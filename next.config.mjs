@@ -3,11 +3,7 @@
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
-    output: isProd ? 'export' : undefined,
-    reactStrictMode: true,
-    assetPrefix: isProd
-      ? 'https://ngyukfung.github.io/epymt/'
-      : undefined
-  }
+    basePath: isProd ? "https://ngyukfung.github.io/epymt/" : "",
+};
 
 export default nextConfig;
