@@ -3,7 +3,11 @@
 const isProd = process.env.NODE_ENV === "production";
 
 const nextConfig = {
-    assetPrefix : "https://ngyukfung.github.io/epymt/"
+    output: "export",
+    basePath: "/epymt",
+    images: {
+        unoptimized: true,
+    }
 };
 
 export default nextConfig;

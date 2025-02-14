@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
           <header className="bg-[#770000] px-4 py-1 flex md:justify-between justify-center items-center select-none">
             <Link href="https://www.math.cuhk.edu.hk">
               <Image
-                src="/culogo.gif"
+                src="/epymt/culogo.gif"
                 alt="CUHK Logo"
                 width={75}
                 height={50}
@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
             </div>
             <Link href="http://www.ims.cuhk.edu.hk/">
               <Image
-                src="/imslogo.gif"
+                src="/epymt/imslogo.gif"
                 alt="IMS Logo"
                 width={50}
                 height={50}

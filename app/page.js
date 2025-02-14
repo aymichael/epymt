@@ -6,7 +6,7 @@ export default function Home() {
       <div className="flex flex-col gap-4">
         <div className="flex w-full justify-center">
           <Image
-            src="/slogan.jpg"
+            src="/epymt/slogan.jpg"
             alt="EPYMT slogan"
             width={720}
             height={240}
