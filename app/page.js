@@ -21,7 +21,7 @@ export default function Home() {
           The activities in the academic year 2004-2006 are funded by the <Link href="https://www.qef.org.hk/en/index.html" className="text-[#993300]">Quality Education Fund</Link>. Then, the programme continues its development with private fund of the Department of Mathematics.
         </span>
         <span className="text-base font-serif">
-          Application for summer classes: <Link href="aplplication" className="text-red-500">Click Here!</Link>
+          Application for summer classes: <Link href="application" className="text-red-500">Click Here!</Link>
         </span>
         <span className="text-xs font-serif">
           ©&nbsp;EPYMT
