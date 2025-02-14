@@ -14,8 +14,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="h-screen w-full bg-[#eddbc9] justify-items-center">
-        <div className="md:w-[48rem] flex flex-col h-full w-full select-none">
-          <header className="bg-[#770000] px-4 py-1 flex md:justify-between justify-center items-center">
+        <div className="md:w-[48rem] flex flex-col h-full w-full">
+          <header className="bg-[#770000] px-4 py-1 flex md:justify-between justify-center items-center select-none">
             <Link href="https://www.math.cuhk.edu.hk">
               <Image
                 src="/culogo.gif"
