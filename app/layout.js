@@ -50,7 +50,7 @@ export default function RootLayout({ children }) {
             </Link>
           </header>
           <Navbar pages={pages} />
-          <main className="bg-[#ffeed8] h-full sm:p-4 p-2">
+          <main className="bg-[#ffeed8] h-full sm:p-6 p-4">
             {children}
           </main>
         </div>
