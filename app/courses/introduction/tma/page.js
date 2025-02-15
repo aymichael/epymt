@@ -174,7 +174,7 @@ export default function TMA() {
             <span>2. 曾獲得以下任何一個科目取錄:「數論與密碼學」、「微分幾何初探」、「數學分析入門」、「非歐幾何賞析」。</span>
             <span>2. Being admitted in one of the following courses before: Number Theory and Cryptography, Towards Differential Geometry, Mathematical Analysis, and Understanding Non-Euclidean Geometry.</span>
             <span>曾修讀「數學啟導修習I或II」的學生，仍須參加入學試，但可獲優先考慮。</span>
-            <span>Those who had taken "Enrichment Mentoring Mathematics I or II" still need to sit the Test, but will be considered with priority.</span>
+            <span>Those who had taken &quot;Enrichment Mentoring Mathematics I or II&quot; still need to sit the Test, but will be considered with priority.</span>
 
         </div>
     );
