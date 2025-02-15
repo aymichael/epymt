@@ -22,7 +22,7 @@ export default function Courses() {
             </span>
             <br />
             <span className="font-bold text-lg">科目詳情</span>
-            <table className="table-auto">
+            <table className="table-auto md:text-base sm:text-sm text-xs">
                 <tbody>
                     <tr>
                         <td className="px-2 py-2 font-bold align-top border border-black bg-[#E0D0B0]">
@@ -34,7 +34,7 @@ export default function Courses() {
                         <td className="px-2 py-2 font-bold align-top border border-black bg-[#F0E0C0]">
                             <div className="flex flex-col gap-1">
                                 <Link href="/courses/introductions/tma" className="text-[#C71585]">近世代數初探 Towards Modern Algebra</Link>
-                                <Link href="/courses/introductions/cna" className="text-[#C71585]">複數與解析幾何 Complex Numbers and Analytic Geometry</Link>
+                                <Link href="/courses/introductions/cnag" className="text-[#C71585]">複數與解析幾何 Complex Numbers and Analytic Geometry</Link>
                                 <Link href="/courses/introductions/idm" className="text-[#C71585]">離散數學導論 Introduction to Discrete Mathematics</Link>
                                 <Link href="/courses/introductions/ntc" className="text-[#C71585]">數論與密碼學 Number Theory and Cryptography</Link>
                                 <Link href="/courses/introductions/idg" className="text-[#C71585]">微分幾何初探 Introduction to Differential Geometry</Link>

@@ -9,10 +9,11 @@ export default function CourseLayout({children}) {
         <div className="flex justify-center w-full flex-col font-serif gap-2">
             <div className="flex justify-evenly items-center flex-wrap gap-4">
                 {!currPage ? <span className="text-black select-none text-lg font-bold">本年度課程</span> : <Link href="/courses" className="text-[#993300] underline">本年度課程</Link>}
-                {!currPage === "introductions" ? <span className="text-black select-none text-lg font-bold">課程介紹</span> : <Link href="/courses/introductions" className="text-[#993300] underline">課程介紹</Link>}
+                {currPage === "introduction" ? <span className="text-black select-none text-lg font-bold">課程介紹</span> : <Link href="/courses/introduction" className="text-[#993300] underline">課程介紹</Link>}
                 {currPage === "past-courses" ? <span className="text-black select-none text-lg font-bold">往期課程</span> : <Link href="/course/past-courses" className="text-[#993300] underline">往期課程</Link>}
                 {currPage === "student-awards" ? <span className="text-black select-none text-lg font-bold">學生獎項</span> : <Link href="/course/student-awards" className="text-[#993300] underline">學生獎項</Link>}
             </div>
+            <hr className="border border-[#550000]" />
             {children}
             </div>
     );
