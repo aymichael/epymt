@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 export default function Navbar({ pages }) {
-    const currentPath = usePathname();
+    const currentPath = '/'+usePathname().split("/")[1];
     const pagaPath = ['/', ...pages.map((page) => `/${page.toLowerCase().replace(" ", "-")}`)];
     return (
         <nav className="bg-[#440000] px-4 py-1 flex flex-wrap md:gap-4 gap-2 items-center justify-evenly">
