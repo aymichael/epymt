@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function StudentAwards(){
     const years = ["02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23","24"];
     return (
-        <div className="flex justify-center w-full flex-col gap-2 font-serif md:text-base sm:text-sm text-xs">
+        <div className="flex justify-center w-full flex-col gap-2 md:text-base sm:text-sm text-xs">
             <span>
                 本課程設有各種獎學金，以獎勵表現優良和力求上進的學生。 學業獎項有卓越表現和優異表現獎，在每季頒發予該季科目裡表現上佳的學生。 表揚才智和努力不懈的求學態度。 對於熱誠投入的學生，亦設有榮譽生獎，給予全年積極參予課程，以致數學程度達到高等水平，又樂於推動數學英才培訓的學生。 另外，也有林健忠獎學金和數學系的獎學金，頒予將來入讀中文大學數學系的學生。
             </span>

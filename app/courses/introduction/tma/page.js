@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function TMA() {
     return (
-        <div className="flex justify-center w-full flex-col gap-2 font-serif md:text-base sm:text-sm text-xs">
+        <div className="flex justify-center w-full flex-col gap-2 md:text-base sm:text-sm text-xs">
             <table className="table-auto">
                 <tbody>
                     <tr>

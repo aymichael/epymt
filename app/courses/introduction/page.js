@@ -1,6 +1,6 @@
 export default function CourseIntro() {
     return (
-        <div className="flex justify-center w-full flex-col gap-4 font-serif">
+        <div className="flex justify-center w-full flex-col gap-4">
             <span className="font-bold text-lg">基礎課程介紹</span>
             <iframe width="100%" className="aspect-video" src="https://www.youtube.com/embed/Sdm71SnSgOg?si=zbxL5Jr-ahRV437a" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
             <span className="font-bold text-lg">微分幾何初探介紹</span>

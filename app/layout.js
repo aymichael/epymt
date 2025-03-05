@@ -1,7 +1,6 @@
 import "./globals.css";
-import Image from "next/image";
-import Link from "next/link";
 import Navbar from "@/app/navbar";
+import { cactus, noto } from "./fonts";
 
 export const metadata = {
   title: "EPYMT",
@@ -13,44 +12,10 @@ const pages = ["Introduction", "Advisors", "Courses", "Application", "Guest Lect
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-screen w-full bg-[#eddbc9] flex justify-center">
-        <div className="md:w-[48rem] flex flex-col w-full">
-          <header className="bg-[#770000] px-4 py-1 flex md:justify-between justify-center items-center select-none">
-            <Link href="https://www.math.cuhk.edu.hk">
-              <Image
-                src="/epymt/culogo.gif"
-                alt="CUHK Logo"
-                width={75}
-                height={50}
-                className="hidden md:block"
-              />
-            </Link>
-            <div className="flex flex-col items-center">
-              <div className="text-[#ccaa00] font-serif text-center md:text-base sm:text-sm text-xs">
-                The Chinese University of Hong Kong
-                <br />
-                Department of Mathematics & The Institute of Mathematical Sciences
-              </div>
-              <div className="text-[#ffaa77] font-serif text-center font-bold md:text-xl sm:text-lg text-base">
-                Enrichment Programme for Young Mathematics Talents
-                <br />
-                <div className="font-[標楷體]">
-                  數學英才精進課程
-                </div>
-              </div>
-            </div>
-            <Link href="http://www.ims.cuhk.edu.hk/">
-              <Image
-                src="/epymt/imslogo.gif"
-                alt="IMS Logo"
-                width={50}
-                height={50}
-                className="hidden md:block"
-              />
-            </Link>
-          </header>
-          <Navbar pages={pages} />
-          <main className="bg-[#ffeed8] h-full sm:p-6 p-4">
+      <body className={`${cactus.variable} ${noto.variable} font-noto min-h-screen w-full flex justify-center`}>
+        <div className="flex flex-col w-full items-center">
+            <Navbar pages={pages} />
+          <main className="sm:p-6 p-4 md:w-[48rem] lg:w-[64rem] lg:mt-24 md:mt-32 mt-16">
             {children}
           </main>
         </div>

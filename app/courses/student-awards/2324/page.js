@@ -1,6 +1,6 @@
 export default function StudentAwards2324() {
     return (
-        <div className="flex justify-center items-center text-center w-full flex-col gap-2 font-serif md:text-base sm:text-sm text-xs">
+        <div className="flex justify-center items-center text-center w-full flex-col gap-2 md:text-base sm:text-sm text-xs">
             <span className="font-bold text-lg">2023-2024學年暑期班學生得獎名單</span>
             <span className="font-bold text-lg">List of Student Awards, Summer 2023-2024</span>
             <br />

@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 export default function FAQLayout({children}) {
     const currPage = usePathname().split("/")[2];
     return (
-        <div className="flex justify-center w-full flex-col font-serif gap-2">
+        <div className="flex justify-center w-full flex-col gap-2">
             <span className="font-bold text-lg">Frequently Asked Questions (FAQ)</span>
             <div className="flex justify-evenly items-center flex-wrap gap-4">
                 {currPage === "student" ? <span className="text-black select-none text-lg font-bold">I am a student...</span> : <Link href="/faq/student" className="text-[#993300] underline">I am a student...</Link>}

@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 export default function CourseLayout({children}) {
     const currPage = usePathname().split("/")[2];
     return (
-        <div className="flex justify-center w-full flex-col font-serif gap-2">
+        <div className="flex justify-center w-full flex-col gap-2">
             <div className="flex justify-evenly items-center flex-wrap gap-4">
                 {!currPage ? <span className="text-black select-none text-lg font-bold">本年度課程</span> : <Link href="/courses" className="text-[#993300] underline">本年度課程</Link>}
                 {currPage === "introduction" ? <span className="text-black select-none text-lg font-bold">課程介紹</span> : <Link href="/courses/introduction" className="text-[#993300] underline">課程介紹</Link>}

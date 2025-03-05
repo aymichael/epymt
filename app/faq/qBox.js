@@ -11,7 +11,7 @@ export default function QuestionBox({ question, answer }) {
                 {question}
                 <span>{showAnswer ? "⮝" : "⮟"}</span>
             </div>
-            {showAnswer && <div className="font-serif md:text-base sm:text-sm text-xs">{answer}</div>}
+            {showAnswer && <div className="md:text-base sm:text-sm text-xs">{answer}</div>}
         </div>
     );
 }

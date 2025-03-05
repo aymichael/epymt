@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function Application() {
     return (
-        <div className="flex justify-center w-full flex-col font-serif">
+        <div className="flex justify-center w-full flex-col">
             <span className="font-bold text-lg text-center">2024暑期班入學申請程序</span>
             <span className="font-bold text-lg text-center">Application Procedure for Summer Classes 2024</span>
             <span className="text-base text-center">報名日期：<span className="text-red-500">2024年4月8日 - 6月3日晚上11時59分</span></span>

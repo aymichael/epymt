@@ -11,6 +11,10 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        cactus: ["var(--font-cactus)", "ui-serif"],
+        noto: ["var(--font-noto)", "ui-sans-serif"],
+      },
     },
   },
   plugins: [],

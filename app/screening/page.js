@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Screening() {
     return (
-        <div className="flex justify-center w-full flex-col text-base font-serif">
-            <span className="font-bold text-lg text-center font-serif">Announcement of Admission Screening Test</span>
+        <div className="flex justify-center w-full flex-col text-base">
+            <span className="font-bold text-lg text-center">Announcement of Admission Screening Test</span>
             <br />
             <span>If you are not a former EPYMT student, you MUST attend the take-home screening test.</span>
             <br />

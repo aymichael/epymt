@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Courses() {
     return (
-        <div className="flex justify-center w-full flex-col gap-2 font-serif">
+        <div className="flex justify-center w-full flex-col gap-2">
             <span className="font-bold text-lg">引言</span>
             <span className="text-sm">
                 幾何學的應用廣泛深刻，發展源遠流長，是數學的重要分支。中學數學課程所涵蓋的，只是簡單的「歐幾里德幾何」和以坐標系統來描述的「解析幾何」。 這些傳統的幾何學早在18世紀以前，便已發展完備。而推動近代幾何進展的「非歐幾何」和「微分幾何」卻是在19世紀以後才告面世的。 這些劃時代的幾何學不單結集了偉大的數學家如高斯、羅巴切夫斯基、黎曼和龐卡萊等對幾何的深思與創見；它們的出現更標誌著人類在幾何學上的飛躍與革新。 愛恩斯坦解構時空的「廣義相對論」正是建立在這新發展的幾何上的。
