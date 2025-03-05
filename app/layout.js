@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       <body className={`${cactus.variable} ${noto.variable} font-noto min-h-screen w-full flex justify-center`}>
         <div className="flex flex-col w-full items-center">
             <Navbar pages={pages} />
-          <main className="sm:p-6 p-4 md:w-[48rem] lg:w-[64rem] lg:mt-24 md:mt-32 mt-16">
+          <main className="sm:p-6 p-4 md:w-[48rem] lg:w-[64rem] lg:mt-24 mt-32">
             {children}
           </main>
         </div>

@@ -51,6 +51,7 @@ export default function Navbar({ pages }) {
                             key={index}
                             href={pagaPath[index]}
                             className="text-center text-md hover:underline py-1"
+                            onClick={() => setIsOpen(false)}
                         >
                             {page}
                         </Link>
