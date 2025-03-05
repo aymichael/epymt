@@ -11,7 +11,7 @@ export default function Navbar({ pages }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="flex select-none shadow-md w-full bg-white flex-col fixed">
+        <header className="flex select-none border bo w-full bg-white flex-col md:fixed">
             <div className="p-4 flex flex-row justify-between items-center w-full">
                 {/* Icon box */}
                 <div className="flex flex-row gap-2 items-center">
@@ -21,7 +21,7 @@ export default function Navbar({ pages }) {
                             width={100}
                             height={100}
                         />
-                    <span className="font-bold md:text-lg text-sm text-left font-cactus">Enrichment Programme for Young Mathematics Talents</span>
+                    <span className="font-bold md:text-lg text-sm text-left font-cactus md:block hidden">Enrichment Programme for Young Mathematics Talents</span>
                 </div>
                 <button
                     className="md:hidden ml-8"
@@ -51,7 +51,6 @@ export default function Navbar({ pages }) {
                             key={index}
                             href={pagaPath[index]}
                             className="text-center text-md hover:underline py-1"
-                            onClick={() => setIsOpen(false)}
                         >
                             {page}
                         </Link>
