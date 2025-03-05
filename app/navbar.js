@@ -11,7 +11,7 @@ export default function Navbar({ pages }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="flex select-none border bo w-full bg-white flex-col md:fixed">
+        <header className="flex select-none shadow-md w-full bg-white flex-col md:fixed">
             <div className="p-4 flex flex-row justify-between items-center w-full">
                 {/* Icon box */}
                 <div className="flex flex-row gap-2 items-center">
