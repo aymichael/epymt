@@ -27,7 +27,7 @@ export default function Contact() {
                     </tr>
                     <tr>
                         <td className="pr-4 py-1 font-bold">電郵 Email</td>
-                        <td className="pl-4 py-1"><Link href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500">epymt@math.cuhk.edu.hk</Link></td>
+                        <td className="pl-4 py-1"><Link href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</Link></td>
                     </tr>
 
                 </tbody>

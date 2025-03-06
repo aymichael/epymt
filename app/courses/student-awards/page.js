@@ -22,7 +22,7 @@ export default function StudentAwards(){
                                 </div>
                             </td>
                             <td className="p-2">
-                                <Link href={`/courses/student-awards/${years[idx+1]}${years[idx]}`} className="text-indigo-500 underline">名單 List</Link>
+                                <Link href={`/courses/student-awards/${years[idx+1]}${years[idx]}`} className="text-indigo-500 dark:text-indigo-300 underline">名單 List</Link>
                             </td>
                         </tr>
                     ))}

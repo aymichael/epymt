@@ -42,7 +42,7 @@ export default function Student() {
                             </tbody>
                         </table>
                         <span>It is advisable to seek consultation from school teachers to decide the course which suits you most, and ask teacher/principal to write you an online recommendation letter. We will also assess every applicant by an Admission Screening Test to evaluate students&apos; mathematical maturity before admitting them.</span>
-                        <span>For course details and registration, please visit <Link href="courses" className="text-indigo-500">here</Link>.</span>
+                        <span>For course details and registration, please visit <Link href="courses" className="text-indigo-500 dark:text-indigo-300">here</Link>.</span>
                     </div>
                 }
             />
@@ -63,7 +63,7 @@ export default function Student() {
                         <br />
                         It is advisable to seek consultation from school teachers to decide the course which suits you most, and ask teacher/principal to write you an online recommendation letter. We will also assess every applicant by an Admission Screening Test to evaluate students&apos; mathematical maturity before admitting them.
                         <br />
-                        For course details and registration, please visit <Link href="courses" className="text-indigo-500">here</Link>.
+                        For course details and registration, please visit <Link href="courses" className="text-indigo-500 dark:text-indigo-300">here</Link>.
                     </span>
                 }
             />
@@ -105,16 +105,16 @@ export default function Student() {
                 answer={<span>If you submit the online application before deadline, we can actually allow the recommendation letter to be submitted a bit later. Nevertheless, please inform us your situation and submit it as soon as possible so that the process of your application will not be postponed.</span>} />
             <QuestionBox
                 question={<span>I heard of this year&apos;s EPYMT courses after the application deadline! Can I still apply?</span>}
-                answer={<span>Please email us <Link href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500">epymt@math.cuhk.edu.hk</Link> to consider if it is still possible to accept your application at the time of your inquiry.</span>} />
+                answer={<span>Please email us <Link href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</Link> to consider if it is still possible to accept your application at the time of your inquiry.</span>} />
             <QuestionBox
                 question={<span>I have registered but, for some reasons, I cannot join the Admission Screening Test. Will my application be considered?</span>}
                 answer={<span>You are required to take the Admission Screening Test (if you are applying for the first time), but, under certain circumstances, we can probably provide special arrangements. Please send us an email and elaborate your situation.</span>} />
             <QuestionBox
                 question={<span>How do I know my application is successfully submitted?</span>} 
-                answer={<span>You should receive a confirmation email listing the course(s) you applied if your online application has been successfully submitted. If you have not received a confirmation email, please contact us by <Link href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500">epymt@math.cuhk.edu.hk</Link> immediately.</span>} />
+                answer={<span>You should receive a confirmation email listing the course(s) you applied if your online application has been successfully submitted. If you have not received a confirmation email, please contact us by <Link href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</Link> immediately.</span>} />
             <QuestionBox
                 question={<span>Can I change some details or my course choice after I submit the online application?</span>}
-                answer={<span>Yes. Please email us <Link href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500">epymt@math.cuhk.edu.hk</Link> and state the changes by using the email address you provided in the online application form you have submitted.</span>} />
+                answer={<span>Yes. Please email us <Link href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</Link> and state the changes by using the email address you provided in the online application form you have submitted.</span>} />
             <QuestionBox
                 question={<span>How will the information I submit online be used?</span>}
                 answer={<span>The information, collected in the application form, will be used to process the application, administration and statistical purposes. Unless those admitted students request to process academic credit records through the University, we may transfer students&apos; information to the according third party. Besides, we may also keep contact with you, in order to introduce you the latest information of EPYMT-related activities.</span>} />
@@ -124,7 +124,7 @@ export default function Student() {
             <span className="font-bold text-lg">Admission Screening Test</span>
             <QuestionBox 
                 question={<span>When will I know if I can attend the Admission Screening Test?</span>} 
-                answer={<span>Usually, we will invite most applicants to attend an Admission Screening Test on the date mentioned at step 3 of our <Link href="application" className="text-indigo-500">Application Procedure page</Link>. Details of the test including the test date, venue, campus map and other necessary information can be referred <Link href="screening" className="text-indigo-500">here</Link>. We will also send confirmation emails to students after the application period. Please keep checking your emails.</span>} />
+                answer={<span>Usually, we will invite most applicants to attend an Admission Screening Test on the date mentioned at step 3 of our <Link href="application" className="text-indigo-500 dark:text-indigo-300">Application Procedure page</Link>. Details of the test including the test date, venue, campus map and other necessary information can be referred <Link href="screening" className="text-indigo-500 dark:text-indigo-300">here</Link>. We will also send confirmation emails to students after the application period. Please keep checking your emails.</span>} />
             <QuestionBox 
                 question={<span>How many papers will the Admission Screening Test contain and what language will be conducted in the test paper?</span>} 
                 answer={<span>There will be ONE paper conducted in English for the Admission Screening Test. The test paper will be divided into a compulsory part and an elective part. No any past papers of the admission test can be found.</span>} />

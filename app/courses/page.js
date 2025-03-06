@@ -50,8 +50,8 @@ export default function Courses() {
                         </td>
                         <td className="px-2 py-2 border border-black bg-[#F0E0C0]">
                             <div className="flex flex-col gap-1">
-                                <span><Link href="/application" className="text-indigo-500">網上申請</Link>(包括申請步驟及入學試詳情)</span>
-                                <span><Link href="/application" className="text-indigo-500">Online Application</Link>(with steps and admission test details)</span>
+                                <span><Link href="/application" className="text-indigo-500 dark:text-indigo-300">網上申請</Link>(包括申請步驟及入學試詳情)</span>
+                                <span><Link href="/application" className="text-indigo-500 dark:text-indigo-300">Online Application</Link>(with steps and admission test details)</span>
                             </div>
                         </td>
                     </tr>
@@ -64,8 +64,8 @@ export default function Courses() {
                         </td>
                         <td className="px-2 py-2 border border-black bg-[#F0E0C0]">
                             <div className="flex flex-col gap-1">
-                                <span>請參閱<Link href="#leaflet" className="text-indigo-500">課程海報單張</Link>及上述各科網頁</span>
-                                <span>Please refer to the <Link href="#leaflet" className="text-indigo-500">programme poster and leaflet</Link> and course pages above</span>
+                                <span>請參閱<Link href="#leaflet" className="text-indigo-500 dark:text-indigo-300">課程海報單張</Link>及上述各科網頁</span>
+                                <span>Please refer to the <Link href="#leaflet" className="text-indigo-500 dark:text-indigo-300">programme poster and leaflet</Link> and course pages above</span>
                             </div>
                         </td>
                     </tr>
@@ -148,7 +148,7 @@ export default function Courses() {
                                 <span>Students who have attended at least 7 full days will be granted a scholarship not lower than HK$1000*</span>
                                 <span>本課程另設多項獎學金，給予學業良好或積極參與的學員</span>
                                 <span>Additional amount of scholarship will be granted to students with outstanding performance</span>
-                                <span>For every Yau Science Award team that has submitted a complete Mathematics project, each team member will receive a deduction of HK$1,500 in the tuition for the EPYMT program on top of the current scholarship. Details could be found at <Link href="https://yashk.org.hk/yau-award" className="text-indigo-500">https://yashk.org.hk/yau-award</Link>**</span>
+                                <span>For every Yau Science Award team that has submitted a complete Mathematics project, each team member will receive a deduction of HK$1,500 in the tuition for the EPYMT program on top of the current scholarship. Details could be found at <Link href="https://yashk.org.hk/yau-award" className="text-indigo-500 dark:text-indigo-300">https://yashk.org.hk/yau-award</Link>**</span>
                                 <span className="text-xs">*如獲學費減免，而只需繳交少於1,000元，則只回扣所交的學費。</span>
                                 <span className="text-xs">*If the tuition is less than HK$1,000 after fee remission, exact amount will be granted.</span>
                                 <span className="text-xs">**如獲學費減免，而只需繳交少於1,500元，則只回扣所交的學費。</span>
