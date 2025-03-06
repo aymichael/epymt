@@ -24,38 +24,6 @@ export default function Home() {
         <span className="text-base">
           Application for summer classes: <Link href="application" className="text-red-500">Click Here!</Link>
         </span>
-        <div className="flex w-full justify-between items-end">
-          <span className="text-xs">
-            ©&nbsp;EPYMT
-            <br />
-            The Chinese University of Hong Kong, Shatin, N.T., Hong Kong
-            <br />
-            Phone: (852) 3943 1984 / 3943 5295
-            <br />
-            Fax: (852) 2603 5154
-            <br />
-            Email: <Link href="mailto:epymt@math.cuhk.edu.hk" className="text-[#993300]">epymt@math.cuhk.edu.hk</Link>
-          </span>
-          <div className="flex gap-2">
-          <Link href="https://www.math.cuhk.edu.hk">
-              <Image
-                src="/epymt/culogo.gif"
-                alt="CUHK Logo"
-                width={75}
-                height={50}
-              />
-            </Link>
-            <Link href="http://www.ims.cuhk.edu.hk/">
-              <Image
-                src="/epymt/imslogo.gif"
-                alt="IMS Logo"
-                width={50}
-                height={50}
-              />
-            </Link>
-          </div>
-        </div>
-
       </div>
     </div >
   );

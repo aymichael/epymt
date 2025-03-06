@@ -7,21 +7,29 @@ import { useState } from "react";
 
 export default function Navbar({ pages }) {
     const currentPath = '/' + usePathname().split("/")[1];
-    const pagaPath = ['/', ...pages.map((page) => `/${page.toLowerCase().replace(" ", "-")}`)];
+    const pagaPath = pages.map((page) => `/${page.toLowerCase().replace(" ", "-")}`);
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="flex select-none shadow-md w-full bg-white flex-col md:fixed">
-            <div className="p-4 flex flex-row justify-between items-center w-full">
-                {/* Icon box */}
-                <div className="flex flex-row gap-2 items-center">
+        <header className="flex select-none shadow-md w-full flex-col md:fixed md:items-center z-10 bg-blue-200">
+            <div className="md:w-[48rem] lg:w-[64rem] py-1 flex flex-row justify-between items-center w-full">
+                <div>
+                    <Link href="/">
                         <Image
                             src="/epymt/epymt.png"
                             alt="CUHK Logo"
-                            width={100}
-                            height={100}
+                            width={350}
+                            height={75}
+                            className="md:block hidden"
                         />
-                    <span className="font-bold md:text-lg text-sm text-left font-cactus md:block hidden">Enrichment Programme for Young Mathematics Talents</span>
+                        <Image
+                            src="/epymt/epymt_logo.png"
+                            alt="CUHK Logo"
+                            width={165}
+                            height={68}
+                            className="md:hidden block"
+                        />
+                    </Link>
                 </div>
                 <button
                     className="md:hidden ml-8"
@@ -29,8 +37,8 @@ export default function Navbar({ pages }) {
                 >
                     {isOpen ? "Close" : "Menu"}
                 </button>
-                <nav className="px-4 py-1 flex-row xl:flex-nowrap justify-end flex-wrap md:gap-4 gap-2 items-center md:flex hidden text-nowrap">
-                    {["Home", ...pages].map((page, index) => (
+                <nav className="px-4 py-1 flex-row md:gap-4 gap-2 items-center md:flex hidden text-nowrap">
+                    {pages.map((page, index) => (
                         currentPath === pagaPath[index] ?
                             <span key={index} className="font-bold text-center text-md underline select-none">{page}</span> :
                             <Link
@@ -44,7 +52,7 @@ export default function Navbar({ pages }) {
                 </nav>
             </div>
             <nav className={`flex md:hidden flex-col items-start transition-all duration-500 ease-in-out ${isOpen ? "px-4 pb-4" : ""}`}>
-                {isOpen && ["Home", ...pages].map((page, index) => (
+                {isOpen && pages.map((page, index) => (
                     currentPath === pagaPath[index] ?
                         <span key={index} className="font-bold text-center text-lg underline select-none py-1">{page}</span> :
                         <Link
