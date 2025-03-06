@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
       <body className={`${nunito.variable} font-nunito min-h-screen w-full flex justify-center bg-blue-50 dark:bg-blue-950`}>
         <div className="flex flex-col w-full items-center">
           <Navbar pages={pages} />
-          <main className="md:w-[48rem] lg:w-[64rem] w-full  h-full bg-white dark:bg-gray-700">
+          <main className="md:w-[48rem] lg:w-[64rem] w-full  h-full ">
             <div className="sm:p-6 p-4 md:mt-20 mt-16">
               {children}
             </div>

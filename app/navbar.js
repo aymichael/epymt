@@ -13,7 +13,7 @@ export default function Navbar({ pages }) {
 
     return (
         <header className="flex select-none w-full flex-col text-lg md:shadow-md fixed md:items-center z-10 md:bg-blue-200 md:dark:bg-blue-800">
-            <div className={`md:w-[48rem] lg:w-[64rem] md:shadow-none ${isOpen ? "" : "shadow-md"} md:h-20 h-16 py-1 flex flex-row justify-between items-center w-full bg-blue-200 dark:bg-blue-800 z-10`}>
+            <div className={`md:w-[48rem] lg:w-[64rem] md:shadow-none ${isOpen ? "" : "shadow-md"} md:h-20 h-16 py-1 flex flex-row justify-between items-center w-full bg-blue-200 dark:bg-blue-800 z-10 gap-4 md:px-0 px-2`}>
                 <div>
                     <Link href="/">
                         <Image
@@ -50,7 +50,7 @@ export default function Navbar({ pages }) {
                     <div className={clsx("w-full border border-black dark:border-white transition-all duration-300 ease-in-out",
                         isOpen ? "transform -rotate-45" : "translate-y-2")}></div>
                 </button>
-                <nav className="px-4 py-1 flex-row md:gap-4 gap-2 items-center md:flex hidden text-nowrap">
+                <nav className="py-1 flex-row md:gap-4 gap-2 items-center md:flex hidden text-nowrap">
                     {pages.map((page, index) => (
                         currentPath === pagaPath[index] ?
                             <span key={index} className="font-bold text-center underline">{page}</span> :
@@ -64,14 +64,14 @@ export default function Navbar({ pages }) {
                     ))}
                 </nav>
             </div>
-            <nav className={`flex md:hidden bg-blue-200/95 dark:bg-blue-800/95 flex-col items-start transition-all duration-500 ease-in-out px-4 z-0 ${isOpen ? "shadow-md" : " -translate-y-full"}`}>
+            <nav className={`flex md:hidden bg-blue-200/95 dark:bg-blue-800/95 flex-col items-start transition-all duration-500 ease-in-out px-4 z-0 ${isOpen ? "shadow-md" : " -translate-y-full"} py-2`}>
                 {isOpen && pages.map((page, index) => (
                     currentPath === pagaPath[index] ?
-                        <span key={index} className="font-bold underline py-2">{page}</span> :
+                        <span key={index} className="font-bold py-2 w-full bg-blue-300/95 rounded-md px-2 dark:bg-blue-700/95">{page}</span> :
                         <Link
                             key={index}
                             href={pagaPath[index]}
-                            className="py-2"
+                            className="py-2 w-full px-2"
                         >
                             {page}
                         </Link>
