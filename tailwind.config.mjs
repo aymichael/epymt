@@ -12,8 +12,8 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        cactus: ["var(--font-cactus)", "ui-serif"],
         noto: ["var(--font-noto)", "ui-sans-serif"],
+        nunito: ["var(--font-nunito)", "ui-sans-serif"],
       },
     },
   },

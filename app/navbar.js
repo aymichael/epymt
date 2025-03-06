@@ -12,8 +12,8 @@ export default function Navbar({ pages }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="flex select-none shadow-md w-full flex-col fixed md:items-center z-10 md:bg-blue-200 md:dark:bg-blue-800">
-            <div className="md:w-[48rem] lg:w-[64rem] md:h-20 h-16 py-1 flex flex-row justify-between items-center w-full bg-blue-200 dark:bg-blue-800">
+        <header className="flex select-none w-full flex-col text-lg md:shadow-md fixed md:items-center z-10 md:bg-blue-200 md:dark:bg-blue-800">
+            <div className={`md:w-[48rem] lg:w-[64rem] md:shadow-none ${isOpen ? "" : "shadow-md"} md:h-20 h-16 py-1 flex flex-row justify-between items-center w-full bg-blue-200 dark:bg-blue-800 z-10`}>
                 <div>
                     <Link href="/">
                         <Image
@@ -53,25 +53,25 @@ export default function Navbar({ pages }) {
                 <nav className="px-4 py-1 flex-row md:gap-4 gap-2 items-center md:flex hidden text-nowrap">
                     {pages.map((page, index) => (
                         currentPath === pagaPath[index] ?
-                            <span key={index} className="font-bold text-center text-md underline select-none">{page}</span> :
+                            <span key={index} className="font-bold text-center underline">{page}</span> :
                             <Link
                                 key={index}
                                 href={pagaPath[index]}
-                                className="text-center text-md transition-all duration-200 ease-in-out hover:translate-y-[-3px]"
+                                className="text-center transition-all duration-200 ease-in-out hover:translate-y-[-3px]"
                             >
                                 {page}
                             </Link>
                     ))}
                 </nav>
             </div>
-            <nav className={`flex md:hidden bg-blue-200/95 dark:bg-blue-800/95 flex-col items-start transition-all duration-500 ease-in-out ${isOpen ? "px-4 pb-4" : ""}`}>
+            <nav className={`flex md:hidden bg-blue-200/95 dark:bg-blue-800/95 flex-col items-start transition-all duration-500 ease-in-out px-4 z-0 ${isOpen ? "shadow-md" : " -translate-y-full"}`}>
                 {isOpen && pages.map((page, index) => (
                     currentPath === pagaPath[index] ?
-                        <span key={index} className="font-bold text-center text-lg underline select-none py-1">{page}</span> :
+                        <span key={index} className="font-bold underline py-2">{page}</span> :
                         <Link
                             key={index}
                             href={pagaPath[index]}
-                            className="text-center text-md hover:underline py-1"
+                            className="py-2"
                         >
                             {page}
                         </Link>

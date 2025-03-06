@@ -1,6 +1,6 @@
 import "./globals.css";
 import Navbar from "@/app/navbar";
-import { cactus, noto } from "./fonts";
+import { nunito } from "./fonts";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -14,7 +14,7 @@ const pages = ["Introduction", "Courses", "Application", "Alumni Sharing", "FAQ"
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${cactus.variable} ${noto.variable} font-noto min-h-screen w-full flex justify-center bg-blue-50 dark:bg-blue-950`}>
+      <body className={`${nunito.variable} font-nunito min-h-screen w-full flex justify-center bg-blue-50 dark:bg-blue-950`}>
         <div className="flex flex-col w-full items-center">
           <Navbar pages={pages} />
           <main className="md:w-[48rem] lg:w-[64rem] w-full  h-full bg-white dark:bg-gray-700">
