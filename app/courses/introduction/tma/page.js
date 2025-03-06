@@ -164,7 +164,7 @@ export default function TMA() {
             <span className="text-xs text-red-500">*此課程於中文大學內授課。</span>
             <span className="text-xs text-red-500">*This course offers face-to-face lessons on CUHK campus.</span>
             <br />
-            <Link href="/application" className="text-[#993300] text-lg font-bold underline">網上報名(Online application)</Link>
+            <Link href="/application" className="text-indigo-500 text-lg font-bold underline">網上報名(Online application)</Link>
             <br />
             <span className="font-bold text-lg">入學試免試條款 Conditions for Admission Screening Test Exemption</span>
             <span>凡符合以下其中一項條款的申請人，可免除入學試而獲本科直接取錄。（參考附註）</span>

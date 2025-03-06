@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <div className="flex flex-col w-full items-center">
           <Navbar pages={pages} />
           <main className="md:w-[48rem] lg:w-[64rem] w-full  h-full bg-white">
-            <div className="sm:p-6 p-4 lg:mt-24 md:mt-32">
+            <div className="sm:p-6 p-4 md:mt-20 mt-16">
               {children}
             </div>
           </main>
@@ -27,13 +27,13 @@ export default function RootLayout({ children }) {
               <span className="text-xs">
                 ©&nbsp;EPYMT
                 <br />
-                The Chinese University of Hong Kong, Shatin, N.T., Hong Kong
+                EPYMT, Department of Mathematics, The Chinese University of Hong Kong, Shatin, N.T., Hong Kong
                 <br />
                 Phone: (852) 3943 1984 / 3943 5295
                 <br />
                 Fax: (852) 2603 5154
                 <br />
-                Email: <Link href="mailto:epymt@math.cuhk.edu.hk" className="text-[#993300]">epymt@math.cuhk.edu.hk</Link>
+                Email: <Link href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500">epymt@math.cuhk.edu.hk</Link>
               </span>
               <div className="flex gap-2">
                 <Link href="https://www.math.cuhk.edu.hk">

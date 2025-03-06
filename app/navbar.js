@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import clsx from "clsx";
 
 export default function Navbar({ pages }) {
     const currentPath = '/' + usePathname().split("/")[1];
@@ -11,8 +12,8 @@ export default function Navbar({ pages }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="flex select-none shadow-md w-full flex-col md:fixed md:items-center z-10 bg-blue-200">
-            <div className="md:w-[48rem] lg:w-[64rem] py-1 flex flex-row justify-between items-center w-full">
+        <header className="flex select-none shadow-md w-full flex-col fixed md:items-center z-10 md:bg-blue-200">
+            <div className="md:w-[48rem] lg:w-[64rem] md:h-20 h-16 py-1 flex flex-row justify-between items-center w-full bg-blue-200">
                 <div>
                     <Link href="/">
                         <Image
@@ -25,17 +26,22 @@ export default function Navbar({ pages }) {
                         <Image
                             src="/epymt/epymt_logo.png"
                             alt="CUHK Logo"
-                            width={165}
-                            height={68}
+                            width={120}
+                            height={50}
                             className="md:hidden block"
                         />
                     </Link>
                 </div>
                 <button
-                    className="md:hidden ml-8"
+                    className="md:hidden flex flex-col justify-center items-center w-8 h-8 mx-2 "
                     onClick={() => setIsOpen(!isOpen)}
                 >
-                    {isOpen ? "Close" : "Menu"}
+                    <div className={clsx("w-full border border-black transition-all duration-300 ease-in-out", 
+                        isOpen ? "transform rotate-45" : "-translate-y-2")}></div>
+                    <div className={clsx("w-full border border-black transition-all duration-300 ease-in-out",
+                        isOpen ? "hidden" : "")}></div>
+                    <div className={clsx("w-full border border-black transition-all duration-300 ease-in-out",
+                        isOpen ? "transform -rotate-45" : "translate-y-2")}></div>
                 </button>
                 <nav className="px-4 py-1 flex-row md:gap-4 gap-2 items-center md:flex hidden text-nowrap">
                     {pages.map((page, index) => (
@@ -51,7 +57,7 @@ export default function Navbar({ pages }) {
                     ))}
                 </nav>
             </div>
-            <nav className={`flex md:hidden flex-col items-start transition-all duration-500 ease-in-out ${isOpen ? "px-4 pb-4" : ""}`}>
+            <nav className={`flex md:hidden bg-blue-200/95 flex-col items-start transition-all duration-500 ease-in-out ${isOpen ? "px-4 pb-4" : ""}`}>
                 {isOpen && pages.map((page, index) => (
                     currentPath === pagaPath[index] ?
                         <span key={index} className="font-bold text-center text-lg underline select-none py-1">{page}</span> :

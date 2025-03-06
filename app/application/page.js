@@ -12,8 +12,8 @@ export default function Application() {
             <span className="font-bold text-base">STEP 1 : Online Application Form</span>
             <span className="text-sm">請依照下列步驟完成網上申請。</span>
             <span className="text-sm">Please follow the steps to complete online application.</span>
-            <span className="text-sm mt-1">1. 登入<Link href="https://cloud.itsc.cuhk.edu.hk/SAYT/Login.aspx" className="text-[#993300]">SAYT申請系統</Link>。(首次登入須先以電郵登記帳戶，EPYMT舊生亦須透過有效帳戶登入。)</span>
-            <span className="text-sm mb-1">1. Log into <Link href="https://cloud.itsc.cuhk.edu.hk/SAYT/Login.aspx" className="text-[#993300]">SAYT Application System</Link>. (For first-time user, please register an account with your email. Even you were former EPYMT student, you still need a valid account to login.)</span>
+            <span className="text-sm mt-1">1. 登入<Link href="https://cloud.itsc.cuhk.edu.hk/SAYT/Login.aspx" className="text-indigo-500">SAYT申請系統</Link>。(首次登入須先以電郵登記帳戶，EPYMT舊生亦須透過有效帳戶登入。)</span>
+            <span className="text-sm mb-1">1. Log into <Link href="https://cloud.itsc.cuhk.edu.hk/SAYT/Login.aspx" className="text-indigo-500">SAYT Application System</Link>. (For first-time user, please register an account with your email. Even you were former EPYMT student, you still need a valid account to login.)</span>
             <span className="text-sm mt-1">2. 根據指示填寫申請表。</span>
             <span className="text-sm mb-1">2. Complete the application form.</span>
             <span className="text-sm">請留意以下事項:</span>
@@ -39,8 +39,8 @@ export default function Application() {
             <span className="text-sm font-bold">Local and Overseas students</span> 
             <span className="text-sm mt-1">所有本地首次申請人均須參加於 <span className="text-red-500">2024年6月8日（星期六）</span>舉行的入學試。缺席者作放棄論。</span> 
             <span className="text-sm mb-1">All local first-time applicants must attend the admission screening test on <span className="text-red-500">8 June 2024 (Sat)</span>. Failing to do so will be considered as withdrawing from application.</span> 
-            <span className="text-sm mt-1 text-green-500">入學試詳情請參閱<Link href="screening" className="text-[#993300]">這裡</Link></span> 
-            <span className="text-sm mb-1 text-green-500">For test details, please click <Link href="screening" className="text-[#993300]">here</Link></span>
+            <span className="text-sm mt-1 text-green-500">入學試詳情請參閱<Link href="screening" className="text-indigo-500">這裡</Link></span> 
+            <span className="text-sm mb-1 text-green-500">For test details, please click <Link href="screening" className="text-indigo-500">here</Link></span>
             <br />
             <span className="text-xs">注意：本課程<span className="text-bold text-green-500">編排緊密</span>，學生須妥善安排時間，<span className="text-bold text-green-500">積極參與</span>，方能獲得最大學習成效。學生退學或無故缺課，將按照大學規章嚴格處理。</span>
             <span className="text-xs">Attention: The learning pace is fast and the schedule is tight. It <span className="text-bold text-green-500">requires tremendous effort</span> and commitment of the student to truly benefit from our programme. Absence and withdrawal are detrimental to learning, and we will also strictly follow the university regulations on matters related to taking leave and withdrawal.</span>
