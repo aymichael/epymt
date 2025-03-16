@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Screening() {
     return (
-        <div className="flex justify-center w-full flex-col text-base">
-            <span className="font-bold text-lg text-center">Announcement of Admission Screening Test</span>
+        <div className="flex justify-center w-full flex-col text-base/8">
+            <span className="font-bold text-lg/8 text-center">Announcement of Admission Screening Test</span>
             <br />
             <span>If you are not a former EPYMT student, you MUST attend the take-home screening test.</span>
             <br />
@@ -44,7 +44,7 @@ export default function Screening() {
             <span>1. The test paper will be sent to you by email on 8 June (Saturday, 10:30 a.m. Hong Kong Time).</span>
             <span>2. Please return your answers from 00:00 to 23:59 on 11 June (next Tuesday) by email to <Link href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</Link>.</span>
             <br />
-            <span className="text-sm">Enquiries: <Link href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</Link></span>
+            <span className="text-sm/8">Enquiries: <Link href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</Link></span>
 
         </div>
     );

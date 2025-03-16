@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function TMA() {
     return (
-        <div className="flex justify-center w-full flex-col gap-2 md:text-base sm:text-sm text-xs">
+        <div className="flex justify-center w-full flex-col gap-2 md:text-base/8 sm:text-sm/8 text-xs">
             <table className="table-auto">
                 <tbody>
                     <tr>
@@ -164,9 +164,9 @@ export default function TMA() {
             <span className="text-xs text-red-500">*此課程於中文大學內授課。</span>
             <span className="text-xs text-red-500">*This course offers face-to-face lessons on CUHK campus.</span>
             <br />
-            <Link href="/application" className="text-indigo-500 dark:text-indigo-300 text-lg font-bold underline">網上報名(Online application)</Link>
+            <Link href="/application" className="text-indigo-500 dark:text-indigo-300 text-lg/8 font-bold underline">網上報名(Online application)</Link>
             <br />
-            <span className="font-bold text-lg">入學試免試條款 Conditions for Admission Screening Test Exemption</span>
+            <span className="font-bold text-lg/8">入學試免試條款 Conditions for Admission Screening Test Exemption</span>
             <span>凡符合以下其中一項條款的申請人，可免除入學試而獲本科直接取錄。（參考附註）</span>
             <span>Applicants who satisfy either one of the following conditions may be exempted from Admission Screening Test and will be directly admitted into this course. (refer to note below)</span>
             <span>1. 曾修讀並及格完成以下任何一個科目取錄: 「複數的幾何面貌」、「複數與解析幾何」、「近世代數初探」。</span>

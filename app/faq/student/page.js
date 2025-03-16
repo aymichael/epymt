@@ -4,13 +4,13 @@ import Link from "next/link";
 export default function Student() {
     return (
         <div className="flex flex-col gap-4">
-            <span className="font-bold text-lg">About EPYMT</span>
+            <span className="font-bold text-lg/8">About EPYMT</span>
             <QuestionBox
                 question={<span>How do I choose the courses of EPYMT?</span>}
                 answer={
                     <div className="flex flex-col gap-2">
                         <span>There are several courses of different levels for you to choose. In general, if you are Secondary 3 or above, if you enjoy mathematics and usually are the better ones in your class, there should be a course suitable for you. If you are of lower forms but already have mathematics skills of higher forms, you may also find a suitable course according to the following levels.</span>
-                        <table className="table-auto md:text-sm text-xs border border-black border-collapse">
+                        <table className="table-auto md:text-sm/8 text-xs border border-black border-collapse">
                             <thead>
                                 <tr>
                                     <th className="px-2 py-2 text-left">Course</th>
@@ -54,7 +54,7 @@ export default function Student() {
                 question={<span>What language will be conducted in the courses?</span>}
                 answer={<span>The lecturers and teaching assistants will use Cantonese in class but all notes and teaching materials are conducted in English.</span>}
             />
-            <span className="font-bold text-lg">Applying EPYMT</span>
+            <span className="font-bold text-lg/8">Applying EPYMT</span>
             <QuestionBox
                 question={<span>I am mathematically well beyond the average of my age. However, I am only F.2 (or any junior form), am I able to attend your courses?</span>}
                 answer={
@@ -96,7 +96,7 @@ export default function Student() {
                 question={<span>What if I can only attend several dates of the course?</span>}
                 answer={<span>Our courses are intensive and they demand tremendous efforts to master the course contents. Therefore, it is advisable not to skip any one of the lecture, even to take a leave. Attending several dates of the course is strongly discouraged and your application may not be considered if such a condition is acknowledged.</span>}
             />
-            <span className="font-bold text-lg">Submitting the online application</span>
+            <span className="font-bold text-lg/8">Submitting the online application</span>
             <QuestionBox
                 question={<span>If I had applied EPYMT last year, do I still ask my teacher/principal to write me another recommendation letter this year?</span>}
                 answer={<span>A note on the application form states that “recommendation is NOT required if the applicant had applied for admission to EPYMT before” so you can choose not to hand another recommendation letter to us. However, if the teacher wants to write another stronger recommendation letters for the student this year, we will still accept.</span>} />
@@ -121,7 +121,7 @@ export default function Student() {
             <QuestionBox
                 question={<span>Do I need to send in my school report cards or supporting documents for examination results?</span>}
                 answer={<span>NO. Please DO NOT send in any neither academic supporting documents, nor school reports now. You may be requested to do so in the future.</span>} />
-            <span className="font-bold text-lg">Admission Screening Test</span>
+            <span className="font-bold text-lg/8">Admission Screening Test</span>
             <QuestionBox 
                 question={<span>When will I know if I can attend the Admission Screening Test?</span>} 
                 answer={<span>Usually, we will invite most applicants to attend an Admission Screening Test on the date mentioned at step 3 of our <Link href="application" className="text-indigo-500 dark:text-indigo-300">Application Procedure page</Link>. Details of the test including the test date, venue, campus map and other necessary information can be referred <Link href="screening" className="text-indigo-500 dark:text-indigo-300">here</Link>. We will also send confirmation emails to students after the application period. Please keep checking your emails.</span>} />

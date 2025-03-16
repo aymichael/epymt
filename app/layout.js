@@ -14,16 +14,16 @@ const pages = ["Introduction", "Courses", "Application", "Alumni Sharing", "FAQ"
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${nunito.variable} font-nunito min-h-screen w-full flex justify-center bg-blue-50 dark:bg-blue-950`}>
+      <body className={`${nunito.variable} font-nunito min-h-screen w-full flex justify-center leading-8`}>
         <div className="flex flex-col w-full items-center">
           <Navbar pages={pages} />
-          <main className="md:w-[48rem] lg:w-[64rem] w-full  h-full ">
-            <div className="sm:p-6 p-4 md:mt-20 mt-16">
+          <main className="md:w-[48rem] lg:w-[64rem] w-full h-full dark:bg-gray-700">
+            <div className="sm:p-10 p-6 md:mt-20 mt-16">
               {children}
             </div>
           </main>
-          <footer className="w-full bg-blue-100 dark:bg-blue-900 text-left py-2 flex justify-center">
-            <div className="flex w-full justify-between items-end md:w-[48rem] lg:w-[64rem] p-2">
+          <footer className="w-full bg-gray-100 dark:bg-gray-800 p-8  text-left flex justify-center">
+            <div className="flex w-full justify-between items-center md:w-[48rem] lg:w-[64rem]">
               <span className="text-xs">
                 ©&nbsp;EPYMT
                 <br />
@@ -35,23 +35,23 @@ export default function RootLayout({ children }) {
                 <br />
                 Email: <Link href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</Link>
               </span>
-              <div className="flex gap-2">
-                <Link href="https://www.math.cuhk.edu.hk">
+              <div className="flex gap-2 md:flex-row flex-col items-center">
+                <a href="https://www.math.cuhk.edu.hk" >
                   <Image
                     src="/epymt/culogo.gif"
                     alt="CUHK Logo"
                     width={75}
                     height={50}
                   />
-                </Link>
-                <Link href="http://www.ims.cuhk.edu.hk/">
+                </a>
+                <a href="http://www.ims.cuhk.edu.hk/">
                   <Image
                     src="/epymt/imslogo.gif"
                     alt="IMS Logo"
                     width={50}
                     height={50}
                   />
-                </Link>
+                </a>
               </div>
             </div>
           </footer>

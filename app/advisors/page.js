@@ -1,15 +1,15 @@
 export default function Advisors() {
     return (
         <div className="flex justify-center w-full flex-col gap-2">
-            <span className="font-bold text-lg">初始學術顧問委員 Inaugurate Advisors</span>
-            <span className="text-sm">
+            <span className="font-bold text-lg/8">初始學術顧問委員 Inaugurate Advisors</span>
+            <span className="text-sm/8">
                 本課程的初始顧問來自世界各地著名大學，大部份曾任系主任、院長、甚至校長。 他們一方面位處世界學問前端，另一方面也了解大學教育和收生等行政事務。他們也致力於培養各地優秀的年青人，全賴他們提供之寶貴意見，為本課程的發展奠下基礎。
             </span>
-            <span className="text-sm">
+            <span className="text-sm/8">
                 The inaugurate advisors for our programme are coming from the most famous universities in the world. They had been department heads, faculty deans, or even presidents in their universities. On the one hand, they are at the frontier of academic research; on the other hand, they are well acquainted with university education and administration such as admission. They are also committed to cultivating outstanding young people from all over the world, and their valuable contributions laid the foundation for the development of our programme.
             </span>
             <div className="flex justify-center">
-                <table className="w-3/4 table-auto border border-collapse border-black text-sm">
+                <table className="w-3/4 table-auto border border-collapse border-black text-sm/8">
                     <thead>
                         <tr className="border border-black bg-[#bdab79]">
                             <th className="text-left px-2 py-1">NAME</th>

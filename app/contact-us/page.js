@@ -2,8 +2,8 @@ import Link from "next/link";
 
 export default function Contact() {
     return (
-        <div className="flex justify-center w-full flex-col gap-2 sm:text-base text-sm">
-            <span className="font-bold text-lg">查詢及聯絡方法 Contact</span>
+        <div className="flex justify-center w-full flex-col gap-2 sm:text-base/8 text-sm/8">
+            <span className="font-bold text-lg/8">查詢及聯絡方法 Contact</span>
             <table className="table-auto">
                 <tbody>
                     <tr>

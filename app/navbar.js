@@ -12,8 +12,8 @@ export default function Navbar({ pages }) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <header className="flex select-none w-full flex-col text-lg md:shadow-md fixed md:items-center z-10 md:bg-blue-200 md:dark:bg-blue-800">
-            <div className={`md:w-[48rem] lg:w-[64rem] md:shadow-none ${isOpen ? "" : "shadow-md"} md:h-20 h-16 py-1 flex flex-row justify-between items-center w-full bg-blue-200 dark:bg-blue-800 z-10 gap-4 md:px-0 px-2`}>
+        <header className="flex select-none w-full flex-col text-lg/8 md:shadow-md fixed md:items-center z-10">
+            <div className={`md:w-[48rem] bg-white dark:bg-gray-700 lg:w-[64rem] md:shadow-none ${isOpen ? "" : "shadow-md"} md:h-20 h-16 py-1 flex flex-row justify-between items-center w-full z-10 gap-4 md:px-0 px-2`}>
                 <div>
                     <Link href="/">
                         <Image
@@ -64,10 +64,10 @@ export default function Navbar({ pages }) {
                     ))}
                 </nav>
             </div>
-            <nav className={`flex md:hidden bg-blue-200/95 dark:bg-blue-800/95 flex-col items-start transition-all duration-500 ease-in-out px-4 z-0 ${isOpen ? "shadow-md" : " -translate-y-full"} py-2`}>
+            <nav className={`flex md:hidden bg-white/95 flex-col items-start transition-all duration-500 ease-in-out px-4 z-0 ${isOpen ? "shadow-md scale-y-100" : " scale-y-0"} py-2 origin-top`}>
                 {isOpen && pages.map((page, index) => (
                     currentPath === pagaPath[index] ?
-                        <span key={index} className="font-bold py-2 w-full bg-blue-300/95 rounded-md px-2 dark:bg-blue-700/95">{page}</span> :
+                        <span key={index} className="font-bold py-2 w-full bg-blue-100/95 rounded-md px-2 dark:bg-blue-700/95">{page}</span> :
                         <Link
                             key={index}
                             href={pagaPath[index]}
