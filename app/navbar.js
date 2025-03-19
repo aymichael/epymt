@@ -81,7 +81,7 @@ export default function Navbar() {
                     </nav>
                 </div> : null}
             </div>
-            <div className={`w-full md:hidden h-screen ${isOpen ? "bg-black/40" : ""}`}>
+            <div className={`w-full md:hidden h-screen ${isOpen ? "bg-black/40" : "hidden"}`}>
                 <nav className={`flex bg-white/95 dark:bg-gray-700/95 flex-col items-start transition-all duration-500 ease-in-out ${isOpen ? "shadow-md scale-y-100" : "scale-y-0"} pt-2 origin-top`}>
                     {isOpen && pages.map((page, index) => (
                         <div
