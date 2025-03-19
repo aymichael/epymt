@@ -17,7 +17,7 @@ export default function Navbar() {
 
     return (
         <header className="flex select-none w-full flex-col text-lg/8 md:shadow-md fixed md:items-center" >
-            <div className={` dark:bg-gray-700 md:shadow-none ${isOpen ? "" : "shadow-md"} flex flex-col w-full md:px-0 px-2 items-center`}>
+            <div className={` dark:bg-gray-700 md:shadow-none ${isOpen ? "" : "shadow-md"} flex flex-col w-full md:px-0 px-2 items-center`} onMouseLeave={() => setCurrentNav(-1)}>
                 <div className="bg-white md:w-[48rem] lg:w-[64rem] flex flex-row items-center w-full justify-between h-16">
                 <div>
                     <Link href="/">
@@ -55,28 +55,28 @@ export default function Navbar() {
                     <div className={clsx("w-full border border-black dark:border-white transition-all duration-300 ease-in-out",
                         isOpen ? "transform -rotate-45" : "translate-y-2")}></div>
                 </button>
-                <nav className="flex-row items-center md:flex hidden text-nowrap h-full">
+                <nav className="flex-row items-center md:flex hidden text-nowrap h-full gap-2">
                     {pages.map((page, index) => (
                         <Link
                             key={index}
                             href={pagaPath[index]}
-                            className={`h-full flex items-center group px-2 ${currentNav === index ? "bg-blue-300" : ""}`}
-                            onMouseEnter={() => setCurrentNav(index)}
+                            className={`h-full flex items-center px-2 ${currentNav === index ? "bg-blue-200" : ""}`}
                         >
-                            <span className="group-hover:translate-y-[-3px] transition-all duration-200 ease-in-out">{page}</span>
+                            <span className="hover:translate-y-[-3px] transition-all duration-200 ease-in-out" 
+                            onMouseEnter={() => setCurrentNav(index)}>{page}</span>
                         </Link>
                     ))}
                 </nav>
                 </div>
-                {currentNav === -1 || currentNav > 1 ? null : <div className={`bg-blue-300 w-full shadow-md h-16 flex justify-center`} onMouseLeave={() => setCurrentNav(-1)}>
-                    <nav className="flex flex-row md:w-[48rem] lg:w-[64rem] items-center">
+                {currentNav === -1 || currentNav > 1 ? null : <div className={`bg-blue-200 w-full shadow-md h-16 flex justify-center`}>
+                    <nav className="flex flex-row md:w-[48rem] lg:w-[64rem] items-center p-2">
                         {subpages[currentNav].map((subpage, index) => (
                             <Link
                                 key={index}
                                 href={`/${subpageURL[currentNav][index]}`}
-                                className="h-full flex items-center group px-2"
+                                className="h-full flex items-center px-2"
                             >
-                                <span className="group-hover:translate-y-[-3px] transition-all duration-200 ease-in-out">{subpage}</span>
+                                <span className="hover:translate-y-[-3px] transition-all duration-200 ease-in-out">{subpage}</span>
                             </Link>
                         ))}
                     </nav>
