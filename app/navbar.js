@@ -81,7 +81,7 @@ export default function Navbar() {
                     </nav>
                 </div> : null}
             </div>
-            <div className={`w-full md:hidden h-screen ${isOpen ? "bg-black/40" : "hidden"}`}>
+            <div className={`w-full md:hidden ${isOpen ? "bg-black/40 h-screen" : ""}`}>
                 <nav className={`flex bg-white/95 dark:bg-gray-700/95 flex-col items-start transition-all duration-500 ease-in-out ${isOpen ? "shadow-md scale-y-100" : "scale-y-0"} pt-2 origin-top`}>
                     {isOpen && pages.map((page, index) => (
                         <div
@@ -100,7 +100,7 @@ export default function Navbar() {
                                         key={subindex}
                                         href={`/${subpageURL[index][subindex]}`}
                                         className="w-full p-2 px-8 flex flex-row justify-between items-center last:border-none border-b border-gray-300"
-                                        onClick={() => setIsOpen(false)}
+                                        onClick={() => {setIsOpen(false);setSelectedNav(-1);}}
                                     >
                                         {subpage}
                                     </Link>
@@ -110,7 +110,7 @@ export default function Navbar() {
 
                     ))}
                 </nav>
-                <div className="w-full h-full" onClick={() => setIsOpen(false)}></div>
+                <div className="w-full h-full" onClick={() => {setIsOpen(false);setSelectedNav(-1);}}></div>
             </div>
             <div className={`w-full h-screen ${currentNav === -1 ? "hidden" : ""} bg-black/40`}></div>
         </header>
