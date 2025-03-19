@@ -9,16 +9,14 @@ export const metadata = {
   description: "Enrichment Programme for Young Mathematics Talents",
 };
 
-const pages = ["Introduction", "Courses", "Application", "Alumni Sharing", "FAQ"];
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${nunito.variable} font-nunito min-h-screen w-full flex justify-center leading-8`}>
         <div className="flex flex-col w-full items-center">
-          <Navbar pages={pages} />
+          <Navbar />
           <main className="md:w-[48rem] lg:w-[64rem] w-full h-full dark:bg-gray-700">
-            <div className="sm:p-10 p-6 md:mt-20 mt-16">
+            <div className="sm:p-10 p-6 mt-16">
               {children}
             </div>
           </main>
