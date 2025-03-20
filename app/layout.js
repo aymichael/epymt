@@ -15,12 +15,12 @@ export default function RootLayout({ children }) {
       <body className={`${nunito.variable} font-nunito min-h-screen w-full flex justify-center leading-8`}>
         <div className="flex flex-col w-full items-center">
           <Navbar />
-          <main className="md:w-[48rem] lg:w-[64rem] w-full h-full dark:bg-gray-700">
-            <div className="sm:p-10 p-6 mt-16">
+          <main className=" md:bg-[url(/epymt/background.png)] md:dark:bg-[url(/epymt/background_dark.png)] bg-center bg-contain bg-no-repeat  mt-16 w-full h-full dark:bg-gray-700 flex justify-center">
+            <div className={`sm:p-10 p-6 md:w-[48rem] lg:w-[64rem] `}>
               {children}
             </div>
           </main>
-          <footer className="w-full bg-gray-100 dark:bg-gray-800 p-8  text-left flex justify-center">
+          <footer className="w-full bg-gray-100 dark:bg-gray-600 p-8 text-left flex justify-center">
             <div className="flex w-full justify-between items-center md:w-[48rem] lg:w-[64rem]">
               <span className="text-xs">
                 ©&nbsp;EPYMT
