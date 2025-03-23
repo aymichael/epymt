@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export function generateStaticParams() {
+  return [{lang: "en"}, {lang: "zh"}];
+}
+
+export default async function Home() {
   return (
     <div className="flex justify-center h-1/2 w-full">
       <div className="flex flex-col gap-4">

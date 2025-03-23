@@ -1,5 +1,9 @@
 import Link from "next/link";
 
+export function generateStaticParams() {
+    return [{lang: "en"}, {lang: "zh"}];
+  }
+
 export default function StudentAwards(){
     const years = ["02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23","24"];
     return (

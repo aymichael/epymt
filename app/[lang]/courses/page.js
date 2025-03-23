@@ -1,6 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 
+export function generateStaticParams() {
+    return [{lang: "en"}, {lang: "zh"}];
+}
+
 export default function Courses() {
     return (
         <div className="flex justify-center w-full flex-col gap-2">

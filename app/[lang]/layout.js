@@ -1,5 +1,5 @@
 import "./globals.css";
-import Navbar from "@/app/navbar";
+import Navbar from "./navbar";
 import { nunito } from "./fonts";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,7 +9,8 @@ export const metadata = {
   description: "Enrichment Programme for Young Mathematics Talents",
 };
 
-export default function RootLayout({ children }) {
+export default async function RootLayout({ children, params }) {
+  const { lang } = await params;
   return (
     <html lang="en">
       <body className={`${nunito.variable} font-nunito min-h-screen w-full flex justify-center leading-8`}>

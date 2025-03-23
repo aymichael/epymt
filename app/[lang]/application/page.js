@@ -1,5 +1,9 @@
 import Link from "next/link"
 
+export function generateStaticParams() {
+    return [{lang: "en"}, {lang: "zh"}];
+}
+
 export default function Application() {
     return (
         <div className="flex justify-center w-full flex-col">

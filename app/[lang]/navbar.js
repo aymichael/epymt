@@ -20,7 +20,7 @@ export default function Navbar() {
             <div className={`bg-[#7d2882] md:shadow-none ${isOpen ? "" : "shadow-md"} flex flex-col w-full md:px-0 px-2 items-center text-white`} onMouseLeave={() => setCurrentNav(-1)}>
                 <div className="md:w-[48rem] lg:w-[64rem] flex flex-row items-center w-full justify-between h-16">
                     <div>
-                        <Link href="/">
+                        <Link href="">
                             <Image
                                 src="/epymt/epymt_dark.png"
                                 alt="CUHK Logo"
@@ -65,7 +65,7 @@ export default function Navbar() {
                         {subpages[currentNav].map((subpage, index) => (
                             <Link
                                 key={index}
-                                href={`/${subpageURL[currentNav][index]}`}
+                                href={`${subpageURL[currentNav][index]}`}
                                 className="h-full flex items-center px-2"
                             >
                                 <span className="hover:translate-y-[-3px] transition-all duration-200 ease-in-out">{subpage}</span>
@@ -90,7 +90,7 @@ export default function Navbar() {
                                 {selectedNav === index ? subpages[index].map((subpage, subindex) => (
                                     <Link
                                         key={subindex}
-                                        href={`/${subpageURL[index][subindex]}`}
+                                        href={`${subpageURL[index][subindex]}`}
                                         className="w-full p-2 px-8 flex flex-row justify-between items-center last:border-none border-b border-gray-200"
                                         onClick={() => {setIsOpen(false);setSelectedNav(-1);}}
                                     >

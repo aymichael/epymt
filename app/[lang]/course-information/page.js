@@ -1,3 +1,7 @@
+export function generateStaticParams() {
+    return [{lang: "en"}, {lang: "zh"}];
+}
+
 export default function CourseIntro() {
     return (
         <div className="flex justify-center w-full flex-col gap-4">
