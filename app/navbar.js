@@ -41,12 +41,12 @@ export default function Navbar() {
                         className="md:hidden flex flex-col justify-center items-center w-8 h-8 mx-2 "
                         onClick={() => setIsOpen(!isOpen)}
                     >
-                        <div className={clsx("w-full border border-white transition-all duration-300 ease-in-out",
-                            isOpen ? "transform rotate-45" : "-translate-y-2")}></div>
-                        <div className={clsx("w-full border border-white transition-all duration-300 ease-in-out",
-                            isOpen ? "hidden" : "")}></div>
-                        <div className={clsx("w-full border border-white transition-all duration-300 ease-in-out",
-                            isOpen ? "transform -rotate-45" : "translate-y-2")}></div>
+                        <span className={clsx("w-full border border-white transition-all duration-300 ease-in-out",
+                            isOpen ? "transform rotate-45" : "-translate-y-2")}></span>
+                        <span className={clsx("w-full border border-white transition-all duration-300 ease-in-out",
+                            isOpen ? "hidden" : "")}></span>
+                        <span className={clsx("w-full border border-white transition-all duration-300 ease-in-out",
+                            isOpen ? "transform -rotate-45" : "translate-y-2")}></span>
                     </button>
                     <nav className="flex-row items-center md:flex hidden text-nowrap h-full gap-2">
                         {pages.map((page, index) => (
