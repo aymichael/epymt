@@ -5,7 +5,7 @@ import { Trans } from "react-i18next/TransWithoutContext";
 
 export default async function Home({ params }) {
   const { lng } = await params;
-  const { t } = await translation(lng, 'intro');
+  const { t } = await translation(lng, "home");
   return (
     <div className="flex justify-center h-1/2 w-full">
       <div className="flex flex-col gap-4">
