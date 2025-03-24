@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { translation } from '../i18n-index'
+import { translation } from '../i18n-index';
+import { Trans } from "react-i18next/TransWithoutContext";
 
 export default async function Home({ params }) {
   const { lng } = await params;
@@ -18,12 +19,21 @@ export default async function Home({ params }) {
           </Image>
         </div>
         <span>
-          {t("intro.sentence_1")}<strong>William Benter</strong>{t("intro.sentence_2")}<Link href="https://www.qef.org.hk/en/index.html" className="text-indigo-500 dark:text-indigo-300">{t("intro.link")}</Link>{t("intro.sentence_3")}
+         <Trans
+          i18nKey="intro"
+          t={t}
+          components={[<span key="0" className="font-bold"/>, <Link key="1" href="https://www.qef.org.hk/en/index.html" className="text-indigo-500 dark:text-indigo-300"/>]}
+        /> 
         </span>
         <span>
-          {t("intro.application")}<Link href={`${lng}/application`} className="text-red-500">{t("intro.application_link")}</Link>
+          <Trans
+            i18nKey="application"
+            t={t}
+            components={[<Link key="0" href={`${lng}/application`} className="text-red-500" />]}
+          />
         </span>
       </div>
     </div >
   );
 }
+
