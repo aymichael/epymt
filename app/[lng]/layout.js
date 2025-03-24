@@ -4,7 +4,6 @@ import { nunito } from "./fonts";
 import Link from "next/link";
 import Image from "next/image";
 import { languages } from "../i18n-settings";
-import NormalizePath from "./normalizePath";
 
 export const metadata = {
   title: "EPYMT",
@@ -25,7 +24,6 @@ export default async function RootLayout({ children, params }) {
           <main className=" md:bg-[url(/epymt/background.png)] md:dark:bg-[url(/epymt/background_dark.png)] bg-center bg-contain bg-no-repeat  mt-16 w-full h-full dark:bg-gray-700 flex items-center flex-col">
             <div className="sm:p-10 p-6 md:w-[48rem] lg:w-[64rem] bg-white/90 dark:bg-gray-700/90 shadow-white dark:shadow-gray-700 shadow-2xl h-full">
               {children}
-              <NormalizePath />
             </div>
           </main>
           <footer className="w-full bg-gray-100 dark:bg-gray-600 p-8 text-left flex justify-center">
