@@ -17,7 +17,7 @@ export default function Navbar({ lang }) {
     const [selectedNav, setSelectedNav] = useState(-1);
     const pathname = usePathname();
     return (
-        <header className="flex select-none w-full flex-col text-lg/8 md:shadow-md fixed md:items-center font-lato font-bold" >
+        <header className="flex select-none w-full flex-col text-lg/8 md:shadow-md fixed md:items-center font-lato font-bold z-20" >
             <div className={`bg-[#7d2882] md:shadow-none ${isOpen ? "" : "shadow-md"} flex flex-col w-full md:px-0 px-2 items-center text-white`} onMouseLeave={() => setCurrentNav(-1)}>
                 <div className="md:w-[48rem] lg:w-[64rem] flex flex-row items-center w-full justify-between h-16">
                     <div>
