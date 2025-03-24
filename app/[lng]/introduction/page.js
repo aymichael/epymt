@@ -1,39 +1,48 @@
 import Link from "next/link"
+import { translation } from "@/app/i18n-index"
+import { Trans } from "react-i18next/TransWithoutContext"
 
-
-
-export default function Introduction() {
+export default async function Introduction({ params }) {
+    const { lng } = await params;
+    const { t } = await translation(lng, "introduction");
     return (
         <div className="flex justify-center w-full flex-col gap-1">
-            <span className=" font-bold text-lg/8">前言</span>
+            <span className=" font-bold text-2xl/8 underline-offset-8 underline my-2">{t("section_1.title")}</span>
             <span>
-                隨著香港逐步邁向知識型經濟，社會各界日益重視高等、深入的學問。 有志向的中學生都打算在升讀大學時，建立好穩固的學術基礎，使將來無論投身科研、教育、工程、財務或管理等工作時， 均能學以致用，並以高效益的方法發展事業，運籌帷幄、領導創新。 理科生更希望憑良好的數學根基，在各行各業裡發揮科技的特長。 中文大學數學系，也因此收取了不少優秀的學生，相信預科的同學和老師早已知道。 這些積極奮進的學生，無論是否選擇繼續作數學研究， 都喜歡選修數學系特具挑戰的「精研課程」以鍛鍊自我， 尋求突破。
+                {t("section_1.content_1")}
             </span>
             <span>
-                隨著香港逐步邁向知識型經濟，社會各界日益重視高等、深入的學問。 有志向的中學生都打算在升讀大學時，建立好穩固的學術基礎，使將來無論投身科研、教育、工程、財務或管理等工作時， 均能學以致用，並以高效益的方法發展事業，運籌帷幄、領導創新。 理科生更希望憑良好的數學根基，在各行各業裡發揮科技的特長。 中文大學數學系，也因此收取了不少優秀的學生，相信預科的同學和老師早已知道。 這些積極奮進的學生，無論是否選擇繼續作數學研究， 都喜歡選修數學系特具挑戰的「精研課程」以鍛鍊自我， 尋求突破。
-                青少年對數學的愛好，往往在高中時期成形，而數學的潛能，也在這時展露。 中學課程內的數學及其處理方法，顯然不能滿足數學才華卓越的學生。 有鑑於此，在丘成桐教授的倡議和策劃下，數學系和數學科學研究所決定開辦每年三季的「精進課程」科目系列。 讓數理表現出類拔萃的學生，早日得到科技前沿學者的指引，眼界得以拓展到更高的學術領域上。 在熱心數學教育的 Mr. William Benter 慷慨捐助下，「精進課程」得以順利推行。
-            </span>
-            <br />
-            <span className=" font-bold text-lg/8">學術評審及顧問委員</span>
-            <span>
-            「精進課程」的構思參考了世界各地的同類課程，它根據中文大學的正式程序運作，內容和考試都經嚴格審核。 每季科目均為大學認可，成功修畢科目的學生，在入讀中文大學學士學位課程時，會獲得2學分。 與此同時，我們更邀請了一群具領導地位的學者， 組成<Link href="advisors" className="text-indigo-500 dark:text-indigo-300">學術顧問委員會</Link>，負起監察的工作，以確保畢業學生的數學水平達到一定程度， 課程的質素得到國際認同。 <strong>顧問一般是前任或現任著名大學數學系的系主任</strong>，其中包括來自哈佛、MIT、史丹福、牛津等大學的教授、學者。 他們將經常來港為課程講學和指導學生研習，藉著 親身接觸學生來啟迪學生，讓學生的學科知識有所增長，思維能力有所提升。 他們的目標是讓學生的數學修養到達他們任教大學的一年級水平。
-            </span>
-            <span>
-            學生得到這種超越地域界限的栽培，對長遠發展將有著決定性的正面影響。 另一方面，知名學者們能親身感受到香港人材輩出，必定有助提高香港的國際地位。 事實上，<strong>他們都樂於認識香港的尖子學生，從中發掘可造之材！</strong>
+                {t("section_1.content_2")}
             </span>
             <br />
-            <span className=" font-bold text-lg/8">課程特色</span>
+            <span className=" font-bold text-2xl/8 underline-offset-8 underline my-2">{t("section_2.title")}</span>
             <span>
-            課程主要對象是對數學有興趣和有能力的高中學生。 課題並不要求大量高深的理論，但學生必須有敏銳的學習能力。 文憑試的高中學生最適合就讀，其他特具才華的學生也會被考慮取錄。 暑假是最適合開始修讀的時候，我們鼓勵學生修讀整個課程，因此曾修暑期科目的學生， 如表現理想，可獲優先取錄，入讀秋、春季科目。
+                <Trans
+                    i18nKey="section_2.content_1"
+                    t={t}
+                    components={[<Link key="0" href="https://www.qef.org.hk/en/index.html" className="text-indigo-500 dark:text-indigo-300" />, <span key="1" className="font-bold" />]}
+                />
             </span>
             <span>
-            授課強調面對面的互動交流及學生之間的切磋，基本課由中文大學數學系的教授主理，並有充足的助教和輔導員協助學生； 專題講座將由學術委員或其他邀請嘉賓主講；中文大學教授和學術委員都會參予指導小組研習。
+                <Trans
+                    i18nKey="section_2.content_2"
+                    t={t}
+                    components={[<span key="0" className="font-bold" />]}
+                />
+            </span>
+            <br />
+            <span className=" font-bold text-2xl/8 underline-offset-8 underline my-2">{t("section_3.title")}</span>
+            <span>
+                {t("section_3.content_1")}
             </span>
             <span>
-            我們會營造一種互相鼓舞和砥礪的學習風氣，讓學生取長補短，追求全面的科技才能。 培訓有別於一般競賽訓練，著重獨立思考和創意。 學生一方面得到悉心指導，另一方面亦需主動找尋資料和發掘問題，並要嘗試在導修時解說、表達和分享成果。 除了上課日外，學生將要撥出充足時間來完成家課、溫習和預備；更常要在大學圖書館閱覽和自修。 我們鼓勵學生使用數學系的電算設施作數學計算或上網搜集資料。
+                {t("section_3.content_2")}
             </span>
             <span>
-            學生挑戰難題是可貴的思考訓練，他們努力的成果將會轉化成實在的學?搳A有助於將來爭取在科技界或其他領域的成就。 我們的教授和顧問，均非常樂意長期特別栽培本課程的優異生。
+                {t("section_3.content_3")}
+            </span>
+            <span>
+                {t("section_3.content_4")}
             </span>
         </div>
     )
