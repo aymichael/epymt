@@ -1,0 +1,29 @@
+{
+  "title": "Application Procedure for Summer Classes {{year}}",
+  "applicationPeriod": "Application period: <0>{{time}}<0/>",
+  "step_1": {
+    "title": "STEP 1 : Online Application Form",
+    "description": "Please follow the steps to complete online application.",
+    "login": "1. Log into <0>SAYT Application System</0>. (For first-time user, please register an account with your email. Even you were former EPYMT student, you still need a valid account to login.)",
+    "completeForm": "2. Complete the application form.",
+    "reminder": "Please be reminded:",
+    "reminder_1": "- Former EPYMT students must complete the form at the link under \"Former EPYMT Applicant\" of the online application.",
+    "reminder_2": "- Application fee is HK$50 for each EPYMT course.",
+    "reminder_3": "- Applicants who apply for more than one course should submit application separately for each course in the same account.",
+    "checkStatus": "3. Check application status. Applicants can also login the account to check their course result in the future.",
+    "remark": "* It is not necessary to send any supporting documents at this stage."
+  },
+  "step_2": {
+    "title": "STEP 2 : Admission Screening Test",
+    "formerStudents": {
+      "title": "Former students",
+      "description": "Former students of EPYMT may enjoy exemption of admission screening tests under certain conditions. Please read the course webpage for requirements and complete the form under \"Former EPYMT Applicant\" of the online application."
+    },
+    "localAndOverseasStudents": {
+      "title": "Local and Overseas students",
+      "description": "All local first-time applicants must attend the admission screening test on <0>{{admissionDate}}</0>. Failing to do so will be considered as withdrawing from the application."
+    },
+    "detailsLink": "For test details, please click <0>here</0>."
+  },
+  "remark":  "Attention: The learning pace is fast and the schedule is tight. It <0>requires tremendous effort</0> and commitment from students to truly benefit from the programme. Absence and withdrawal are detrimental to learning, and we will also strictly follow the university regulations on matters related to taking leave and withdrawal."
+}
