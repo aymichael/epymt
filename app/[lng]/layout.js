@@ -4,6 +4,7 @@ import { nunito, lato } from "./fonts";
 import Link from "next/link";
 import Image from "next/image";
 import { languages } from "../i18n-settings";
+import { basePath } from "@/next.config.mjs";
 
 export const metadata = {
   title: "EPYMT",
@@ -42,7 +43,7 @@ export default async function RootLayout({ children, params }) {
               <div className="flex gap-2 md:flex-row flex-col items-center">
                 <a href="https://www.math.cuhk.edu.hk" >
                   <Image
-                    src="/epymt/culogo.gif"
+                    src={basePath+"/culogo.gif"}
                     alt="CUHK Logo"
                     width={75}
                     height={50}
@@ -50,7 +51,7 @@ export default async function RootLayout({ children, params }) {
                 </a>
                 <a href="http://www.ims.cuhk.edu.hk/">
                   <Image
-                    src="/epymt/imslogo.gif"
+                    src={basePath+"/imslogo.gif"}
                     alt="IMS Logo"
                     width={50}
                     height={50}

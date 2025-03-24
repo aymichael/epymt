@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { translation } from '../i18n-index';
 import { Trans } from "react-i18next/TransWithoutContext";
+import { basePath } from "@/next.config.mjs";
 
 export default async function Home({ params }) {
   const { lng } = await params;
@@ -11,7 +12,7 @@ export default async function Home({ params }) {
       <div className="flex flex-col gap-4">
         <div className="flex w-full justify-center">
           <Image
-            src="/epymt/slogan.jpg"
+            src={basePath+"/slogan.jpg"}
             alt="EPYMT slogan"
             width={720}
             height={240}

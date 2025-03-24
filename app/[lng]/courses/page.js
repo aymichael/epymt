@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-
+import { basePath } from "@/next.config.mjs";
 
 
 export default function Courses() {
@@ -161,9 +161,9 @@ export default function Courses() {
                 </tbody>
             </table>
             <span className="text-lg/8 font-bold" name="leaflet">課程海報單張</span>
-            <Image src="/epymt/EPYMT_poster.jpg" alt="課程海報" width={2475} height={3499} />
-            <Image src="/epymt/EPYMT_leaflet_1.jpg" alt="課程單張" width={1754} height={1240} />
-            <Image src="/epymt/EPYMT_leaflet_2.jpg" alt="課程單張" width={3500} height={2475} />
+            <Image src={basePath+"/EPYMT_poster.jpg"} alt="課程海報" width={2475} height={3499} />
+            <Image src={basePath+"/EPYMT_leaflet_1.jpg"} alt="課程單張" width={1754} height={1240} />
+            <Image src={basePath+"/EPYMT_leaflet_2.jpg"} alt="課程單張" width={3500} height={2475} />
         </div>
     );
 };
