@@ -5,8 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import clsx from "clsx";
 import { redirect, usePathname } from "next/navigation";
-import { languages } from "../i18n-settings";
-
+import { languages } from "../i18n-settings"
 
 export default function Navbar({ lang }) {
     const pages = lang === languages[0] ? ["About", "Courses", "Students Highlights", "Support"] : ["關於", "課程", "學生亮點", "支援"];
@@ -43,7 +42,7 @@ export default function Navbar({ lang }) {
                             {pages.map((page, index) => (
                                 <div
                                     key={index}
-                                    className={`h-full flex items-center px-2 ${currentNav === index ? "bg-[#f0aa23]" : ""}`}
+                                    className={`h-full flex items-center px-4 ${currentNav === index ? "bg-[#f0aa23]" : ""}`}
                                 >
                                     <span className="hover:translate-y-[-3px] transition-all duration-200 ease-in-out"
                                         onMouseEnter={() => setCurrentNav(index)}>{page}</span>
