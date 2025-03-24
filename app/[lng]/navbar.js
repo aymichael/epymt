@@ -4,11 +4,11 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import clsx from "clsx";
-import {redirect, usePathname} from "next/navigation";
+import { redirect, usePathname } from "next/navigation";
 import { languages } from "../i18n-settings";
 
 
-export default function Navbar({lang}) {
+export default function Navbar({ lang }) {
     const pages = lang === languages[0] ? ["About", "Courses", "Students Highlights", "Support"] : ["關於", "課程", "學生亮點", "支援"];
     const subpages = lang === languages[0] ? [["Introduction", "Advisors"], ["This Year's Courses", "Past Courses", "Course Infomation", "Guest Lectures"], ["Student Awards", "Alumni Sharing"], ["Application", "FAQ", "Contact Us"]] : [["簡介", "導師"], ["本年度課程", "過往課程", "課程資訊", "客席講座"], ["學生獎項", "校友分享"], ["申請", "常見問題", "聯絡我們"]];
     const subpageURL = [["introduction", "advisors"], ["courses", "past-courses", "course-information", "guest-lectures"], ["student-awards", "alumni-sharing"], ["application", "faq", "contact-us"]];
@@ -17,7 +17,7 @@ export default function Navbar({lang}) {
     const [selectedNav, setSelectedNav] = useState(-1);
     const pathname = usePathname();
     return (
-        <header className="flex select-none w-full flex-col text-lg/8 md:shadow-md fixed md:items-center" >
+        <header className="flex select-none w-full flex-col text-lg/8 md:shadow-md fixed md:items-center font-lato font-bold" >
             <div className={`bg-[#7d2882] md:shadow-none ${isOpen ? "" : "shadow-md"} flex flex-col w-full md:px-0 px-2 items-center text-white`} onMouseLeave={() => setCurrentNav(-1)}>
                 <div className="md:w-[48rem] lg:w-[64rem] flex flex-row items-center w-full justify-between h-16">
                     <div>
@@ -39,33 +39,33 @@ export default function Navbar({lang}) {
                         </Link>
                     </div>
                     <div className="flex flex-row items-center h-full gap-2">
-                    <nav className="flex-row items-center md:flex hidden text-nowrap h-full">
-                        {pages.map((page, index) => (
-                            <div
-                                key={index}
-                                className={`h-full flex items-center px-2 ${currentNav === index ? "bg-[#f0aa23]" : ""}`}
-                            >
-                                <span className="hover:translate-y-[-3px] transition-all duration-200 ease-in-out"
-                                    onMouseEnter={() => setCurrentNav(index)}>{page}</span>
-                            </div>
-                        ))}
-                    </nav>
-                    <button className="flex items-center h-full px-2 w-12 justify-center" onClick={() => redirect(`${pathname.replace(lang, lang === languages[0] ? languages[1] : languages[0])}`)}>
-                        <span className="text-sm">{lang === "en" ? "中" : "ENG"}</span> 
-                    </button>
-                    <button
-                        className="md:hidden flex flex-col justify-center items-center w-8 h-8 mx-2 "
-                        onClick={() => setIsOpen(!isOpen)}
-                    >
-                        <span className={clsx("w-full border border-white transition-all duration-300 ease-in-out",
-                            isOpen ? "transform rotate-45" : "-translate-y-2")}></span>
-                        <span className={clsx("w-full border border-white transition-all duration-300 ease-in-out",
-                            isOpen ? "hidden" : "")}></span>
-                        <span className={clsx("w-full border border-white transition-all duration-300 ease-in-out",
-                            isOpen ? "transform -rotate-45" : "translate-y-2")}></span>
-                    </button>
+                        <nav className="flex-row items-center md:flex hidden text-nowrap h-full">
+                            {pages.map((page, index) => (
+                                <div
+                                    key={index}
+                                    className={`h-full flex items-center px-2 ${currentNav === index ? "bg-[#f0aa23]" : ""}`}
+                                >
+                                    <span className="hover:translate-y-[-3px] transition-all duration-200 ease-in-out"
+                                        onMouseEnter={() => setCurrentNav(index)}>{page}</span>
+                                </div>
+                            ))}
+                        </nav>
+                        <button className="flex items-center h-full px-2 w-12 justify-center" onClick={() => redirect(`${pathname.replace(lang, lang === languages[0] ? languages[1] : languages[0])}`)}>
+                            <span className="text-sm">{lang === "en" ? "中" : "ENG"}</span>
+                        </button>
+                        <button
+                            className="md:hidden flex flex-col justify-center items-center w-8 h-8 mx-2 "
+                            onClick={() => setIsOpen(!isOpen)}
+                        >
+                            <span className={clsx("w-full border border-white transition-all duration-300 ease-in-out",
+                                isOpen ? "transform rotate-45" : "-translate-y-2")}></span>
+                            <span className={clsx("w-full border border-white transition-all duration-300 ease-in-out",
+                                isOpen ? "hidden" : "")}></span>
+                            <span className={clsx("w-full border border-white transition-all duration-300 ease-in-out",
+                                isOpen ? "transform -rotate-45" : "translate-y-2")}></span>
+                        </button>
                     </div>
-                    
+
                 </div>
                 {currentNav >= 0 ? <div className={` bg-[#f0aa23] w-full shadow-md h-16 md:flex hidden justify-center`}>
                     <nav className="flex flex-row md:w-[48rem] lg:w-[64rem] items-center py-2 justify-end gap-2">
@@ -99,7 +99,7 @@ export default function Navbar({lang}) {
                                         key={subindex}
                                         href={`/${lang}/${subpageURL[index][subindex]}`}
                                         className="w-full p-2 px-8 flex flex-row justify-between items-center last:border-none border-b border-gray-200"
-                                        onClick={() => {setIsOpen(false);setSelectedNav(-1);}}
+                                        onClick={() => { setIsOpen(false); setSelectedNav(-1); }}
                                     >
                                         {subpage}
                                     </Link>
@@ -109,7 +109,7 @@ export default function Navbar({lang}) {
 
                     ))}
                 </nav>
-                <div className="w-full h-full" onClick={() => {setIsOpen(false);setSelectedNav(-1);}}></div>
+                <div className="w-full h-full" onClick={() => { setIsOpen(false); setSelectedNav(-1); }}></div>
             </div>
             <div className={`w-full h-screen ${currentNav === -1 ? "hidden" : ""} bg-black/40`}></div>
         </header>

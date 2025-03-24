@@ -12,8 +12,8 @@ export default {
         foreground: "var(--foreground)",
       },
       fontFamily: {
-        noto: ["var(--font-noto)", "ui-sans-serif"],
         nunito: ["var(--font-nunito)", "ui-sans-serif"],
+        lato: ["var(--font-lato)", "ui-sans-serif"],
       },
     },
   },

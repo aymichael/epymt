@@ -1,6 +1,6 @@
 import "./globals.css";
 import Navbar from "./navbar";
-import { nunito } from "./fonts";
+import { nunito, lato } from "./fonts";
 import Link from "next/link";
 import Image from "next/image";
 import { languages } from "../i18n-settings";
@@ -18,11 +18,11 @@ export default async function RootLayout({ children, params }) {
   const { lng } = await params;
   return (
     <html lang={lng}>
-      <body className={`${nunito.variable} font-nunito min-h-screen w-full flex justify-center leading-8`}>
+      <body className={`${nunito.variable} ${lato.variable} font-nunito min-h-screen w-full flex justify-center leading-8`}>
         <div className="flex flex-col w-full items-center">
           <Navbar lang={lng} />
           <main className=" md:bg-[url(/epymt/background.png)] md:dark:bg-[url(/epymt/background_dark.png)] bg-center bg-contain bg-no-repeat  mt-16 w-full h-full dark:bg-gray-700 flex items-center flex-col">
-            <div className="sm:p-10 p-6 md:w-[48rem] lg:w-[64rem] bg-white/90 dark:bg-gray-700/90 shadow-white dark:shadow-gray-700 shadow-2xl h-full">
+            <div className="sm:p-10 p-6 md:w-[48rem] lg:w-[64rem] bg-white/90 dark:bg-gray-700/90 shadow-white dark:shadow-gray-700 shadow-2xl h-full text-lg/8">
               {children}
             </div>
           </main>

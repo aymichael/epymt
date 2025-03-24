@@ -17,11 +17,11 @@ export default async function Home({ params }) {
           >
           </Image>
         </div>
-        <span className="text-base/8">
+        <span>
           {t("intro.sentence_1")}<strong>William Benter</strong>{t("intro.sentence_2")}<Link href="https://www.qef.org.hk/en/index.html" className="text-indigo-500 dark:text-indigo-300">{t("intro.link")}</Link>{t("intro.sentence_3")}
         </span>
-        <span className="text-base/8">
-          Application for summer classes: <Link href="application" className="text-red-500">Click Here!</Link>
+        <span>
+          {t("intro.application")}<Link href={`${lng}/application`} className="text-red-500">{t("intro.application_link")}</Link>
         </span>
       </div>
     </div >
