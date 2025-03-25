@@ -57,7 +57,7 @@ export default async function TDG({ params }) {
                 </tbody>
             </table>
             <span className="text-sm/8 text-red-500">{t("remark")}</span>
-            <Link href="/application" className="text-indigo-500 text-center my-2 dark:text-indigo-300 font-bold underline text-2xl/8">{t("application")}</Link>
+            <Link href={`/${lng}/application`} className="text-indigo-500 text-center my-2 dark:text-indigo-300 font-bold underline text-2xl/8">{t("application")}</Link>
             <div className="flex flex-col gap-2 p-4 border-gray-300 rounded-2xl border-2">
                 <span className="font-bold text-xl/8 text-center">{t("conditions.title")}</span>
                 <span>{t("conditions.description")}</span>
