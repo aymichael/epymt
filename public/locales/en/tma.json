@@ -1,0 +1,32 @@
+{
+    "courseCode": "Course Code",
+    "universityRecognition":{
+        "header": "University Recognition",
+        "content": "1 credit of CUHK"
+    },
+    "mediumOfInstruction":{
+        "header": "Medium of Instruction",
+        "content": "mainly in Cantonese with English course materials"
+    },
+    "expectedApplicants": {
+        "header": "Expected Applicants",
+        "content": "Students who have high competence in abstract mathematical reasoning, and are promoting to Secondary 4 or Secondary 5"
+    },
+    "introduction": {
+        "header": "Introduction",
+        "content": "<0>The central themes of classical algebra includes the study of polynomials, finding roots of polynomials, solving system of equations, Compass-and-straightedge construction. In response to these problems, modern abstract algebra was introduced during 19th century.</0><0>In this course, we start with classical algebra topics which include using radicals to solve cubic and biquadratic equations, bisection method, compass-and straightedge constructions, construction of regular-17-gon, relationship between roots and coefficients, symmetric polynomials, closed formula of sum of powers, among other things.</0><0>We will then introduce abstract algebraic structures including groups, fields, vector spaces with emphasis on concrete examples. We will introduce concrete math objects, including complex numbers, quadratic fields, quaternions, polynomials, additive and multiplicative group mod n, permutation groups, elliptic curves, finite fields, among other things, to illustrate the concepts of the algebraic structures.</0>"
+    },
+    "tuitionFee": {
+        "header": "Tuition Fee",
+        "content": "HK$4,000 (with $50 application fee included)"
+    },
+    "remark": "*This course offers face-to-face lessons on CUHK campus.",
+    "application": "Online Application",
+    "conditions":{
+        "title": "Conditions for Admission Screening Test Exemption",
+        "description": "Applicants who satisfy either one of the following conditions may be exempted from Admission Screening Test and will be directly admitted into this course.",
+        "note": "*(Those who had taken \"Enrichment Mentoring Mathematics I or II\" still need to sit the Test, but will be considered with priority.)",
+        "point_1": "1. Passed in any of the following courses before: Geometric Perspectives of Complex Numbers, Complex Number and Analytical Geometry, and Towards Modern Algebra.",
+        "point_2": "2. Being admitted in one of the following courses before: Number Theory and Cryptography, Towards Differential Geometry, Mathematical Analysis, and Understanding Non-Euclidean Geometry."
+    }
+}
