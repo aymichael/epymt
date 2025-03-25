@@ -1,0 +1,32 @@
+{
+    "courseCode": "Course Code",
+    "universityRecognition":{
+        "header": "University Recognition",
+        "content": "2 credit of CUHK"
+    },
+    "mediumOfInstruction":{
+        "header": "Medium of Instruction",
+        "content": "mainly in Cantonese with English course materials"
+    },
+    "expectedApplicants": {
+        "header": "Expected Applicants",
+        "content": "Students who have high competence in abstract mathematical reasoning, and are promoting to Secondary 4 or Secondary 5"
+    },
+    "introduction": {
+        "header": "Introduction",
+        "content": "This course, combining the knowledge of calculus and geometric intuition, leads students to explore the fruitful variety of curves and surfaces beyond lines, planes, and conics. Students will use calculus up to partial differentiation to describe curves and surfaces, to calculate the tangent vector, normal vector and curvature, tangent plane, geodesic and Gaussian curvature. Other essential geometric theorems, such as Gauss-Bonnet, will be introduced."
+    },
+    "tuitionFee": {
+        "header": "Tuition Fee",
+        "content": "HK$4,000 (with $50 application fee included)"
+    },
+    "remark": "*This course offers face-to-face lessons on CUHK campus.",
+    "application": "Online Application",
+    "conditions":{
+        "title": "Conditions for Admission Screening Test Exemption",
+        "description": "Applicants who satisfy either one of the following conditions may be exempted from Admission Screening Test and will be directly admitted into this course.",
+        "note": "*(Those who had taken \"Enrichment Mentoring Mathematics I or II\" still need to sit the Test, but will be considered with priority.)",
+        "point_1": "1. Passed in any of the following courses before: Geometric Perspectives of Complex Numbers, Complex Number and Analytical Geometry, and Towards Modern Algebra.",
+        "point_2": "2. Being admitted in one of the following courses before: Number Theory and Cryptography, Towards Differential Geometry, Mathematical Analysis, and Understanding Non-Euclidean Geometry."
+    }
+}
