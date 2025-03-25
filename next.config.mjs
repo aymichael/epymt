@@ -6,11 +6,7 @@ export const basePath = "/epymt";
 
 
 const nextConfig = {
-    output: "export",
     basePath: basePath,
-    images: {
-        unoptimized: true,
-    }
 };
 
 export default nextConfig;
