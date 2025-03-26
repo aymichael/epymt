@@ -1,0 +1,9 @@
+{
+    "header1": "Academic Year",
+    "header2": "Time Period",
+    "period":{
+        "1": "Summer",
+        "2": "Spring",
+        "3": "Autumn"
+    }
+}
