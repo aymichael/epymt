@@ -6,58 +6,21 @@ export default async function TDG({ params }) {
     const { t } = await translation(lng, "tdg");
     return (
         <div className="flex justify-center w-full flex-col gap-2">
-            <table className="table-auto">
-                <tbody>
-                    <tr>
-                        <td className="p-2 font-bold align-top text-nowrap">
-                            <span>{t("courseCode")}</span>
-                        </td>
-                        <td className="p-2">SAYT1134</td>
-                    </tr>
-                    <tr>
-                        <td className="p-2 font-bold align-top text-nowrap">
-                            <span>{t("universityRecognition.header")}</span>
-                        </td>
-                        <td className="p-2">
-                            <span>{t("universityRecognition.content")}</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="p-2 font-bold align-top text-nowrap">
-                            <span>{t("mediumOfInstruction.header")}</span>
-                        </td>
-                        <td className="p-2">
-                            <span>{t("mediumOfInstruction.content")}</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="p-2 font-bold align-top text-nowrap">
-                            <span>{t("expectedApplicants.header")}</span>
-                        </td>
-                        <td className="p-2">
-                            <span>{t("expectedApplicants.content")}</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="p-2 font-bold align-top text-nowrap">
-                            <span>{t("introduction.header")}</span>
-                        </td>
-                        <td className="p-2">
-                            <span>{t("introduction.content")}</span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="p-2 font-bold align-top text-nowrap">
-                            <span>{t("tuitionFee.header")}</span>
-                        </td>
-                        <td className="p-2 text-red-500">
-                            <span>{t("tuitionFee.content")}</span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <span className="text-sm/8 text-red-500">{t("remark")}</span>
-            <Link href={`/${lng}/application`} className="text-indigo-500 text-center my-2 dark:text-indigo-300 font-bold underline text-2xl/8">{t("application")}</Link>
+            <div className="flex flex-col gap-2">
+                <span className="font-bold">{t("courseCode")}</span>
+                <span>SAYT1134</span>
+                <span className="font-bold">{t("universityRecognition.header")}</span>
+                <span>{t("universityRecognition.content")}</span>
+                <span className="font-bold">{t("mediumOfInstruction.header")}</span>
+                <span>{t("mediumOfInstruction.content")}</span>
+                <span className="font-bold">{t("expectedApplicants.header")}</span>
+                <span>{t("expectedApplicants.content")}</span>
+                <span className="font-bold">{t("introduction.header")}</span>
+                <div className="flex flex-col">{t("introduction.content")}</div>
+                <span className="font-bold">{t("tuitionFee.header")}</span>
+                <span className="text-red-500">{t("tuitionFee.content")}</span>
+            </div>
+            <Link href={`/${lng}/application`} className="text-indigo-500 text-center my-4 dark:text-indigo-300 font-bold underline text-2xl/8">{t("application")}</Link>
             <div className="flex flex-col gap-2 p-4 border-gray-300 rounded-2xl border-2">
                 <span className="font-bold text-xl/8 text-center">{t("conditions.title")}</span>
                 <span>{t("conditions.description")}</span>
