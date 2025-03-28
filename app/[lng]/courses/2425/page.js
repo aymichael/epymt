@@ -1,169 +1,186 @@
 import Link from "next/link";
 import Image from "next/image";
 import { basePath } from "@/next.config.mjs";
+import { translation } from "@/app/i18n-index";
+import { Trans } from "react-i18next/TransWithoutContext";
 
+const courses = ["tma", "cnac", "idm", "ntc", "tdg"];
+const groups = [["tma", "cnac", "idm"], ["ntc", "tdg"]];
+const groupNameCHI = ["基礎程度", "進階程度"];
+const groupNameENG = ["Fundamental Level", "Intermediate Level"];
+const date = ["15/7, 16/7, 18/7, 19/7, 22/7, 23/7, 25/7, 26/7, 29/7", "9/8, 12/8, 14/8, 16/8, 19/8, 21/8, 23/8, 26/8, 27/8"];
+const examDate = ["1/8", "30/8"];
+const reserveDate = ["24/7, 30/7, 2/8", "22/8, 28/8, 31/8"];
+const lecturerCHI = ["李俊捷博士(香港中文大學)", "陳曉寧博士(香港中文大學)", "吳銘豪博士(香港中文大學)", "陳啟良博士(香港中文大學)", "鄭文銓博士(香港中文大學)"];
+const lecturerENG = ["Dr. LI Chun Che (CUHK)", "Dr. CHAN Hiu Ning (CUHK)", "Dr. NG Ming Ho (CUHK)", "Dr. CHAN Kai Leung (CUHK)", "Dr. CHENG Man Chuen (CUHK)"];
 
-export default function Course() {
+export default async function Course({ params }) {
+    const { lng } = await params;
+    const { t } = await translation(lng, "course");
+    const groupName = lng === "en" ? groupNameENG : groupNameCHI;
+    const lecturer = lng === "en" ? lecturerENG : lecturerCHI;
+    const colon = lng === "en" ? ": " : "：";
+
     return (
-        <div className="flex justify-center w-full flex-col gap-2">
-            <span className="font-bold text-lg/8">引言</span>
-            <span>
-                幾何學的應用廣泛深刻，發展源遠流長，是數學的重要分支。中學數學課程所涵蓋的，只是簡單的「歐幾里德幾何」和以坐標系統來描述的「解析幾何」。 這些傳統的幾何學早在18世紀以前，便已發展完備。而推動近代幾何進展的「非歐幾何」和「微分幾何」卻是在19世紀以後才告面世的。 這些劃時代的幾何學不單結集了偉大的數學家如高斯、羅巴切夫斯基、黎曼和龐卡萊等對幾何的深思與創見；它們的出現更標誌著人類在幾何學上的飛躍與革新。 愛恩斯坦解構時空的「廣義相對論」正是建立在這新發展的幾何上的。
-            </span>
-            <span>
-                另一方面，數論在數學研究中的地位超然，是推動數學發展的主要動力之源，它極端困難的問題和精妙深刻的定理，向來是大數學家如費馬 (Fermat)、歐拉 (Euler)、高斯 (Gauss) 和黎曼 (Riemann) 等廢寢忘餐， 鍥而不捨的研究對象。時至今日，數論的研究成果不僅引人注目，而且，近十多年來在科學技術，持別是在計算機及資訊科技方面獲得越來越重要的應用。尖端的密碼學所應用的代數幾何學 (Algebraic Geometry) 與解決費馬大定理 (Fermat Last Theorem) 的橢圓曲線 (Elliptic Curves) 理論，正是數論研究所衍生而來的！
-            </span>
-            <span>
-                「數學英才精進課程」在這個暑期，將圍繞這些近代數學的主流課題，分別開設「近世代數初探」，「複數與解析幾何」，「離散數學導論」，「數論與密碼學」和「微分幾何初探」*五門精采的課程，向熱衷數學，有興趣探索、理解奇妙數學世界的中學同學，介紹近代幾何及數論的入門知識。「近世代數初探」，「離散數學導論」和「複數與解析幾何」適合初次報讀的同學，不要求高等數學作預備知識，將升中四的同學，亦可藉此打好數理基礎。而「數論與密碼學」和「數論與密碼學」專為高中同學而設，同學於中四、中五數學科中，須有優異表現和濃厚興趣。同學可按個人的興趣與數學程度，選擇相應科目修讀，讓豐富新奇的數學知識伴你渡過一個有意義的暑假。
-            </span>
-            <span>
-                要善用暑期，要嘗試了解近代數學的發展？參加「數學英才精進課程」的暑期班是你的最佳選擇。
-            </span>
-            <span className="text-xs text-red-500">
-                *各科均為香港中文大學入學考慮元素之一，完成任何一科者，如日後入讀香港中文大學，可以用該等科目申請扣減課業學分。過去亦有學生憑該等科目，獲得海外大學的學分認可。
-            </span>
-            <br />
-            <span className="font-bold text-lg/8">科目詳情</span>
-            <table className="table-auto md:text-base/8 sm:text-sm/8 text-xs">
+        <div className="flex justify-center w-full flex-col gap-1">
+            <span className="font-bold text-2xl/8 underline underline-offset-8">{t("title_1")}</span>
+            <div className="flex flex-col gap-1 my-4">
+                <Trans
+                    i18nKey="introduction_1"
+                    t={t}
+                    components={[<span key="0"/>]}
+                    />
+
+                <span className="text-sm text-red-500">
+                    {t("remark_1")}
+                </span>
+            </div>
+            <span className="font-bold text-2xl/8 underline underline-offset-8">{t("title_2")}</span>
+            <table className="my-4">
                 <tbody>
-                    <tr>
-                        <td className="px-2 py-2 font-bold align-top border border-black bg-[#E0D0B0]">
-                            <div className="flex flex-col gap-1">
-                                <span>主題</span>
-                                <span>Courses</span>
-                            </div>
+                    <tr className="md:border-b border-0 border-gray-200 dark:border-gray-600 md:table-row flex flex-col">
+                        <td className="font-bold align-top text-xl/8 md:w-1/4 md:bg-gray-100 md:dark:text-white md:dark:bg-gray-800 md:px-4 md:py-4 md:border-0 border-b-2">
+                            {t("table.header_1")}
                         </td>
-                        <td className="px-2 py-2 font-bold align-top border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col gap-1">
-                                <Link href="/courses/introduction/tma" className="text-[#C71585]">近世代數初探 Towards Modern Algebra</Link>
-                                <Link href="/courses/introduction/cnag" className="text-[#C71585]">複數與解析幾何 Complex Numbers and Analytic Geometry</Link>
-                                <Link href="/courses/introduction/idm" className="text-[#C71585]">離散數學導論 Introduction to Discrete Mathematics</Link>
-                                <Link href="/courses/introduction/ntc" className="text-[#C71585]">數論與密碼學 Number Theory and Cryptography</Link>
-                                <Link href="/courses/introduction/idg" className="text-[#C71585]">微分幾何初探 Introduction to Differential Geometry</Link>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="px-2 py-2 font-bold align-top border border-black bg-[#E0D0B0]">
-                            <div className="flex flex-col gap-1">
-                                <span>入學方法</span>
-                                <span>Application Method</span>
-                            </div>
-                        </td>
-                        <td className="px-2 py-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col gap-1">
-                                <span><Link href="/application" className="text-indigo-500 dark:text-indigo-300">網上申請</Link>(包括申請步驟及入學試詳情)</span>
-                                <span><Link href="/application" className="text-indigo-500 dark:text-indigo-300">Online Application</Link>(with steps and admission test details)</span>
-                            </div>
+                        <td className="align-top flex flex-col gap-2 md:px-4 md:py-4 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
+                            {groupName.map((name, index) => (
+                                <div key={index} className="flex flex-col">
+                                    <span className="font-bold text-green-500">
+                                        {name}
+                                    </span>
+                                    {groups[index].map((course, i) => (
+                                        <Link key={i} href={`/${lng}/course-introduction/${course}`} className="text-indigo-500 dark:text-indigo-300">
+                                            {t(course)}
+                                        </Link>
+                                    ))}
+                                </div>
+                            ))}
                         </td>
                     </tr>
-                    <tr>
-                        <td className="px-2 py-2 font-bold align-top border border-black bg-[#E0D0B0]">
-                            <div className="flex flex-col gap-1">
-                                <span>上課時間</span>
-                                <span>Date and Time</span>
-                            </div>
+                    <tr className="md:border-b border-0 border-gray-200 dark:border-gray-600 md:table-row flex flex-col">
+                        <td className="font-bold align-top text-xl/8 md:w-1/4 md:bg-gray-100 md:dark:text-white md:dark:bg-gray-800 md:px-4 md:py-4 md:border-0 border-b-2">
+                            {t("table.header_2")}
                         </td>
-                        <td className="px-2 py-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col gap-1">
-                                <span>請參閱<Link href="#leaflet" className="text-indigo-500 dark:text-indigo-300">課程海報單張</Link>及上述各科網頁</span>
-                                <span>Please refer to the <Link href="#leaflet" className="text-indigo-500 dark:text-indigo-300">programme poster and leaflet</Link> and course pages above</span>
-                            </div>
+                        <td className="md:px-4 md:py-4 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
+                            <Trans
+                                i18nKey="table.applicationMethod"
+                                t={t}
+                                components={[<Link key="0" href={`/${lng}/application`} className="text-indigo-500 dark:text-indigo-300" />]}
+                            />
                         </td>
                     </tr>
-                    <tr>
-                        <td className="px-2 py-2 font-bold align-top border border-black bg-[#E0D0B0]">
-                            <div className="flex flex-col gap-1">
-                                <span>上課地點</span>
-                                <span>Venue</span>
-                            </div>
+                    <tr className="md:border-b border-0 border-gray-200 dark:border-gray-600 md:table-row flex flex-col">
+                        <td className="font-bold align-top text-xl/8 md:w-1/4 md:bg-gray-100 md:dark:text-white md:dark:bg-gray-800 md:px-4 md:py-4 md:border-0 border-b-2">
+                            {t("table.header_3")}
                         </td>
-                        <td className="px-2 py-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col gap-1">
-                                <span>請參閱上述各科網頁</span>
-                                <span>Please refer to the course pages above</span>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="px-2 py-2 font-bold align-top border border-black bg-[#E0D0B0]">
-                            <div className="flex flex-col gap-1">
-                                <span>形式</span>
-                                <span>Learning
-                                    Activities</span>
-                            </div>
-                        </td>
-                        <td className="px-2 py-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col gap-1">
-                                <span>課程將以授課和導修的形式進行  Lectures and Tutorials</span>
-                                <span>學業評核主要包括課堂與習作表現及小測等</span>
-                                <span>Assessment includes class performance, assignment and quizzes</span>
-                            </div>
+                        <td className="md:px-4 md:py-4 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6 flex flex-col gap-1">
+                            {groupName.map((name, index) => (
+                                <div key={index} className="flex flex-col">
+                                    <span className="font-bold text-green-500">
+                                        {name}
+                                    </span>
+                                    <span>
+                                        {date[index]}
+                                    </span>
+                                    <span>
+                                        {t("table.examDate") + colon + examDate[index]}
+                                    </span>
+                                    <span>
+                                        {t("table.reserveDate") + colon + reserveDate[index]}
+                                    </span>
+                                </div>
+                            ))}
                         </td>
                     </tr>
-                    <tr>
-                        <td className="px-2 py-2 font-bold align-top border border-black bg-[#E0D0B0]">
-                            <div className="flex flex-col gap-1">
-                                <span>對象</span>
-                                <span>Target Students</span>
-                            </div>
+
+                    <tr className="md:border-b border-0 border-gray-200 dark:border-gray-600 md:table-row flex flex-col">
+                        <td className="font-bold align-top text-xl/8 md:w-1/4 md:bg-gray-100 md:dark:text-white md:dark:bg-gray-800 md:px-4 md:py-4 md:border-0 border-b-2">
+                            {t("table.header_4")}
                         </td>
-                        <td className="px-2 py-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col gap-1">
-                                <span>不論級別的中學生，數學能力視乎所報讀科目的要求，但通常是班上表現最好的一批。</span>
-                                <span>過往曾修讀本課程的學生將獲優先考慮。</span>
-                                <span>Secondary school students with distinguished mathematical performance in class.</span>
-                                <span>Former EPYMT students will be considered with priority.</span>
-                            </div>
+                        <td className="md:px-4 md:py-4 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
+                            10:30am - 5:15pm
                         </td>
                     </tr>
-                    <tr>
-                        <td className="px-2 py-2 font-bold align-top border border-black bg-[#E0D0B0]">
-                            <div className="flex flex-col gap-1">
-                                <span>學費</span>
-                                <span>Tuition</span>
-                            </div>
+                    <tr className="md:border-b border-0 border-gray-200 dark:border-gray-600 md:table-row flex flex-col">
+                        <td className="font-bold align-top text-xl/8 md:w-1/4 md:bg-gray-100 md:dark:text-white md:dark:bg-gray-800 md:px-4 md:py-4 md:border-0 border-b-2">
+                            {t("table.header_5")}
                         </td>
-                        <td className="px-2 py-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col gap-1">
-                                <span>根據大學規定，學費為每科港幣4,000元 (已包括報名費50元)。</span>
-                                <span>Tuition fee is HK$4,000 (included application fee $50).</span>
-                                <span>詳細請參閱上述各科網頁</span>
-                                <span>Please refer to the course pages above.</span>
-                            </div>
+                        <td className="md:px-4 md:py-4 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
+                            {t("table.venue")}
                         </td>
                     </tr>
-                    <tr>
-                        <td className="px-2 py-2 font-bold align-top border border-black bg-[#E0D0B0]">
-                            <div className="flex flex-col gap-1">
-                                <span>學分認可、 獎學金</span>
-                                <span>Credit Recognition and Scholarship</span>
-                            </div>
+                    <tr className="md:border-b border-0 border-gray-200 dark:border-gray-600 md:table-row flex flex-col">
+                        <td className="font-bold align-top text-xl/8 md:w-1/4 md:bg-gray-100 md:dark:text-white md:dark:bg-gray-800 md:px-4 md:py-4 md:border-0 border-b-2">
+                            {t("table.header_6")}
                         </td>
-                        <td className="px-2 py-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col gap-1">
-                                <span>科目總成績合格的學生將獲頒授証書</span>
-                                <span>Students who have passed the assessment will receive a certificate</span>
-                                <span>學分科目合格的學生如入讀香港中文大學學士學位課程，該科可獲大學承認1-2學分</span>
-                                <span>Credits granted to students who have passed in credit-bearing course(s) upon official registration as CUHK undergraduates</span>
-                                <span>根據大學規定，出席7整天或以上者可獲不低於港幣1,000元獎學金作為學費回扣*</span>
-                                <span>Students who have attended at least 7 full days will be granted a scholarship not lower than HK$1000*</span>
-                                <span>本課程另設多項獎學金，給予學業良好或積極參與的學員</span>
-                                <span>Additional amount of scholarship will be granted to students with outstanding performance</span>
-                                <span>For every Yau Science Award team that has submitted a complete Mathematics project, each team member will receive a deduction of HK$1,500 in the tuition for the EPYMT program on top of the current scholarship. Details could be found at <Link href="https://yashk.org.hk/yau-award" className="text-indigo-500 dark:text-indigo-300">https://yashk.org.hk/yau-award</Link>**</span>
-                                <span className="text-xs">*如獲學費減免，而只需繳交少於1,000元，則只回扣所交的學費。</span>
-                                <span className="text-xs">*If the tuition is less than HK$1,000 after fee remission, exact amount will be granted.</span>
-                                <span className="text-xs">**如獲學費減免，而只需繳交少於1,500元，則只回扣所交的學費。</span>
-                                <span className="text-xs">**If the tuition is less than HK$1,500 after fee remission, exact amount will be granted.</span>
-                            </div>
+                        <td className="md:px-4 md:py-4 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6 flex flex-col gap-1">
+                            {courses.map((course, index) => (
+                                <div key={index} className="flex flex-wrap">
+                                    <span className="font-bold mr-2">
+                                        {t(course) + colon}
+                                    </span>
+                                    <span>
+                                        {lecturer[index]}
+                                    </span>
+                                </div>
+                            ))}
+                        </td>
+                    </tr>
+                    <tr className="md:border-b border-0 border-gray-200 dark:border-gray-600 md:table-row flex flex-col">
+                        <td className="font-bold align-top text-xl/8 md:w-1/4 md:bg-gray-100 md:dark:text-white md:dark:bg-gray-800 md:px-4 md:py-4 md:border-0 border-b-2">
+                            {t("table.header_7")}
+                        </td>
+                        <td className="md:px-4 md:py-4 flex flex-col gap-1 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
+                            <Trans
+                                i18nKey="table.learningActivities"
+                                t={t}
+                                components={[<span key="0" />]}
+                            />
+                        </td>
+                    </tr>
+                    <tr className="md:border-b border-0 border-gray-200 dark:border-gray-600 md:table-row flex flex-col">
+                        <td className="font-bold align-top text-xl/8 md:w-1/4 md:bg-gray-100 md:dark:text-white md:dark:bg-gray-800 md:px-4 md:py-4 md:border-0 border-b-2">
+                            {t("table.header_8")}
+                        </td>
+                        <td className="md:px-4 md:py-4 flex flex-col gap-1 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
+                            <Trans
+                                i18nKey="table.targetStudents"
+                                t={t}
+                                components={[<span key="0" />]}
+                            />
+                        </td>
+                    </tr>
+                    <tr className="md:border-b border-0 border-gray-200 dark:border-gray-600 md:table-row flex flex-col">
+                        <td className="font-bold align-top text-xl/8 md:w-1/4 md:bg-gray-100 md:dark:text-white md:dark:bg-gray-800 md:px-4 md:py-4 md:border-0 border-b-2">
+                            {t("table.header_9")}
+                        </td>
+                        <td className="md:px-4 md:py-4 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
+                            {t("table.tuition")}
+                        </td>
+                    </tr>
+                    <tr className="md:table-row flex flex-col">
+                        <td className="font-bold align-top text-xl/8 md:w-1/4 md:bg-gray-100 md:dark:text-white md:dark:bg-gray-800 md:px-4 md:py-4 md:border-0 border-b-2">
+                            {t("table.header_10")}
+                        </td>
+                        <td className="md:px-4 md:py-4 flex flex-col gap-1 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
+                            <Trans
+                                i18nKey="table.creditRecognition"
+                                t={t}
+                                components={{ span: <span key="0" />, Link: <Link href="https://yashk.org.hk/yau-award" key="1" className="text-indigo-500 dark:text-indigo-300" /> }}
+                            />
+                            <Trans
+                                i18nKey="table.remark"
+                                t={t}
+                                components={[<span key="0" className="text-sm text-red-500" />]}
+                            />
                         </td>
                     </tr>
                 </tbody>
             </table>
-            <span className="text-lg/8 font-bold" name="leaflet">課程海報單張</span>
-            <Image src={basePath+"/EPYMT_poster.jpg"} alt="課程海報" width={2475} height={3499} />
-            <Image src={basePath+"/EPYMT_leaflet_1.jpg"} alt="課程單張" width={1754} height={1240} />
-            <Image src={basePath+"/EPYMT_leaflet_2.jpg"} alt="課程單張" width={3500} height={2475} />
+            <span className="font-bold text-2xl/8 underline underline-offset-8" name="leaflet">{t("title_3")}</span>
+            <Image src={basePath + "/EPYMT_poster.jpg"} alt="課程海報" width={2475} height={3499} />
+            <Image src={basePath + "/EPYMT_leaflet_1.jpg"} alt="課程單張" width={1754} height={1240} />
+            <Image src={basePath + "/EPYMT_leaflet_2.jpg"} alt="課程單張" width={3500} height={2475} />
         </div>
     );
 };
