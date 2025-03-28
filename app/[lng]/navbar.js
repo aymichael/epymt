@@ -7,15 +7,18 @@ import clsx from "clsx";
 import { redirect, usePathname } from "next/navigation";
 import { languages } from "../i18n-settings";
 import { basePath } from "@/next.config.mjs";
+import { year } from "../data";
 
 export default function Navbar({ lang }) {
+    const currCourseURL = year.toString().slice(2) + (year + 1).toString().slice(2);
     const pages = lang === languages[0] ? ["About", "Courses", "Students Highlights", "Support"] : ["關於", "課程", "學生亮點", "支援"];
     const subpages = lang === languages[0] ? [["Introduction", "Advisors"], ["This Year's Courses", "Past Courses", "Course Infomation", "Guest Lectures"], ["Student Awards", "Alumni Sharing"], ["Application", "FAQ", "Contact Us"]] : [["簡介", "導師"], ["本年度課程", "過往課程", "課程資訊", "客席講座"], ["學生獎項", "校友分享"], ["申請", "常見問題", "聯絡我們"]];
-    const subpageURL = [["introduction", "advisors"], ["courses", "past-courses", "course-information", "guest-lectures"], ["student-awards", "alumni-sharing"], ["application", "faq", "contact-us"]];
+    const subpageURL = [["introduction", "advisors"], [`courses/${currCourseURL}`, "courses", "course-information", "guest-lectures"], ["student-awards", "alumni-sharing"], ["application", "faq", "contact-us"]];
     const [isOpen, setIsOpen] = useState(false);
     const [currentNav, setCurrentNav] = useState(-1);
     const [selectedNav, setSelectedNav] = useState(-1);
     const pathname = usePathname();
+    console.log(currCourseURL);
     return (
         <header className="flex select-none w-full flex-col text-lg/8 md:shadow-md fixed md:items-center font-lato font-bold z-20" >
             <div className={`bg-[#7d2882] md:shadow-none ${isOpen ? "" : "shadow-md"} flex flex-col w-full md:px-0 px-2 items-center text-white`} onMouseLeave={() => setCurrentNav(-1)}>
