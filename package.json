@@ -13,7 +13,7 @@
     "clsx": "^2.1.1",
     "i18next": "^24.2.3",
     "i18next-resources-to-backend": "^1.2.1",
-    "next": "15.1.7",
+    "next": "^15.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-i18next": "^15.4.1"
