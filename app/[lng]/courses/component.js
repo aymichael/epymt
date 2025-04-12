@@ -20,9 +20,9 @@ export default function DateBox({ lang, courseName, date, examDate, reservedDate
                     </button>
                 ))}
             </div>
-            <span className="mt-2">{dateText}{colon}{date[selected]}</span>
-            <span className="mt-2">{examText}{colon}{examDate[selected]}</span>
-            <span className="mt-2">{reservedText}{colon}{reservedDate[selected]}</span>
+            <span className="mt-2"><strong>{dateText}{colon}</strong>{date[selected]}</span>
+            <span className="mt-2"><strong>{examText}{colon}</strong>{examDate[selected]}</span>
+            <span className="mt-2"><strong>{reservedText}{colon}</strong>{reservedDate[selected]}</span>
         </div>
 
     )

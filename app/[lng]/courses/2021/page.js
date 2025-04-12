@@ -1,26 +1,24 @@
 import Link from "next/link";
-import Image from "next/image";
 import { translation } from "@/app/i18n-index";
 import { Trans } from "react-i18next/TransWithoutContext";
 import DateBox from "../component";
 
-const prefix = "2425";
 const courses = ["tma", "cnag", "idm", "ntc", "tdg"];
 const date =
-    ["15/7, 16/7, 18/7, 19/7, 22/7, 23/7, 25/7, 26/7, 29/7",
-        "15/7, 16/7, 18/7, 19/7, 22/7, 23/7, 25/7, 26/7, 29/7",
-        "15/7, 16/7, 18/7, 19/7, 22/7, 23/7, 25/7, 26/7, 29/7",
-        "9/8, 12/8, 14/8, 16/8, 19/8, 21/8, 23/8, 26/8, 27/8",
-        "9/8, 12/8, 14/8, 16/8, 19/8, 21/8, 23/8, 26/8, 27/8"];
-const examDate = ["1/8", "1/8", "1/8", "30/8", "30/8"];
+    ["17/7, 18/7, 20/7, 21/7, 24/7, 25/7, 27/7, 28/7, 31/7",
+        "17/7, 18/7, 20/7, 21/7, 24/7, 25/7, 27/7, 28/7, 31/7",
+        "17/7, 18/7, 20/7, 21/7, 24/7, 25/7, 27/7, 28/7, 31/7",
+        "9/8, 11/8, 14/8, 16/8, 18/8, 21/8, 23/8, 25/8, 28/8",
+        "9/8, 11/8, 14/8, 16/8, 18/8, 21/8, 23/8, 25/8, 28/8"];
+const examDate = ["3/8", "3/8", "3/8", "30/8", "30/8"];
 const reservedDate =
-    ["24/7, 30/7, 2/8",
-        "24/7, 30/7, 2/8",
-        "24/7, 30/7, 2/8",
-        "22/8, 28/8, 31/8",
-        "22/8, 28/8, 31/8"];
-const lecturerCHI = ["李俊捷博士(香港中文大學)", "陳曉寧博士(香港中文大學)", "吳銘豪博士(香港中文大學)", "陳啟良博士(香港中文大學)", "鄭文銓博士(香港中文大學)"];
-const lecturerENG = ["Dr. LI Chun Che (CUHK)", "Dr. CHAN Hiu Ning (CUHK)", "Dr. NG Ming Ho (CUHK)", "Dr. CHAN Kai Leung (CUHK)", "Dr. CHENG Man Chuen (CUHK)"];
+    ["19/7, 26/7, 4/8",
+        "19/7, 26/7, 4/8",
+        "19/7, 26/7, 4/8",
+        "17/8, 24/8, 31/8",
+        "17/8, 24/8, 31/8"];
+const lecturerCHI = ["李俊捷博士(香港中文大學)", "陳曉寧博士(香港中文大學)", "吳銘豪博士(香港中文大學)", "廖振隆博士(香港中文大學)", "鄭文銓博士(香港中文大學)"];
+const lecturerENG = ["Dr. LI Chun Che (CUHK)", "Dr. CHAN Hiu Ning (CUHK)", "Dr. NG Ming Ho (CUHK)", "Dr. Liu Chun Lung Kelvin (CUHK)", "Dr. CHENG Man Chuen (CUHK)"];
 
 export default async function Course({ params }) {
     const { lng } = await params;
@@ -28,6 +26,7 @@ export default async function Course({ params }) {
     const lecturer = lng === "en" ? lecturerENG : lecturerCHI;
     const colon = lng === "en" ? ": " : "：";
     const courseName = courses.map((course) => t(course));
+    
     return (
         <div className="flex justify-center w-full flex-col gap-1">
             <span className="font-bold text-2xl/8 underline underline-offset-8">{t("title_1")}</span>
@@ -168,10 +167,6 @@ export default async function Course({ params }) {
                     </tr>
                 </tbody>
             </table>
-            <span className="font-bold text-2xl/8 underline underline-offset-8" name="leaflet">{t("title_3")}</span>
-            <Image src={`/leaflet&poster/${prefix}_poster.jpg`} alt="課程海報" width={2475} height={3499} />
-            <Image src={`/leaflet&poster/${prefix}_leaflet_1.jpg`} alt="課程單張" width={1754} height={1240} />
-            <Image src={`/leaflet&poster/${prefix}_leaflet_2.jpg`} alt="課程單張" width={3500} height={2475} />
         </div>
     );
 };
