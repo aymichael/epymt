@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Image from "next/image";
-import { basePath } from "@/next.config.mjs";
 import { translation } from "@/app/i18n-index";
 import { Trans } from "react-i18next/TransWithoutContext";
 
@@ -178,9 +177,9 @@ export default async function Course({ params }) {
                 </tbody>
             </table>
             <span className="font-bold text-2xl/8 underline underline-offset-8" name="leaflet">{t("title_3")}</span>
-            <Image src={basePath + "/EPYMT_poster.jpg"} alt="課程海報" width={2475} height={3499} />
-            <Image src={basePath + "/EPYMT_leaflet_1.jpg"} alt="課程單張" width={1754} height={1240} />
-            <Image src={basePath + "/EPYMT_leaflet_2.jpg"} alt="課程單張" width={3500} height={2475} />
+            <Image src="/EPYMT_poster.jpg" alt="課程海報" width={2475} height={3499} />
+            <Image src="/EPYMT_leaflet_1.jpg" alt="課程單張" width={1754} height={1240} />
+            <Image src="/EPYMT_leaflet_2.jpg" alt="課程單張" width={3500} height={2475} />
         </div>
     );
 };

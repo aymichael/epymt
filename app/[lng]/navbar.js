@@ -6,7 +6,6 @@ import { useState } from "react";
 import clsx from "clsx";
 import { redirect, usePathname } from "next/navigation";
 import { languages } from "../i18n-settings";
-import { basePath } from "@/next.config.mjs";
 import { year } from "../data";
 
 export default function Navbar({ lang }) {
@@ -25,14 +24,14 @@ export default function Navbar({ lang }) {
                     <div>
                         <Link href={`/${lang}`}>
                             <Image
-                                src={basePath+"/epymt_dark.png"}
+                                src="/epymt_dark.png"
                                 alt="CUHK Logo"
                                 width={350}
                                 height={75}
                                 className="md:block hidden"
                             />
                             <Image
-                                src={basePath+"/epymt_logo.png"}
+                                src="/epymt_logo.png"
                                 alt="CUHK Logo"
                                 width={120}
                                 height={50}

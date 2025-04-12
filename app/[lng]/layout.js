@@ -4,7 +4,6 @@ import { nunito, lato } from "./fonts";
 import Link from "next/link";
 import Image from "next/image";
 import { languages } from "../i18n-settings";
-import { basePath } from "@/next.config.mjs";
 
 export const metadata = {
   title: "EPYMT",
@@ -22,7 +21,7 @@ export default async function RootLayout({ children, params }) {
       <body className={`${nunito.variable} ${lato.variable} font-nunito min-h-screen w-full flex justify-center leading-8`}>
         <div className="flex flex-col w-full items-center">
           <Navbar lang={lng} />
-          <main className=" md:bg-[url(/epymt/background.png)] md:dark:bg-[url(/epymt/background_dark.png)] bg-center bg-contain bg-no-repeat  mt-16 w-full h-full dark:bg-gray-700 flex items-center flex-col">
+          <main className=" md:bg-[url(/background.png)] md:dark:bg-[url(/background_dark.png)] bg-center bg-contain bg-no-repeat  mt-16 w-full h-full dark:bg-gray-700 flex items-center flex-col">
             <div className="sm:p-10 p-6 md:w-[48rem] lg:w-[64rem] bg-white/90 dark:bg-gray-700/90 shadow-white dark:shadow-gray-700 shadow-2xl h-full text-lg/8">
               {children}
             </div>
@@ -43,7 +42,7 @@ export default async function RootLayout({ children, params }) {
               <div className="flex gap-2 md:flex-row flex-col items-center">
                 <a href="https://www.math.cuhk.edu.hk" >
                   <Image
-                    src={basePath+"/culogo.gif"}
+                    src="/culogo.gif"
                     alt="CUHK Logo"
                     width={75}
                     height={50}
@@ -51,7 +50,7 @@ export default async function RootLayout({ children, params }) {
                 </a>
                 <a href="http://www.ims.cuhk.edu.hk/">
                   <Image
-                    src={basePath+"/imslogo.gif"}
+                    src="/imslogo.gif"
                     alt="IMS Logo"
                     width={50}
                     height={50}
