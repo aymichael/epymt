@@ -2,24 +2,31 @@ import Link from "next/link";
 import Image from "next/image";
 import { translation } from "@/app/i18n-index";
 import { Trans } from "react-i18next/TransWithoutContext";
+import DateBox from "../component";
 
-const courses = ["tma", "cnac", "idm", "ntc", "tdg"];
-const groups = [["tma", "cnac", "idm"], ["ntc", "tdg"]];
-const groupNameCHI = ["基礎程度", "進階程度"];
-const groupNameENG = ["Fundamental Level", "Intermediate Level"];
-const date = ["15/7, 16/7, 18/7, 19/7, 22/7, 23/7, 25/7, 26/7, 29/7", "9/8, 12/8, 14/8, 16/8, 19/8, 21/8, 23/8, 26/8, 27/8"];
-const examDate = ["1/8", "30/8"];
-const reserveDate = ["24/7, 30/7, 2/8", "22/8, 28/8, 31/8"];
+const courses = ["tma", "cnag", "idm", "ntc", "tdg"];
+const date =
+    ["15/7, 16/7, 18/7, 19/7, 22/7, 23/7, 25/7, 26/7, 29/7",
+        "15/7, 16/7, 18/7, 19/7, 22/7, 23/7, 25/7, 26/7, 29/7",
+        "15/7, 16/7, 18/7, 19/7, 22/7, 23/7, 25/7, 26/7, 29/7",
+        "9/8, 12/8, 14/8, 16/8, 19/8, 21/8, 23/8, 26/8, 27/8",
+        "9/8, 12/8, 14/8, 16/8, 19/8, 21/8, 23/8, 26/8, 27/8"];
+const examDate = ["1/8", "1/8", "1/8", "30/8", "30/8"];
+const reservedDate =
+    ["24/7, 30/7, 2/8",
+        "24/7, 30/7, 2/8",
+        "24/7, 30/7, 2/8",
+        "22/8, 28/8, 31/8",
+        "22/8, 28/8, 31/8"];
 const lecturerCHI = ["李俊捷博士(香港中文大學)", "陳曉寧博士(香港中文大學)", "吳銘豪博士(香港中文大學)", "陳啟良博士(香港中文大學)", "鄭文銓博士(香港中文大學)"];
 const lecturerENG = ["Dr. LI Chun Che (CUHK)", "Dr. CHAN Hiu Ning (CUHK)", "Dr. NG Ming Ho (CUHK)", "Dr. CHAN Kai Leung (CUHK)", "Dr. CHENG Man Chuen (CUHK)"];
 
 export default async function Course({ params }) {
     const { lng } = await params;
     const { t } = await translation(lng, "course");
-    const groupName = lng === "en" ? groupNameENG : groupNameCHI;
     const lecturer = lng === "en" ? lecturerENG : lecturerCHI;
     const colon = lng === "en" ? ": " : "：";
-
+    const courseName = courses.map((course) => t(course));
     return (
         <div className="flex justify-center w-full flex-col gap-1">
             <span className="font-bold text-2xl/8 underline underline-offset-8">{t("title_1")}</span>
@@ -27,32 +34,25 @@ export default async function Course({ params }) {
                 <Trans
                     i18nKey="introduction_1"
                     t={t}
-                    components={[<span key="0"/>]}
-                    />
+                    components={[<span key="0" />]}
+                />
 
                 <span className="text-sm text-red-500">
                     {t("remark_1")}
                 </span>
             </div>
             <span className="font-bold text-2xl/8 underline underline-offset-8">{t("title_2")}</span>
-            <table className="my-4">
+            <table className="my-4 table-fixed w-full">
                 <tbody>
                     <tr className="md:border-b border-0 border-gray-200 dark:border-gray-600 md:table-row flex flex-col">
                         <td className="font-bold align-top text-xl/8 md:w-1/4 md:bg-gray-100 md:dark:text-white md:dark:bg-gray-800 md:px-4 md:py-4 md:border-0 border-b-2">
                             {t("table.header_1")}
                         </td>
                         <td className="align-top flex flex-col gap-2 md:px-4 md:py-4 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
-                            {groupName.map((name, index) => (
-                                <div key={index} className="flex flex-col">
-                                    <span className="font-bold text-green-500">
-                                        {name}
-                                    </span>
-                                    {groups[index].map((course, i) => (
-                                        <Link key={i} href={`/${lng}/course-introduction/${course}`} className="text-indigo-500 dark:text-indigo-300">
-                                            {t(course)}
-                                        </Link>
-                                    ))}
-                                </div>
+                            {courses.map((course, index) => (
+                                <Link key={index} href={`/${lng}/course-information/${course}`} className="text-indigo-500 dark:text-indigo-300">
+                                    {t(course)}
+                                </Link>
                             ))}
                         </td>
                     </tr>
@@ -72,23 +72,14 @@ export default async function Course({ params }) {
                         <td className="font-bold align-top text-xl/8 md:w-1/4 md:bg-gray-100 md:dark:text-white md:dark:bg-gray-800 md:px-4 md:py-4 md:border-0 border-b-2">
                             {t("table.header_3")}
                         </td>
-                        <td className="md:px-4 md:py-4 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6 flex flex-col gap-1">
-                            {groupName.map((name, index) => (
-                                <div key={index} className="flex flex-col">
-                                    <span className="font-bold text-green-500">
-                                        {name}
-                                    </span>
-                                    <span>
-                                        {date[index]}
-                                    </span>
-                                    <span>
-                                        {t("table.examDate") + colon + examDate[index]}
-                                    </span>
-                                    <span>
-                                        {t("table.reserveDate") + colon + reserveDate[index]}
-                                    </span>
-                                </div>
-                            ))}
+                        <td className="md:px-4 md:py-4 dark:md:bg-gray-700  md:bg-gray-50 md:pb-4 pb-6">
+                            <DateBox
+                                lang={lng}
+                                courseName={courseName}
+                                date={date}
+                                examDate={examDate}
+                                reservedDate={reservedDate}
+                            />
                         </td>
                     </tr>
 
