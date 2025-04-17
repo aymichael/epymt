@@ -1,5 +1,7 @@
 export default function Parent() {
     return (
-        <div></div>
+        <span className="text-center text-2xl font-bold">
+            To be updated
+        </span>
     );
 };
