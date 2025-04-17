@@ -25,7 +25,7 @@ export default async function Home({ params }) {
           components={[<span key="0" className="font-bold"/>, <Link key="1" href="https://www.qef.org.hk/en/index.html" className="text-indigo-500 dark:text-indigo-300"/>]}
         /> 
         </span>
-        <span>
+        <span className="text-2xl text-center font-bold">
           <Trans
             i18nKey="application"
             t={t}
