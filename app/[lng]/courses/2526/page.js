@@ -183,7 +183,6 @@ export default async function Course({ params }) {
             <Image src={`/leaflet&poster/${prefix}_poster_2.jpg`} alt="課程海報" width={724} height={1024} />
             <Image src={`/leaflet&poster/${prefix}_poster_3.jpg`} alt="課程海報" width={724} height={1024} />
             <Image src={`/leaflet&poster/${prefix}_poster_4.jpg`} alt="課程海報" width={724} height={1024} />
-            <span>To be updated</span>
         </div>
     );
 };
