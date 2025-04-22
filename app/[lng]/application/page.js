@@ -8,6 +8,8 @@ export default async function Application({ params }) {
     const { t } = await translation(lng, "application");
     const applicationPeriod = lng === "en" ? applicationPeriodENG : applicationPeriodCHI;
     const admissionTestDate = lng === "en" ? admissionTestDateENG : admissionTestDateCHI;
+    const detailsLink = lng === "en" ? "Test details to be announced." : 
+    "入學試詳情待公布。";
     return (
         <div className="flex justify-center w-full flex-col">
             <span className="font-bold text-center text-2xl/8">{t("title", { year: year })}</span>
@@ -51,11 +53,12 @@ export default async function Application({ params }) {
             </span>
             <br />
             <span className="text-green-500">
-                <Trans
+                {/* <Trans
                     i18nKey="step_2.detailsLink"
                     t={t}
                     components={[<Link key="0" href="screening" className="text-indigo-500 dark:text-indigo-300" />]}
-                />
+                /> */}
+                {detailsLink}
             </span>
             <br />
             <span className="text-sm text-red-500">

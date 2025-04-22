@@ -154,12 +154,12 @@ export default async function Course({ params }) {
                         </td>
                         <td className="md:px-4 md:py-4 flex flex-col gap-1 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
                             <Trans
-                                i18nKey="table.creditRecognition"
+                                i18nKey="table.creditRecognition_1"
                                 t={t}
                                 components={{ span: <span key="0" />, Link: <Link href="https://yashk.org.hk/yau-award" key="1" className="text-indigo-500 dark:text-indigo-300" /> }}
                             />
                             <Trans
-                                i18nKey="table.remark"
+                                i18nKey="table.remark_1"
                                 t={t}
                                 components={[<span key="0" className="text-sm text-red-500" />]}
                             />

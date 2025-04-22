@@ -21,14 +21,15 @@ const reservedDate =
         "19/8, 28/8, 30/8",
         "19/8, 28/8, 30/8"
     ];
-const lecturerCHI = ["李俊捷博士(香港中文大學)", "陳曉寧博士(香港中文大學)", "吳銘豪博士(香港中文大學)", "陳啟良博士(香港中文大學)", "鄭文銓博士(香港中文大學)"];
-const lecturerENG = ["Dr. LI Chun Che (CUHK)", "Dr. CHAN Hiu Ning (CUHK)", "Dr. NG Ming Ho (CUHK)", "Dr. CHAN Kai Leung (CUHK)", "Dr. CHENG Man Chuen (CUHK)"];
+const lecturerCHI = ["李俊捷博士(香港中文大學)", "陳曉寧博士(香港中文大學)", "吳銘豪博士(香港中文大學)", "廖振隆博士(香港中文大學)", "鄭文銓博士(香港中文大學)"];
+const lecturerENG = ["Dr. LI Chun Che (CUHK)", "Dr. CHAN Hiu Ning (CUHK)", "Dr. NG Ming Ho (CUHK)", "Dr. LIU Chun Lung Kelvin (CUHK)", "Dr. CHENG Man Chuen (CUHK)"];
 
 export default async function Course({ params }) {
     const { lng } = await params;
     const { t } = await translation(lng, "course");
     const lecturer = lng === "en" ? lecturerENG : lecturerCHI;
     const colon = lng === "en" ? ": " : "：";
+    const tuitionFee = lng === "en" ? "Tuition fee is HK$3,350 (included application fee $50)." : "根據大學規定，學費為每科港幣3,350元 (已包括報名費50元)。";
     const courseName = courses.map((course) => t(course));
     return (
         <div className="flex justify-center w-full flex-col gap-1">
@@ -85,7 +86,6 @@ export default async function Course({ params }) {
                             />
                         </td>
                     </tr>
-
                     <tr className="md:border-b border-0 border-gray-200 dark:border-gray-600 md:table-row flex flex-col">
                         <td className="font-bold align-top text-xl/8 md:w-1/4 md:bg-gray-100 md:dark:text-white md:dark:bg-gray-800 md:px-4 md:py-4 md:border-0 border-b-2">
                             {t("table.header_4")}
@@ -100,6 +100,14 @@ export default async function Course({ params }) {
                         </td>
                         <td className="md:px-4 md:py-4 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
                             {t("table.venue")}
+                        </td>
+                    </tr>
+                    <tr className="md:border-b border-0 border-gray-200 dark:border-gray-600 md:table-row flex flex-col">
+                        <td className="font-bold align-top text-xl/8 md:w-1/4 md:bg-gray-100 md:dark:text-white md:dark:bg-gray-800 md:px-4 md:py-4 md:border-0 border-b-2">
+                            {t("table.header_11")}
+                        </td>
+                        <td className="md:px-4 md:py-4 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
+                            {t("table.mediumOfInstruction")}
                         </td>
                     </tr>
                     <tr className="md:border-b border-0 border-gray-200 dark:border-gray-600 md:table-row flex flex-col">
@@ -148,7 +156,7 @@ export default async function Course({ params }) {
                             {t("table.header_9")}
                         </td>
                         <td className="md:px-4 md:py-4 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
-                            {t("table.tuition")}
+                            {tuitionFee}
                         </td>
                     </tr>
                     <tr className="md:table-row flex flex-col">
@@ -157,12 +165,12 @@ export default async function Course({ params }) {
                         </td>
                         <td className="md:px-4 md:py-4 flex flex-col gap-1 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
                             <Trans
-                                i18nKey="table.creditRecognition"
+                                i18nKey="table.creditRecognition_2"
                                 t={t}
                                 components={{ span: <span key="0" />, Link: <Link href="https://yashk.org.hk/yau-award" key="1" className="text-indigo-500 dark:text-indigo-300" /> }}
                             />
                             <Trans
-                                i18nKey="table.remark"
+                                i18nKey="table.remark_2"
                                 t={t}
                                 components={[<span key="0" className="text-sm text-red-500" />]}
                             />
@@ -170,7 +178,7 @@ export default async function Course({ params }) {
                     </tr>
                 </tbody>
             </table>
-            <span className="font-bold text-2xl/8 underline underline-offset-8" name="leaflet">{t("title_3")}</span>
+            <span className="font-bold text-2xl/8 underline underline-offset-8" name="leaflet">{t("title_4")}</span>
             {/* <Image src={`/leaflet&poster/${prefix}_poster.jpg`} alt="課程海報" width={2475} height={3499} />
             <Image src={`/leaflet&poster/${prefix}_leaflet_1.jpg`} alt="課程單張" width={1754} height={1240} />
             <Image src={`/leaflet&poster/${prefix}_leaflet_2.jpg`} alt="課程單張" width={3500} height={2475} /> */}
