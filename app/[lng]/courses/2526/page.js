@@ -179,9 +179,10 @@ export default async function Course({ params }) {
                 </tbody>
             </table>
             <span className="font-bold text-2xl/8 underline underline-offset-8" name="leaflet">{t("title_4")}</span>
-            {/* <Image src={`/leaflet&poster/${prefix}_poster.jpg`} alt="課程海報" width={2475} height={3499} />
-            <Image src={`/leaflet&poster/${prefix}_leaflet_1.jpg`} alt="課程單張" width={1754} height={1240} />
-            <Image src={`/leaflet&poster/${prefix}_leaflet_2.jpg`} alt="課程單張" width={3500} height={2475} /> */}
+            <Image src={`/leaflet&poster/${prefix}_poster_1.jpg`} alt="課程海報" width={724} height={1024} />
+            <Image src={`/leaflet&poster/${prefix}_poster_2.jpg`} alt="課程海報" width={724} height={1024} />
+            <Image src={`/leaflet&poster/${prefix}_poster_3.jpg`} alt="課程海報" width={724} height={1024} />
+            <Image src={`/leaflet&poster/${prefix}_poster_4.jpg`} alt="課程海報" width={724} height={1024} />
             <span>To be updated</span>
         </div>
     );
