@@ -23,7 +23,7 @@ export default function Contact() {
                     </tr>
                     <tr>
                         <td className="pr-4 py-1 font-bold"><span>電話 Phones</span></td>
-                        <td className="pl-4 py-1">(852) 3943 5295</td>
+                        <td className="pl-4 py-1">(852) 3943 7962 / 3943 7989</td>
                     </tr>
                     <tr>
                         <td className="pr-4 py-1 font-bold"><span>傳真 Fax</span></td>
@@ -31,7 +31,7 @@ export default function Contact() {
                     </tr>
                     <tr>
                         <td className="pr-4 py-1 font-bold"><span>電郵 Email</span></td>
-                        <td className="pl-4 py-1"><Link href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</Link></td>
+                        <td className="pl-4 py-1"><Link href="mailto:epymt.math@cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt.math@cuhk.edu.hk</Link></td>
                     </tr>
 
                 </tbody>

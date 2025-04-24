@@ -33,11 +33,11 @@ export default async function RootLayout({ children, params }) {
                 <br />
                 EPYMT, Department of Mathematics, The Chinese University of Hong Kong, Shatin, N.T., Hong Kong
                 <br />
-                Phone: (852) 3943 1984 / 3943 5295
+                Phone: (852) 3943 7962 / 3943 7989
                 <br />
                 Fax: (852) 2603 5154
                 <br />
-                Email: <Link href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</Link>
+                Email: <Link href="mailto:epymt.math@cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt.math@cuhk.edu.hk</Link>
               </span>
               <div className="flex gap-2 md:flex-row flex-col items-center">
                 <a href="https://www.math.cuhk.edu.hk" >
