@@ -16,10 +16,6 @@
         "header": "Introduction",
         "content": "This course, combining the knowledge of calculus and geometric intuition, leads students to explore the fruitful variety of curves and surfaces beyond lines, planes, and conics. Students will use calculus up to partial differentiation to describe curves and surfaces, to calculate the tangent vector, normal vector and curvature, tangent plane, geodesic and Gaussian curvature. Other essential geometric theorems, such as Gauss-Bonnet, will be introduced."
     },
-    "tuitionFee": {
-        "header": "Tuition Fee",
-        "content": "HK$4,000 (with $50 application fee included)"
-    },
     "remark": "*This course offers face-to-face lessons on CUHK campus.",
     "application": "Online Application",
     "conditions":{

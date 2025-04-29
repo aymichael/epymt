@@ -17,8 +17,6 @@ export default async function NTC({ params }) {
                 <span>{t("expectedApplicants.content")}</span>
                 <span className="font-bold">{t("introduction.header")}</span>
                 <div className="flex flex-col">{t("introduction.content")}</div>
-                <span className="font-bold">{t("tuitionFee.header")}</span>
-                <span className="text-red-500">{t("tuitionFee.content")}</span>
             </div>
             <Link href={`/${lng}/application`} className="text-indigo-500 text-center my-4 dark:text-indigo-300 font-bold underline text-2xl/8">{t("application")}</Link>
             <div className="flex flex-col gap-2 p-4 border-gray-300 rounded-2xl border-2">

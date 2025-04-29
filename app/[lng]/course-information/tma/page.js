@@ -24,8 +24,6 @@ export default async function TMA({ params }) {
                         components={[<span key="0" />]}
                     />
                 </div>
-                <span className="font-bold">{t("tuitionFee.header")}</span>
-                <span className="text-red-500">{t("tuitionFee.content")}</span>
 
             </div>
             <Link href={`/${lng}/application`} className="text-indigo-500 text-center my-4 dark:text-indigo-300 font-bold underline text-2xl/8">{t("application")}</Link>

@@ -16,10 +16,6 @@
         "header": "Introduction",
         "content": "Students would be introduced to some fundamental topics in discrete mathematics including logic and proof, sets and functions, integers and primes, mathematical induction, combinatorics, discrete probability, graph theory and game theory. Their applications in mathematics and computer science will also be explored."
     },
-    "tuitionFee": {
-        "header": "Tuition Fee",
-        "content": "HK$4,000 (with $50 application fee included)"
-    },
     "remark": "*This course offers face-to-face lessons on CUHK campus.",
     "application": "Online Application",
     "conditions":{
