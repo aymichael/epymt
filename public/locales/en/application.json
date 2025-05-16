@@ -23,7 +23,7 @@
       "title": "Local and Overseas students",
       "description": "All local first-time applicants must attend the admission screening test on <0>{{admissionDate}}</0>. Failing to do so will be considered as withdrawing from the application."
     },
-    "details": "The screening test is a take-home exam that assesses whether an applicant has acquired sufficient background knowledge to take EPYMT courses. The question paper will be sent to applicants at 10:00 on 31 May 2025 (Saturday) by email. Answers should be scanned, combined into a single PDF file, and submitted to the link provided in the email before 17:00 on 2 June 2025 (Monday). Late submissions may not be considered."
+    "details": "The screening test is a take-home exam that assesses whether an applicant has acquired sufficient background knowledge to take EPYMT courses. The question paper will be sent to applicants at <0>10:00 on 31 May 2025 (Saturday)</0> by email. Answers should be scanned, combined into a single PDF file, and submitted to the link provided in the email before <0>17:00 on 2 June 2025 (Monday)</0>. Late submissions may not be considered."
   },
   "remark":  "Attention: The learning pace is fast and the schedule is tight. It <0>requires tremendous effort</0> and commitment from students to truly benefit from the programme. Absence and withdrawal are detrimental to learning, and we will also strictly follow the university regulations on matters related to taking leave and withdrawal."
 }

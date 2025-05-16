@@ -50,7 +50,11 @@ export default async function Application({ params }) {
                 />
             </span>
             <span>
-                {t("step_2.details")}
+                <Trans
+                    i18nKey="step_2.details"
+                    t={t}
+                    components={[<span className="text-red-500" key="0" />]}
+                />
             </span>
             <br />
             <span className="text-sm text-red-500">
