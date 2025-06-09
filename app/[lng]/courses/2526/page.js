@@ -23,13 +23,13 @@ const reservedDate =
     ];
 const lecturerCHI = ["李俊捷博士(香港中文大學)", "陳曉寧博士(香港中文大學)", "吳銘豪博士(香港中文大學)", "廖振隆博士(香港中文大學)", "鄭文銓博士(香港中文大學)"];
 const lecturerENG = ["Dr. LI Chun Che (CUHK)", "Dr. CHAN Hiu Ning (CUHK)", "Dr. NG Ming Ho (CUHK)", "Dr. LIU Chun Lung Kelvin (CUHK)", "Dr. CHENG Man Chuen (CUHK)"];
+const tuitionFee = "3,350";
 
 export default async function Course({ params }) {
     const { lng } = await params;
     const { t } = await translation(lng, "course");
     const lecturer = lng === "en" ? lecturerENG : lecturerCHI;
     const colon = lng === "en" ? ": " : "：";
-    const tuitionFee = lng === "en" ? "Tuition fee is HK$3,350 (included application fee $50)." : "根據大學規定，學費為每科港幣3,350元 (已包括報名費50元)。";
     const courseName = courses.map((course) => t(course));
     return (
         <div className="flex justify-center w-full flex-col gap-1">
@@ -156,7 +156,11 @@ export default async function Course({ params }) {
                             {t("table.header_9")}
                         </td>
                         <td className="md:px-4 md:py-4 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
-                            {tuitionFee}
+                            <Trans
+                                i18nKey="table.tuition"
+                                t={t}
+                                values={{amount: tuitionFee}}
+                            />
                         </td>
                     </tr>
                     <tr className="md:table-row flex flex-col">

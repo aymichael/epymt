@@ -1,4 +1,4 @@
-import NavBar from "./navBar";
+import NavBar from "../navBar";
 
 export default async function CourseLayout({ children, params }) {
     const { lng } = await params;

@@ -19,6 +19,7 @@ const reservedDate =
         "17/8, 24/8, 31/8"];
 const lecturerCHI = ["李俊捷博士(香港中文大學)", "陳曉寧博士(香港中文大學)", "吳銘豪博士(香港中文大學)", "廖振隆博士(香港中文大學)", "鄭文銓博士(香港中文大學)"];
 const lecturerENG = ["Dr. LI Chun Che (CUHK)", "Dr. CHAN Hiu Ning (CUHK)", "Dr. NG Ming Ho (CUHK)", "Dr. Liu Chun Lung Kelvin (CUHK)", "Dr. CHENG Man Chuen (CUHK)"];
+const tuitionFee = "4,000";
 
 export default async function Course({ params }) {
     const { lng } = await params;
@@ -145,7 +146,11 @@ export default async function Course({ params }) {
                             {t("table.header_9")}
                         </td>
                         <td className="md:px-4 md:py-4 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
-                            {t("table.tuition")}
+                            <Trans
+                                i18nKey="table.tuition"
+                                t={t}
+                                values={{amount: tuitionFee}}
+                            />
                         </td>
                     </tr>
                     <tr className="md:table-row flex flex-col">

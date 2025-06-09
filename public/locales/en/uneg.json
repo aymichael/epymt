@@ -10,11 +10,11 @@
     },
     "expectedApplicants": {
         "header": "Expected Applicants",
-        "content": "Students who have high competence in abstract mathematical reasoning, and are promoting to Secondary 4 or Secondary 5."
+        "content": "Senior form students who have distinguished mathematical performance or have taken any previous EPYMT course. Students are expected to have exposure to beginning knowledge of tertiary mathematics."
     },
     "introduction": {
         "header": "Introduction",
-        "content": "In the first half, we will cover some basic knowledge in Number Theory, including modular arithmetic and Euler's theorem. Then, we will cover two topics in Number Theory: primality test and primitive root, which are indispensable in studying Cryptography. In the second half, we will explore some applications of Number Theory in Cryptography, including some classical systems such as Vigenere cipher and some modern systems such as DES, RSA, digital signature. We will also briefly discuss Shor's algorithm: a quantum-based algorithm and QKD: a quantum-based cryptosystem."
+        "content": "Starting with special geometric structures of complex plane, students will learn symmetry and conformality on complex transformations; the intriguing correspondence between the complex plane and a sphere; and Mobius transformation. Then students would be introduced to a number of amazing properties of Non-Euclidean Geometry from a modern point of view, including hyper-parallelism, non-Euclidean distance, constant curvature, and hyperbolic trigonometry."
     },
     "remark": "*This course offers face-to-face lessons on CUHK campus.",
     "application": "Online Application",
@@ -24,5 +24,6 @@
         "note": "*(Those who had taken \"Enrichment Mentoring Mathematics I or II\" still need to sit the Test, but will be considered with priority.)",
         "point_1": "1. Passed in any of the following courses before: Geometric Perspectives of Complex Numbers, Complex Number and Analytical Geometry, and Towards Modern Algebra.",
         "point_2": "2. Being admitted in one of the following courses before: Number Theory and Cryptography, Towards Differential Geometry, Mathematical Analysis, and Understanding Non-Euclidean Geometry."
-    }
+    },
+    "outdated": "This page is outdated and the course is no longer offered."
 }
