@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { translation } from "@/app/i18n-index";
 import { Trans } from "react-i18next/TransWithoutContext";
-import DateBox from "../component";
+import { DateBox } from "../component";
 
 const courses = ["tma", "cnag", "idm", "ntc", "tdg"];
 const date =

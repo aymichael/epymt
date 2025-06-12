@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { translation } from "@/app/i18n-index";
 import { Trans } from "react-i18next/TransWithoutContext";
-import DateBox from "../component";
+import { DateBox } from "../component";
 
 const prefix = "2526";
 const courses = ["tma", "cnag", "ntc", "tdg", "uneg"];
