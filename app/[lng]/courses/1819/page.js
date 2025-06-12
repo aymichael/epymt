@@ -20,9 +20,10 @@ const reservedDate =
         "31/7, 7/8, 14/8, 15/8",
         "17/7, 24/7, 31/7, 1/8"
     ];
-const lecturerCHI = ["李俊捷博士(香港中文大學)", "陳啟良博士(香港中文大學)", "陳秉迅博士(香港中文大學)", "劉智軒博士(香港中文大學)", "鄭文銓博士(香港中文大學)"];
-const lecturerENG = ["Dr. LI Chun Che (CUHK)", "Dr. CHAN Kai Leung (CUHK)", " Dr. CHAN Ping Shun (CUHK)", "Dr. Lau Chi Hin (CUHK)", "Dr. CHENG Man Chuen (CUHK)"];
-const tuitionFee = "3,350";
+const lecturerCHI = ["李俊捷博士(香港中文大學)", "陳啟良博士(香港中文大學)", "鄭文銓博士(香港中文大學)", "劉智軒博士(香港中文大學)", "鄭文銓博士(香港中文大學)"];
+const lecturerENG = ["Dr. LI Chun Che (CUHK)", "Dr. CHAN Kai Leung (CUHK)", " Dr. CHENG Man Chuen (CUHK)", "Dr. Lau Chi Hin (CUHK)", "Dr. CHENG Man Chuen (CUHK)"];
+const tuitionFee = "3,860";
+const applicationFee = "20";
 
 export default async function Course({ params }) {
     const { lng } = await params;
@@ -157,7 +158,7 @@ export default async function Course({ params }) {
                             <Trans
                                 i18nKey="table.tuition"
                                 t={t}
-                                values={{ amount: tuitionFee }}
+                                values={{ amount: tuitionFee, application: applicationFee }}
                             />
                         </td>
                     </tr>

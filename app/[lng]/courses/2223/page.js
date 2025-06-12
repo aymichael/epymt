@@ -12,6 +12,7 @@ const reservedDate = ["20/8, 27/8, 3/9", "20/8, 27/8, 3/9"];
 const lecturerCHI = ["李俊捷博士(香港中文大學)", "廖振隆博士(香港中文大學)"];
 const lecturerENG = ["Dr. LI Chun Che (CUHK)", "Dr. Liu Chun Lung Kelvin (CUHK)"];
 const tuitionFee = "3,990";
+const applicationFee = "50";
 
 export default async function Course({ params }) {
     const { lng } = await params;
