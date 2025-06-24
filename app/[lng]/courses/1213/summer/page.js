@@ -1,30 +1,19 @@
 import Link from "next/link";
-import Image from "next/image";
 import { translation } from "@/app/i18n-index";
 import { Trans } from "react-i18next/TransWithoutContext";
-import { DateBox } from "../component";
+import { VeryOldDateBox } from "../../component";
 
-const prefix = "2526";
-const courses = ["tma", "cnag", "ntc", "tdg", "uneg"];
+const courses = ["gpcn", "ntc", "tdg", "uneg"];
 const date =
-    ["15/7, 16/7, 18/7, 19/7, 22/7, 23/7, 25/7, 26/7, 29/7",
-        "15/7, 16/7, 18/7, 19/7, 22/7, 23/7, 25/7, 26/7, 29/7",
-        "5/8, 6/8, 8/8, 9/8, 12/8, 13/8, 15/8, 16/8, 19/8",
-        "30/7, 1/8, 2/8, 5/8, 6/8, 8/8, 9/8, 12/8, 13/8",
-        "15/7, 16/7, 18/7, 19/7, 22/7, 23/7, 25/7, 26/7, 29/7"
+    ["16/7, 18/7, 20/7, 23/7, 25/7, 27/7, 30/7, 1/8, 3/8, 6/8",
+        "2/8, 7/8, 9/8, 13/8, 15/8, 17/8, 20/8, 22/8, 24/8, 27/8",
+        "13/7, 16/7, 18/7, 23/7, 25/7, 27/7, 30/7, 1/8, 3/8, 6/8",
+        "20/6, 22/6, 25/6, 27/6, 4/7, 6/7, 9/7, 11/7, 13/7, 16/7"
     ];
-const examDate = ["2/8", "2/8", "23/8", "19/8", "2/8"];
-const reservedDate =
-    ["17/7, 24/7, 31/7, 1/8",
-        "17/7, 24/7, 31/7, 1/8",
-        "7/8, 14/8, 20/8, 21/8",
-        "31/7, 7/8, 14/8, 15/8",
-        "17/7, 24/7, 31/7, 1/8"
-    ];
-const lecturerCHI = ["李俊捷博士(香港中文大學)", "陳啟良博士(香港中文大學)", "陳秉迅博士(香港中文大學)", "劉智軒博士(香港中文大學)", "鄭文銓博士(香港中文大學)"];
-const lecturerENG = ["Dr. LI Chun Che (CUHK)", "Dr. CHAN Kai Leung (CUHK)", " Dr. CHAN Ping Shun (CUHK)", "Dr. Lau Chi Hin (CUHK)", "Dr. CHENG Man Chuen (CUHK)"];
-const tuitionFee = "3,350";
-const applicationFee = "50";
+const lecturerCHI = ["區國強教授(香港中文大學)", "李俊捷博士(香港中文大學)", "劉智軒博士(香港中文大學)", "溫有恒教授(香港中文大學)"];
+const lecturerENG = ["Prof. AU Kwok Keung Thomas (CUHK)", "Dr. Li Chun Che Charles (CUHK)", " Dr. Lau Chi Hin (CUHK)", "Prof. WAN Yau Heng Tom (CUHK)"];
+const tuitionFee = "2,800";
+const scholarshipAmount = "600";
 
 export default async function Course({ params }) {
     const { lng } = await params;
@@ -37,13 +26,13 @@ export default async function Course({ params }) {
             <span className="font-bold text-2xl/8 underline underline-offset-8">{t("title_1")}</span>
             <div className="flex flex-col gap-1 my-4">
                 <Trans
-                    i18nKey="introduction_2"
+                    i18nKey="introduction_3"
                     t={t}
                     components={[<span key="0" />]}
                 />
 
                 <span className="text-sm text-red-500">
-                    {t("remark_1")}
+                    {t("remark_2")}
                 </span>
             </div>
             <span className="font-bold text-2xl/8 underline underline-offset-8">{t("title_2")}</span>
@@ -78,12 +67,10 @@ export default async function Course({ params }) {
                             {t("table.header_3")}
                         </td>
                         <td className="md:px-4 md:py-4 dark:md:bg-gray-600  md:bg-gray-50 md:pb-4 pb-6">
-                            <DateBox
+                            <VeryOldDateBox
                                 lang={lng}
                                 courseName={courseName}
                                 date={date}
-                                examDate={examDate}
-                                reservedDate={reservedDate}
                             />
                         </td>
                     </tr>
@@ -158,9 +145,9 @@ export default async function Course({ params }) {
                         </td>
                         <td className="md:px-4 md:py-4 dark:md:bg-gray-600 md:bg-gray-50 md:pb-4 pb-6">
                             <Trans
-                                i18nKey="table.tuition"
+                                i18nKey="table.tuition_2"
                                 t={t}
-                                values={{ amount: tuitionFee, application: applicationFee }}
+                                values={{ amount: tuitionFee}}
                             />
                         </td>
                     </tr>
@@ -170,14 +157,10 @@ export default async function Course({ params }) {
                         </td>
                         <td className="md:px-4 md:py-4 flex flex-col gap-1 dark:md:bg-gray-600 md:bg-gray-50 md:pb-4 pb-6">
                             <Trans
-                                i18nKey="table.creditRecognition_1"
+                                i18nKey="table.creditRecognition_3"
                                 t={t}
-                                components={{ span: <span key="0" />, Link: <Link href="https://yashk.org.hk/yau-award" key="1" className="text-indigo-500 dark:text-indigo-300" /> }}
-                            />
-                            <Trans
-                                i18nKey="table.remark_1"
-                                t={t}
-                                components={[<span key="0" className="text-sm text-red-500" />]}
+                                components={{ span: <span key="0" /> }}
+                                values={{ scholarship: scholarshipAmount }}
                             />
                         </td>
                     </tr>

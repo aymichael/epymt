@@ -39,10 +39,8 @@ export function DateBox({ lang, courseName, date, examDate, reservedDate }) {
 }
 
 export function OldDateBox({ lang, courseName, date, examDate}) {
-    const [selected, setSelected] = useState(0);
     const dateText = lang === "en" ? "Date" : "上課日期";
     const examText = lang === "en" ? "Exam Date" : "考試日期";
-    const reservedText = lang === "en" ? "Reserved Date" : "後備課堂日期";
     const colon = lang === "en" ? ": " : "：";
     return (
         <div className="w-full flex flex-col">
@@ -52,6 +50,24 @@ export function OldDateBox({ lang, courseName, date, examDate}) {
                         <span className="mt-2 text-blue-500"><strong>{name}</strong></span>
                         <span className="mt-2"><strong>{dateText}{colon}</strong>{date[index]}</span>
                         <span className="mt-2"><strong>{examText}{colon}</strong>{examDate[index]}</span>
+                    </div>
+                ))
+            }
+        </div>
+
+    )
+}
+
+export function VeryOldDateBox({ lang, courseName, date, examDate }) {
+    const dateText = lang === "en" ? "Date" : "上課日期";
+    const colon = lang === "en" ? ": " : "：";
+    return (
+        <div className="w-full flex flex-col">
+            {
+                courseName.map((name, index) => (
+                    <div key={index} className="flex flex-col">
+                        <span className="mt-2 text-blue-500"><strong>{name}</strong></span>
+                        <span className="mt-2"><strong>{dateText}{colon}</strong>{date[index]}</span>
                     </div>
                 ))
             }
