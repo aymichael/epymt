@@ -3,18 +3,17 @@ import { translation } from "@/app/i18n-index";
 import { Trans } from "react-i18next/TransWithoutContext";
 import { OldDateBox } from "../component";
 
-const prefix = "2526";
 const courses = ["gpcn", "ntc", "tdg", "uneg"];
 const date =
-    ["14/7, 17/7, 18/7, 20/7, 21/7, 24/7, 25/7, 27/7, 28/7",
-        "4/8, 7/8, 9/8, 11/8, 14/8, 16/8, 18/8, 21/8, 23/8",
-        "14/7, 17/7, 18/7, 20/7, 21/7, 24/7, 27/7, 28/7, 31/7",
-        "4/8, 7/8, 10/8, 11/8, 14/8, 15/8, 17/8, 18/8, 21/8"
+    ["16/7, 17/7, 20/7, 21/7, 23/7, 24/7, 27/7, 28/7, 30/7",
+        "3/8, 5/8, 7/8, 10/8, 12/8, 14/8, 17/8, 19/8, 21/8",
+        "20/7, 21/7, 23/7, 24/7, 27/7, 28/7, 30/7, 31/7, 3/8",
+        "27/5, 29/5, 1/6, 3/6, 5/6, 8/6, 10/6, 12/6, 15/6"
     ];
-const examDate = ["3/8", "28/8", "3/8", "25/8"];
-const lecturerCHI = ["陳啟良博士(香港中文大學)", "陳秉迅博士(香港中文大學)", "劉智軒博士(香港中文大學)", "溫有恒教授(香港中文大學)"];
-const lecturerENG = ["Dr. Chan Kai Leung (CUHK)", "Dr. Chan Ping Shun (CUHK)", " Dr. Lau Chi Hin (CUHK)", "Prof. Wan Yau Heng Tom (CUHK)"];
-const tuitionFee = "3,750";
+const examDate = ["4/8", "26/8", "6/8", "25/8"];
+const lecturerCHI = ["陳啟良博士(香港中文大學)", "李俊捷博士(香港中文大學)", "劉智軒博士(香港中文大學)", "區國強教授(香港中文大學)"];
+const lecturerENG = ["Dr. Chan Kai Leung (CUHK)", "Dr. Li Chun Che Charles (CUHK)", " Dr. Lau Chi Hin (CUHK)", "Prof. AU Kwok Keung Thomas (CUHK)"];
+const tuitionFee = "3,400";
 
 export default async function Course({ params }) {
     const { lng } = await params;
@@ -149,7 +148,7 @@ export default async function Course({ params }) {
                             <Trans
                                 i18nKey="table.tuition_2"
                                 t={t}
-                                values={{ amount: tuitionFee }}
+                                values={{ amount: tuitionFee}}
                             />
                         </td>
                     </tr>
@@ -159,7 +158,7 @@ export default async function Course({ params }) {
                         </td>
                         <td className="md:px-4 md:py-4 flex flex-col gap-1 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
                             <Trans
-                                i18nKey="table.creditRecognition_3"
+                                i18nKey="table.creditRecognition_4"
                                 t={t}
                                 components={{ span: <span key="0" /> }}
                             />

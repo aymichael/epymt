@@ -160,7 +160,7 @@ export default async function Course({ params }) {
                             <Trans
                                 i18nKey="table.creditRecognition_3"
                                 t={t}
-                                components={{ span: <span key="0" />, Link: <Link href="https://yashk.org.hk/yau-award" key="1" className="text-indigo-500 dark:text-indigo-300" /> }}
+                                components={{ span: <span key="0" /> }}
                             />
                         </td>
                     </tr>
