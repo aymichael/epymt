@@ -1,0 +1,26 @@
+{
+    "courseCode": "Course Code",
+    "universityRecognition":{
+        "header": "University Recognition",
+        "content": "Admission consideration"
+    },
+    "mediumOfInstruction":{
+        "header": "Medium of Instruction",
+        "content": "mainly in Cantonese with English course materials"
+    },
+    "expectedApplicants": {
+        "header": "Expected Applicants",
+        "content": "Students advancing to Secondary 4, and have a good foundation in mathematics and science."
+    },
+    "introduction": {
+        "header": "Introduction",
+        "content": "Students can learn the operations and properties of complex numbers and how to use complex numbers on geometry topics taught in secondary school. Also, students can learn how to interpret basic geometric transformations by applying complex calculations. This course aims at broadening and deepening students’ perspectives towards advanced mathematics through understanding the cross-influences of the complex algebra and geometric concepts. This course naturally leads to further geometric concepts, and so is regarded as a pre-requisite of “Understanding Non-Euclidean Geometry”."
+    },
+    "remark": "*This course offers face-to-face lessons on CUHK campus.",
+    "application": "Online Application",
+    "conditions":{
+        "title": "Conditions for Admission Screening Test Exemption",
+        "description": "All applicants must attend the Admission Screening Test. Those who had taken \"Enrichment Mentoring Mathematics I or II\" will have priority or special treatment."
+    },
+    "outdated": "This page is outdated and the course is no longer offered."
+}

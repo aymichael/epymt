@@ -1,0 +1,26 @@
+{
+    "courseCode": "課程編號",
+    "universityRecognition":{
+        "header": "大學認可",
+        "content": "入學甄選考慮"
+    },
+    "mediumOfInstruction":{
+        "header": "教學語言",
+        "content": "粵語為主，附以英文教材"
+    },
+    "expectedApplicants": {
+        "header": "對象",
+        "content": "準備升上中四的同學，學員須具備良好的數理基礎。"
+    },
+    "introduction": {
+        "header": "內容簡介",
+        "content": "同學會學習複數的性質和計算方法。同時連繫中學課程的幾何概念，利用複數的運算來解釋基礎的幾何變換。透過理解複數的代數性質與幾何概念的交互影響，本科能擴闊學生在高等數學的視野，深化知識。本科的內容延伸出進一步的幾何概念，可視之為「非歐幾何賞析」的基礎班。"
+    },
+    "remark": "*此課程於中文大學內授課。",
+    "application": "網上報名",
+    "conditions":{
+        "title": "入學試免試條款",
+        "description": "所有報讀本科的學生，必須參加入學試。曾修讀「數學啟導修習I或II」的學生，將獲優先考慮或特別處理。"
+    },
+    "outdated": "此頁面已過時，課程不再開辦。"
+}
