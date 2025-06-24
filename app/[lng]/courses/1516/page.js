@@ -10,10 +10,11 @@ const date =
         "20/7, 21/7, 23/7, 24/7, 27/7, 28/7, 30/7, 31/7, 3/8",
         "27/5, 29/5, 1/6, 3/6, 5/6, 8/6, 10/6, 12/6, 15/6"
     ];
-const examDate = ["4/8", "26/8", "6/8", "25/8"];
+const examDate = ["4/8", "26/8", "6/8", "19/6"];
 const lecturerCHI = ["陳啟良博士(香港中文大學)", "李俊捷博士(香港中文大學)", "劉智軒博士(香港中文大學)", "區國強教授(香港中文大學)"];
 const lecturerENG = ["Dr. Chan Kai Leung (CUHK)", "Dr. Li Chun Che Charles (CUHK)", " Dr. Lau Chi Hin (CUHK)", "Prof. AU Kwok Keung Thomas (CUHK)"];
 const tuitionFee = "3,400";
+const scholarshipAmount = "900";
 
 export default async function Course({ params }) {
     const { lng } = await params;
@@ -158,9 +159,10 @@ export default async function Course({ params }) {
                         </td>
                         <td className="md:px-4 md:py-4 flex flex-col gap-1 dark:md:bg-gray-700 md:bg-gray-50 md:pb-4 pb-6">
                             <Trans
-                                i18nKey="table.creditRecognition_4"
+                                i18nKey="table.creditRecognition_3"
                                 t={t}
                                 components={{ span: <span key="0" /> }}
+                                values={{ scholarship: scholarshipAmount }}
                             />
                         </td>
                     </tr>

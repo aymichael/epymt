@@ -15,6 +15,7 @@ const examDate = ["3/8", "28/8", "3/8", "25/8"];
 const lecturerCHI = ["陳啟良博士(香港中文大學)", "陳秉迅博士(香港中文大學)", "劉智軒博士(香港中文大學)", "溫有恒教授(香港中文大學)"];
 const lecturerENG = ["Dr. Chan Kai Leung (CUHK)", "Dr. Chan Ping Shun (CUHK)", " Dr. Lau Chi Hin (CUHK)", "Prof. Wan Yau Heng Tom (CUHK)"];
 const tuitionFee = "3,750";
+const scholarshipAmount = "1,000";
 
 export default async function Course({ params }) {
     const { lng } = await params;
@@ -162,6 +163,7 @@ export default async function Course({ params }) {
                                 i18nKey="table.creditRecognition_3"
                                 t={t}
                                 components={{ span: <span key="0" /> }}
+                                values={{ scholarship: scholarshipAmount }}
                             />
                         </td>
                     </tr>
