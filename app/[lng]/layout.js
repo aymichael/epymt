@@ -22,7 +22,7 @@ export default async function RootLayout({ children, params }) {
         <div className="flex flex-col w-full items-center">
           <Navbar lang={lng} />
           <main className=" md:bg-[url(/background.png)] md:dark:bg-[url(/background_dark.png)] bg-center bg-contain bg-no-repeat  mt-16 w-full h-full dark:bg-gray-700 flex items-center flex-col">
-            <div className="sm:p-10 p-6 md:w-[48rem] lg:w-[64rem] bg-white/90 dark:bg-gray-700/90 shadow-white dark:shadow-gray-700 shadow-2xl h-full text-lg/8">
+            <div className="sm:p-10 p-6 w-full md:w-[48rem] lg:w-[64rem] bg-white/90 dark:bg-gray-700/90 shadow-white dark:shadow-gray-700 shadow-2xl h-full text-lg/8">
               {children}
             </div>
           </main>
