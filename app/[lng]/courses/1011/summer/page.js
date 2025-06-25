@@ -31,7 +31,7 @@ export default async function Course({ params }) {
             <span className="font-bold text-2xl/8 underline underline-offset-8">{t("title_1")}</span>
             <div className="flex flex-col gap-1 my-4">
                 <Trans
-                    i18nKey="introduction_3"
+                    i18nKey="introduction_4"
                     t={t}
                     components={[<span key="0" />]}
                 />
