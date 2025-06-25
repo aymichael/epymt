@@ -16,7 +16,7 @@ export default async function Course({ params }) {
             <span className="font-bold text-2xl/8 underline underline-offset-8">科目詳情</span>
             <ul className="list-disc list-inside my-4">
                 <li>中文大學課程編號：CUSA0104</li>
-                <li>馮漢柱資優教育中心編號：201213-MATHE-1 數學優才培育計劃（基礎班）</li>
+                <li>馮漢柱資優教育中心編號：201112-MATHE-1 數學優才培育計劃（基礎班）</li>
             </ul>
             <span>上課日期、時間、地點：</span>
             <span>所有課堂將於<strong>香港中文大學李兆基樓514室</strong>舉行，安排如下:</span>

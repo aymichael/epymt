@@ -16,6 +16,7 @@
     "learningActivities": "<0>Lectures and Tutorials</0><0>Assessment includes class performance, assignment and quizzes</0>",
     "header_8": "Target Students",
     "targetStudents": "<0>Secondary school students with distinguished mathematical performance in class.</0><0>Former EPYMT students will be considered with priority.</0>",
+    "targetStudents_2": "<0>Secondary school students of all levels are welcome, but their mathematical ability must exceed the typical Form 5 level. Priority will be given to students who participated in the program in {{year}}.</0>",
     "header_9": "Tuition",
     "tuition": "Tuition fee is HK${{amount}} (included application fee ${{application}}).",
     "tuition_2": "Tuition fee is HK${{amount}}.",
@@ -23,6 +24,7 @@
     "creditRecognition_1": "<span>- Students who have passed the assessment will receive a certificate.</span><span>- Credits granted to students who have passed in credit-bearing course(s) upon official registration as CUHK undergraduates.</span><span>- Students who have attended at least 7 full days will be granted a scholarship not lower than HK$1000*</span><span>- Additional amount of scholarship will be granted to students with outstanding performance</span><span>For every Yau Science Award team that has submitted a complete Mathematics project, each team member will receive a deduction of HK$1,500 in the tuition for the EPYMT program on top of the current scholarship. Details could be found at <Link>https://yashk.org.hk/yau-award</Link>**.</span>",
     "creditRecognition_2": "<span>- Students who have passed the assessment will receive a certificate.</span><span>- Credits granted to students who have passed in credit-bearing course(s) upon official registration as CUHK undergraduates.</span><span>- Additional amount of scholarship will be granted to students with outstanding performance</span><span>For every Yau Science Award team that has submitted a complete Mathematics project, each team member will receive a deduction of HK$1,500 in the tuition for the EPYMT program on top of the current scholarship. Details could be found at <Link>https://yashk.org.hk/yau-award</Link>*.</span>",
     "creditRecognition_3": "<span>- Students who have passed the assessment will receive a certificate.</span><span>- Credits granted to students who have passed in credit-bearing course(s) upon official registration as CUHK undergraduates.</span><span>- Students who have attended at least 7 full days will be granted a scholarship not lower than HK${{scholarship}}*</span><span>- Additional amount of scholarship will be granted to students with outstanding performance</span>",
+    "creditRecognition_4": "<span>- Students who have passed the assessment will receive a certificate.</span><span>- Credits granted to students who have passed in credit-bearing course(s) upon official registration as CUHK undergraduates.</span><span>- Additional amount of scholarship will be granted to students with outstanding performance</span>",
     "remark_1": "<0>*If the tuition is less than HK$1,000 after fee remission, exact amount will be granted.</0><0>**If the tuition is less than HK$1,500 after fee remission, exact amount will be granted.</0>",
     "remark_2": "<0>*If the tuition is less than HK$1,500 after fee remission, exact amount will be granted.</0>",
     "header_11": "Medium of Instruction",
@@ -40,5 +42,6 @@
   "remark_1": "*各科均為香港中文大學入學考慮元素之一，完成任何一科者，如日後入讀香港中文大學，可以用該等科目申請扣減課業學分。過去亦有學生憑該等科目，獲得海外大學的學分認可。",  "remark_2": "*各科均為中文大學入學考慮元素之一。除「複數的幾何面貌」以外，完成任何一科者，如入讀中文大學，將以該等科目申請扣減課業學分。 過去亦有學生憑該等科目，獲得海外大學的學分認可。",
   "cnag": "Complex Numbers and Analytic Geometry",
   "uneg": "Understanding Non-Euclidean Geometry",
-  "gpcn": "Geometric Perspectives of Complex Numbers"
+  "gpcn": "Geometric Perspectives of Complex Numbers",
+  "cnneg": "Complex Numbers and Non-Euclidean Geometry"
 }
