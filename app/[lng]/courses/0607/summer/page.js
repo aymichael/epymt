@@ -4,9 +4,6 @@ export default async function Course({ params }) {
     const { lng } = await params;
     return (
         <div className="flex justify-center w-full flex-col gap-1">
-            <span className="text-2xl/8 font-bold text-center mb-4">
-                2004至2006年度課程活動由<a href="https://www.qef.org.hk/en/index.html" className=" text-indigo-500">「優質教育基金」</a>撥款資助
-            </span>
             <span className="font-bold text-2xl/8 underline underline-offset-8">引言</span>
             <div className="flex flex-col gap-1 my-4">
                 <span>
@@ -16,10 +13,10 @@ export default async function Course({ params }) {
                     「數學英才精進課程」在這個暑期，將圍繞這些近代幾何的主流課題，分別開設「微分幾何初探」和「複數與非歐幾何」兩門精采的幾何課，向熱衷數學，有興趣探索、理解奇妙幾何世界的高中同學，介紹近代幾何的入門知識，課程專為高中同學而設，不要求高等數學作預備知識。同學可按個人的興趣與程度，選擇其中一科修讀，讓豐富新奇的幾何知識伴你渡過一個有意義的暑假！
                 </span>
                 <span>
-                    踏入創辦的第四年，課程得到「優質教育基金」的支持，令人鼓舞。我們將秉承一貫的宗旨，以精心編排的課程，深入淺出的闡釋，引導有志向的年青數學英才，步入高等數學的殿堂。同時，我們更廣邀世界知名的學術翹楚親臨講學，讓同學擴闊視野，提升思維，對他們將來升讀大學及發展所長，將有深遠的效益。
+                    踏入創辦的第五年，我們將秉承一貫的宗旨，以精心編排的課程，深入淺出的闡釋，引導有志向的年青數學英才，步入高等數學的殿堂。同時，我們更廣邀世界知名的學術翹楚親臨講學，讓同學擴闊視野，提升思維，對他們將來升讀大學及發展所長，將有深遠的效益。
                 </span>
                 <span>
-                    在2005-06暑期班表現良好的學生，可優先入讀2005-06學年的<Link href="autumn" className=" text-indigo-500">秋季班</Link>。
+                    在2006-07暑期班表現良好的學生，可優先入讀2006-07學年的<Link href="autumn" className=" text-indigo-500">秋季班</Link>。
                 </span>
             </div>
             <span className="font-bold text-2xl/8 underline underline-offset-8">內容簡介</span>
@@ -49,7 +46,7 @@ export default async function Course({ params }) {
                         </td>
                         <td className="align-top flex flex-col gap-2 md:px-4 md:py-4 dark:md:bg-gray-600 md:bg-gray-50 md:pb-4 pb-6">
                             <span>2005年7月16日至8月8日期間於香港中文大學上課。</span>
-                            <span>(7/11-7/16)*, 7/18, 7/20, 7/22, 7/25, 7/27, 7/28, 8/1, 8/3, 8/5, 8/8</span>
+                            <span>(7/11-7/14)*, 7/15, 7/17, 7/19, 7/21, 7/24, 7/26, 7/28, 7/31, 8/2, 8/4, 8/7</span>
                             <span>基本課和講座：逢星期一、三、五的上午和下午。</span>
                             <span>* CSS1613「微分幾何初探」預備先修課，專為中五的同學作基礎知識訓練。</span>
                         </td>
@@ -74,7 +71,7 @@ export default async function Course({ params }) {
                         <td className="align-top flex flex-col gap-2 md:px-4 md:py-4 dark:md:bg-gray-600 md:bg-gray-50 md:pb-4 pb-6">
                             <span>課程將以講座、授課和導修的形式進行。</span>
                             <span>學業評核包括課堂與習作表現、小測及考試等。</span>
-                            <span>考試日期定於2005年8月8日(星期一)。</span>
+                            <span>考試日期定於2005年8月7日(星期一)。</span>
                         </td>
                     </tr>
                     <tr className="md:border-b border-0 border-gray-200 dark:border-gray-500 md:table-row flex flex-col">
@@ -82,7 +79,7 @@ export default async function Course({ params }) {
                             對象
                         </td>
                         <td className="align-top flex flex-col gap-2 md:px-4 md:py-4 dark:md:bg-gray-600 md:bg-gray-50 md:pb-4 pb-6">
-                            主要為中五至中七學生，曾在2004-05學年研習的學生將獲優先考慮。
+                            主要為中五至中七學生，曾在2005-06學年研習的學生將獲優先考慮。
                         </td>
                     </tr>
                     <tr className="md:border-b border-0 border-gray-200 dark:border-gray-500 md:table-row flex flex-col">
@@ -108,28 +105,8 @@ export default async function Course({ params }) {
                             <th className="px-4 py-2 border-b text-left"></th>
                         </tr>
                         <tr className="odd:bg-white even:bg-gray-50 dark:odd:bg-gray-900 dark:even:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-                            <td className="px-4 py-2 border-b">Prof. Steve Altschuler</td>
-                            <td className="px-4 py-2 border-b">Bauer Center of Genomics, Harvard University, U.S.A.</td>
-                        </tr>
-                        <tr className="odd:bg-white even:bg-gray-50 dark:odd:bg-gray-900 dark:even:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-                            <td className="px-4 py-2 border-b">Prof. Edna Cheung</td>
-                            <td className="px-4 py-2 border-b">Perimeter Institute for Theoretical Physics, Canada</td>
-                        </tr>
-                        <tr className="odd:bg-white even:bg-gray-50 dark:odd:bg-gray-900 dark:even:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-                            <td className="px-4 py-2 border-b">Prof. Esmond Ng</td>
-                            <td className="px-4 py-2 border-b">National Research Scientific Computing Center, Lawrence Berkeley Lab, U.S.A.</td>
-                        </tr>
-                        <tr className="odd:bg-white even:bg-gray-50 dark:odd:bg-gray-900 dark:even:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-                            <td className="px-4 py-2 border-b">Prof. Konstantin Savvidis</td>
-                            <td className="px-4 py-2 border-b">School of Finance and Management, Chiao Tung University, Taiwan</td>
-                        </tr>
-                        <tr className="odd:bg-white even:bg-gray-50 dark:odd:bg-gray-900 dark:even:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-                            <td className="px-4 py-2 border-b">Prof. Lani Wu</td>
-                            <td className="px-4 py-2 border-b">Bauer Center of Genomics, Harvard University, U.S.A.</td>
-                        </tr>
-                        <tr className="odd:bg-white even:bg-gray-50 dark:odd:bg-gray-900 dark:even:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-                            <td className="px-4 py-2 border-b">蕭文強教授</td>
-                            <td className="px-4 py-2 border-b">香港大學</td>
+                            <td className="px-4 py-2 border-b">蔡文端教授</td>
+                            <td className="px-4 py-2 border-b">加拿大多倫多大學</td>
                         </tr>
                         <tr className="odd:bg-white even:bg-gray-50 dark:odd:bg-gray-900 dark:even:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
                             <td className="px-4 py-2 border-b">丘成桐教授</td>
@@ -144,17 +121,15 @@ export default async function Course({ params }) {
                             <td className="px-4 py-2 border-b">香港中文大學</td>
                         </tr>
                         <tr className="odd:bg-white even:bg-gray-50 dark:odd:bg-gray-900 dark:even:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-                            <td className="px-4 py-2 border-b">張家麟博士</td>
+                            <td className="px-4 py-2 border-b">張亮夫博士</td>
                             <td className="px-4 py-2 border-b">香港中文大學</td>
                         </tr>
                         <tr className="odd:bg-white even:bg-gray-50 dark:odd:bg-gray-900 dark:even:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-                            <td className="px-4 py-2 border-b">張亮夫博士</td>
+                            <td className="px-4 py-2 border-b">溫有恆教授</td>
                             <td className="px-4 py-2 border-b">香港中文大學</td>
                         </tr>
                     </tbody>
                 </table>
-
-
             </div>
         </div>
     );
