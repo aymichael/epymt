@@ -1,11 +1,11 @@
 import Link from "next/link";
 import { translation } from "@/app/i18n-index";
 import { Trans } from "react-i18next/TransWithoutContext";
-import { VeryOldDateBox } from "../../component";
+import { VeryOldDateBox } from "../component";
 
-const courses = ["tdg", "gpcn", "ntc", "cnneg"];
-const lecturerCHI = ["區國強教授(香港中文大學)", "李俊捷博士(香港中文大學)", "方穎聰博士(香港中文大學)", "溫有恒教授(香港中文大學)", "張亮夫博士(香港中文大學)"];
-const lecturerENG = ["Prof. AU Kwok Keung Thomas (CUHK)", "Dr. Li Chun Che Charles (CUHK)", "Dr. Fong Wing Chung (CUHK)", "Prof. WAN Yau Heng Tom (CUHK)", "Dr. CHEUNG Leung Fu (CUHK)"];
+const courses = ["tdg", "cnneg", "ntc",];
+const lecturerCHI = ["李俊捷博士(香港中文大學)", "方穎聰博士(香港中文大學)", "溫有恒教授(香港中文大學)", "張亮夫博士(香港中文大學)"];
+const lecturerENG = ["Dr. Li Chun Che Charles (CUHK)", "Dr. Fong Wing Chung (CUHK)", "Prof. WAN Yau Heng Tom (CUHK)", "Dr. CHEUNG Leung Fu (CUHK)"];
 const tuitionFee = "2,000";
 
 export default async function Course({ params }) {
@@ -15,22 +15,20 @@ export default async function Course({ params }) {
     const colon = lng === "en" ? ": " : "：";
     const courseName = courses.map((course) => t(course));
     const date = lng === "en" ? [
-        "7th June-30th June, 2010, every Mon, Wed and Fri",
-        "12th July-2nd August, 2010, every Mon, Wed and Fri",
-        "12th July-2nd August, 2010, every Mon, Wed and Fri",
-        "7th June-30th June, 2010, every Mon, Wed and Fri"
+        "15th June-6th July, 2009, every Mon, Wed and Fri",
+        "13th July-3rd August, 2009, every Mon, Wed and Fri",
+        "13th July-3rd August, 2009, every Mon, Wed and Fri"
     ] : [
-        "2010年6月7日至6月30日逢星期一、三、五",
-        "2010年7月12日至8月2日逢星期一、三、五",
-        "2010年7月12日至8月2日逢星期一、三、五",
-        "2010年6月7日至6月30日逢星期一、三、五"
+        "2009年6月15日至7月6日逢星期一、三、五",
+        "2009年7月13日至8月3日逢星期一、三、五",
+        "2009年7月13日至8月3日逢星期一、三、五"
     ];
     return (
         <div className="flex justify-center w-full flex-col gap-1">
             <span className="font-bold text-2xl/8 underline underline-offset-8">{t("title_1")}</span>
             <div className="flex flex-col gap-1 my-4">
                 <Trans
-                    i18nKey="introduction_4"
+                    i18nKey="introduction_5"
                     t={t}
                     components={[<span key="0" />]}
                 />
@@ -127,7 +125,7 @@ export default async function Course({ params }) {
                                 i18nKey="table.targetStudents_2"
                                 t={t}
                                 components={[<span key="0" />]}
-                                values={{ year: 2009 }}
+                                values={{ year: "2007-08" }}
                             />
                         </td>
                     </tr>
