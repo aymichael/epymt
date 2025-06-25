@@ -1,23 +1,34 @@
-
+import Link from 'next/link';
 
 export default async function Course({ params }) {
     const { lng } = await params;
     return (
         <div className="flex justify-center w-full flex-col gap-1">
+            <span className="text-2xl/8 font-bold text-center mb-4">
+                2004至2006年度課程活動由<a href="https://www.qef.org.hk/en/index.html" className=" text-indigo-500">「優質教育基金」</a>撥款資助
+            </span>
             <span className="font-bold text-2xl/8 underline underline-offset-8">引言</span>
             <div className="flex flex-col gap-1 my-4">
                 <span>
-                    「數學英才精進課程」將在2003年7月推出為期3週（每星期上課3天）的暑期班，主題是引人入勝的「複數與非歐幾何」。 暑期班由本系教授任教，並將邀請各地的知名學者作客席講者，助教導師則由本地及海外大學的本科或研究生擔任。 汲取去年暑期的經驗，今年的暑期課程集中討論幾何的概念，從而啟發同學們更深的興趣以增強教與學的成果。 此外，去年的暑期班的學生，無論來自本地或海外，都是學校裡出類拔萃的一群。 這個暑期班無疑是擴闊視野和結識學術良朋的好機會。
+                    「數學英才精進課程」將於2004年7月17日至8月9日舉辦「微分幾何初探」暑期班， 為有興趣的同學介紹曲線與曲面的幾何學。這個富挑戰性的課程將引領同學見識到如何將分析與幾何共冶一爐， 為他們的數學發展帶來新的體會與創見，是有志進一步認識高等數學的同學所不能錯過的！
                 </span>
                 <span>
-                    在暑期班表現良好的學生，可優先入讀全年課程的其他科目。 暑期班已於2003年3月11日開始接受網上報名，歡迎有興趣的同學參加。
+                    踏入創辦的第三年，課程得到「優質教育基金」的支持，令人鼓舞。我們將秉承一貫的宗旨， 以精心編排的課程，深入淺出的闡釋，引導有志向的年青數學英才，步入高等數學的殿堂。 同時，我們更廣邀世界知名的學術翹楚親臨講學，讓同學擴闊視野，提升思維， 對他們將來升讀大學及發展所長，將有深遠的效益。
+                </span>
+                <span>
+                    同學與志同道合的中學精英在大學聚首研習數學，由中大數學系的教授任教， 並有來自知名大學的數學本科生與研究生擔任助教，這實在是一個結交學術良朋， 善用暑期，激發潛能，再創高峰的寶貴機會！
+                </span>
+                <span>
+                    在暑期班表現良好的學生，可優先入讀2004-05學年的<Link href="autumn" className=" text-indigo-500">秋季班</Link>。
                 </span>
             </div>
             <span className="font-bold text-2xl/8 underline underline-offset-8">內容簡介</span>
             <div className="flex flex-col gap-1 my-4">
-                <span>什麼是非歐幾何 (Non-Euclidean Geometry)？它與複數之間有什麼關係？ 這些問題的答案，都可在「數學英才精進課程」的暑期班中找到。</span>
-                <span>〝平面上三角形的內角和是180度〞這個小學生也知道的數學事實， 它的嚴格証明早記載在距今約二千三百年前歐幾里得 (Euclid) 的經典著作─幾何原本 (Elements) 內。 証明中應用了著明的歐氏第五公設﹝平行公設﹞。由於這公設不像其他公設那樣簡單和明顯，自此以後， 不少數學家都試圖應用歐氏的其他公設去推導平行公設。然而，他們的嘗試都失敗了。 直到十九世紀，偉大的數學家高斯 (Gauss)、 Bolyai 和 Lobachevsky 等在這方面進行了深入的研究， 讓我們知道平行公設是不能由歐氏的其他公設導出的！他們的突破性思想，更促成了一門劃時代的學科─非歐幾何的誕生， 它革新了人類對幾何學的基本看法。這些想法更導致日後黎曼幾何 (Riemannian Geometry) 的出現， 推動了廣義相對論 (General Relativity) 的發展，影響著今天的科學研究。</span>
-                <span>為了向中學同學介紹非歐幾何，我們應用大數學家 F. Klein 和 H. Poincaré 的觀點，取向是具體實在，充滿幾何直觀的。 由同學熟知的複數平面出發，我們引入映射，等距變換等概念，讓同學有效地掌握複數平面的幾何性質。 接著我們將介紹在單位圓內的非歐幾何模型，同學將可透過基本的複數運算，體驗和理解非歐幾何的各種現象。 我們對科目內容的闡述，力求深入淺出，清楚流暢。要知道非歐幾何中三角形的內角和是多少？ 要認識非歐幾何的種種有趣性質？「精進課程」的暑期課程是你不能錯過的!</span>
+                <span>哪一種幾何學可以描述物質在曲面上的運動？在中學所學習到的「歐幾里得幾何」不足以擔當這任務！ 這種複雜微妙的運動必須以一種更靈活、更精確的幾何學來刻劃， 「微分幾何」(Differential Geometry) 就是在這種需求下發展出來的一門現代數學。 「微分幾何」把分析與幾何緊密地結合在一起，它不單是研究精微運動的必要工具， 其應用更滲透到當今的種種尖端科技之中， 學習空間的曲線 (Curve) 與曲面 (Surface) 的幾何性質， 正是邁向認識「微分幾何」的第一步！</span>
+                <span>在香港的中學數學課程中，同學所接觸到的大都是平面上簡單的圓錐曲線，這絕對不能滿足有能力、 有興趣的同學進一步了解空間曲線與曲面的訴求。有見及此，2004年「數學英才精進課程」暑期班的主題將訂為「微分幾何初探」， 就空間中曲線與曲面作出深入詳盡的介紹，並討論它們豐富多采的幾何性質。 課程內容包括：曲線及曲面的參數化 (Parametrization)、曲線的弧長、切向量和曲率 (Curvature)； 曲面的面積、切平面、法曲率 (Normal Curvature) 、高斯曲率 (Gauss Curvature) 和 Gauss-Bonnet 定理等。 課題的講授力求具體清晰、深入淺出，好讓同學感受一下當代「微分幾何」的深刻精妙之處。 同學將體驗到如何把中學學到的解析幾何 (Analytic Geometry) 及微積分結合起來，使之成為強而有力的工具， 用以理解曲線與曲面的種種變化，這對日後升讀大學、進修科學或工程的專業，將有極大的幫助。</span>
+                <span>事實上，曲線與曲面的運用已遍及我們的生活：尖端科研如黎曼流形 (Riemannian Manifold) 上的幾何研究、 高能物理中的弦理論 (String Theory)；實際應用如電腦動畫、電影製作、建築設計 …，可謂不勝枚舉。</span>
+                <span>「微分幾何」由偉大的數學家高斯 (Gauss) 和黎曼 (Riemann) 開創發展至今，可說是名家輩出， 成就輝煌。愛因斯坦的「廣義相對論」就是應用「微分幾何」來表達的。 當代數學大師陳省身教授和丘成桐教授，正是在這方面作出突破性的研究而蜚聲國際， 名揚中外。</span>
+                <span>參加我們的暑假班，從基礎入手，追隨大師的足跡，步入探索「微分幾何」之路， 讓千姿百態的曲線與曲面伴你渡過一個既充實、又有意義的暑假！</span>
             </div>
             <span className="font-bold text-2xl/8 underline underline-offset-8">科目詳情</span>
             <table className="my-4">
@@ -27,7 +38,7 @@ export default async function Course({ params }) {
                             主題
                         </td>
                         <td className="align-top flex flex-col gap-2 md:px-4 md:py-4 dark:md:bg-gray-600 md:bg-gray-50 md:pb-4 pb-6">
-                            複數與非歐幾何
+                            微分幾何初探
                         </td>
                     </tr>
                     <tr className="md:border-b border-0 border-gray-200 dark:border-gray-500 md:table-row flex flex-col">
@@ -35,9 +46,9 @@ export default async function Course({ params }) {
                             上課日期、時間及地點
                         </td>
                         <td className="align-top flex flex-col gap-2 md:px-4 md:py-4 dark:md:bg-gray-600 md:bg-gray-50 md:pb-4 pb-6">
-                            <span><strong>因學校暑期的延遲，本科上課日期更改如下。</strong>時間、地點照舊為上午九時至下午五時於香港中文大學。</span>
-                            <span>7/19, 7/23, 7/25, 7/28, 7/39, 8/1, 8/4, 8/5</span>
-                            <span><strong>客席講座則不一定在上課日舉行。</strong></span>
+                            <span>2004年7月17日至8月9日期間於香港中文大學上課。</span>
+                            <span>7/17, 7/19, 7/21, 7/23, 7/26, 7/28, 7/30, 8/2, 8/4, 8/6, 8/9</span>
+                            <span>基本課和講座：逢星期一、三、五的上午和下午。</span>
                         </td>
                     </tr>
                     <tr className="md:border-b border-0 border-gray-200 dark:border-gray-500 md:table-row flex flex-col">
@@ -45,7 +56,9 @@ export default async function Course({ params }) {
                             內容
                         </td>
                         <td className="align-top flex flex-col gap-2 md:px-4 md:py-4 dark:md:bg-gray-600 md:bg-gray-50 md:pb-4 pb-6">
-                            歐氏空間及複平面、平面與球面的對應、變換的對稱和保圓性、Möbius 變換；曲線積分與非歐距離、平行與超平行、非歐三角學、曲面與曲率
+                            <span>曲線：平面和空間中的曲線，曲線的切向量、法向量，弧長與速率，參數方程和極坐標，曲率、接觸圓與加速度，旋轉數與全曲率，空間中的運動。</span>
+                            <span>曲面：曲面的參數化，曲面上的曲線與測地線，切平面，曲面面積，法曲率和高斯曲率， Gauss-Bonnet 定理。</span>
+                            <span>課題的介紹，將以簡單例子入手，力求具體清晰。</span>
                         </td>
                     </tr>
                     <tr className="md:border-b border-0 border-gray-200 dark:border-gray-500 md:table-row flex flex-col">
@@ -53,7 +66,9 @@ export default async function Course({ params }) {
                             形式
                         </td>
                         <td className="align-top flex flex-col gap-2 md:px-4 md:py-4 dark:md:bg-gray-600 md:bg-gray-50 md:pb-4 pb-6">
-                            課程將以講座、授課和導修的形式進行。
+                            <span>課程將以講座、授課和導修的形式進行。</span>
+                            <span>學業評核包括課堂與習作表現、小測及考試等。</span>
+                            <span>考試日期定於2004年8月9日(星期一)。</span>
                         </td>
                     </tr>
                     <tr className="md:border-b border-0 border-gray-200 dark:border-gray-500 md:table-row flex flex-col">
@@ -61,7 +76,7 @@ export default async function Course({ params }) {
                             對象
                         </td>
                         <td className="align-top flex flex-col gap-2 md:px-4 md:py-4 dark:md:bg-gray-600 md:bg-gray-50 md:pb-4 pb-6">
-                            主要為現正就讀F5-F7的學生，曾在2002-03學年研習的學生將獲優先考慮。
+                            主要為中五至中七學生，曾在2003-04學年研習的學生將獲優先考慮。
                         </td>
                     </tr>
                     <tr className="md:border-b border-0 border-gray-200 dark:border-gray-500 md:table-row flex flex-col">
@@ -70,7 +85,6 @@ export default async function Course({ params }) {
                         </td>
                         <td className="align-top flex flex-col gap-2 md:px-4 md:py-4 dark:md:bg-gray-600 md:bg-gray-50 md:pb-4 pb-6">
                             <ul className="list-disc list-inside">
-                                <li>暑期班將改於2003年8月11日舉行考試。</li>
                                 <li>考試合格的學生將獲頒授証書。</li>
                                 <li>考試合格的學生如入讀香港中文大學學士學位課程，可獲大學承認的2學分。</li>
                                 <li>根據大學規定，學費為港幣二千元。（因經濟理由在中學獲學費減免的學生，於提供有關証明文件後，也可在本班得到同樣比例的學費減免。）</li>
@@ -88,24 +102,16 @@ export default async function Course({ params }) {
                             <th className="px-4 py-2 border-b text-left"></th>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
-                            <td className="px-4 py-2 border-b">鄺英銓教授</td>
-                            <td className="px-4 py-2 border-b">美國北伊利諾州大學</td>
+                            <td className="px-4 py-2 border-b">羅鋒教授</td>
+                            <td className="px-4 py-2 border-b">Rutgers University, USA 美國羅格斯大學</td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
-                            <td className="px-4 py-2 border-b">羅春光教授</td>
-                            <td className="px-4 py-2 border-b">臺灣國立中山大學</td>
-                        </tr>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
-                            <td className="px-4 py-2 border-b">梁迺聰教授</td>
-                            <td className="px-4 py-2 border-b">美國明尼蘇達州大學</td>
+                            <td className="px-4 py-2 border-b">鄧平德博士</td>
+                            <td className="px-4 py-2 border-b">Intel Corporation, USA 美國英特爾公司</td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
                             <td className="px-4 py-2 border-b">丘成桐教授</td>
                             <td className="px-4 py-2 border-b">香港中文大學及美國哈佛大學</td>
-                        </tr>
-                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
-                            <td className="px-4 py-2 border-b">楊傑明教授</td>
-                            <td className="px-4 py-2 border-b">香港中文大學</td>
                         </tr>
                         <tr className="dark:bg-black bg-gray-300">
                             <th className="px-4 py-2 border-b text-left">基本課</th>
@@ -116,11 +122,16 @@ export default async function Course({ params }) {
                             <td className="px-4 py-2 border-b">香港中文大學</td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
-                            <td className="px-4 py-2 border-b">倪思敏教授</td>
-                            <td className="px-4 py-2 border-b">美國南喬治亞州立大學</td>
+                            <td className="px-4 py-2 border-b">鄺英銓教授</td>
+                            <td className="px-4 py-2 border-b">美國北伊利諾州大學</td>
+                        </tr>
+                        <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
+                            <td className="px-4 py-2 border-b">張家麟博士</td>
+                            <td className="px-4 py-2 border-b">香港中文大學</td>
                         </tr>
                     </tbody>
                 </table>
+
             </div>
         </div>
     );

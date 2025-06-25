@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 
 export default async function Course({ params }) {
     const { lng } = await params;
@@ -13,7 +13,7 @@ export default async function Course({ params }) {
                     為了更配合同學的學習，我們在春季班安排了於平日傍晚舉行的導修班方便同學的參予。
                 </span>
                 <span>
-                    在春季班表現良好的學生，可優先入讀2004-05年的暑期班。
+                    在春季班表現良好的學生，可優先入讀2004-05年的<Link href="summer" className=" text-indigo-500">暑期班</Link>。
                 </span>
             </div>
             <span className="font-bold text-2xl/8 underline underline-offset-8">內容簡介</span>
