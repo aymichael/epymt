@@ -4,7 +4,7 @@ export default async function Course({ params }) {
     const { lng } = await params;
     return (
         <div className="flex justify-center w-full flex-col gap-1">
-            <span className="text-3xl font-bold text-center">CUSA0104 Enrichment Mentoring Mathematics I 數學啟導修習 I</span>
+            <span className="text-3xl font-bold text-center mb-4">CUSA0104 Enrichment Mentoring Mathematics I 數學啟導修習 I</span>
             <span className="font-bold text-2xl/8 underline underline-offset-8">引言</span>
             <span className="my-4">
                 數學優才培育計劃是由香港特別行政區政府教育局和香港中文大學數學系合辦。本科專為具備數學能力及濃厚興趣的中學生而設，是一個全年參與的數學科目。由大學教師為數學資優學生提供啟發和輔導，引領學生修習一個特定的數學課題。
