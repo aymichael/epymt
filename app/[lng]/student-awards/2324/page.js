@@ -1,323 +1,62 @@
+import AwardBox from "../awardBox";
+import { translation } from "@/app/i18n-index"
+import { Trans } from "react-i18next/TransWithoutContext"
 
-
-export default function StudentAwards2324() {
+export default async function StudentAwards({ params }) {
+    const { lng } = await params;
+    const { t } = await translation(lng, "awards");
+    const { t:courseT } = await translation(lng, "course");
+    console.log(typeof t);
+    console.log(typeof courseT);
     return (
         <div className="flex justify-center items-center text-center w-full flex-col gap-2 md:text-base/8 sm:text-sm/8 text-xs">
-            <span className="font-bold text-lg/8">2023-2024學年暑期班學生得獎名單</span>
-            <span className="font-bold text-lg/8">List of Student Awards, Summer 2023-2024</span>
+            <Trans i18nKey="summer" t={t} values={{ period: "2023-2024" }} components={[<span key="0" className="font-bold text-3xl/8" />]} />
             <br />
-            <span className="text-lg/8">SAYT1014 Towards Modern Algebra 近世代數初探</span>
-            <table className="table-auto border-collapse w-full">
-                <thead>
-                    <tr className="bg-[#E0D0B0]">
-                        <th className="p-2 border border-black">Award</th>
-                        <th className="p-2 border border-black">Name of Students</th>
-                        <th className="p-2 border border-black">Class and School</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td className="p-2 border border-black bg-[#E0D0B0]">
-                            <div className="flex flex-col text-center">
-                                <span>Outstanding Performance Award</span>
-                                <span>卓越表現獎</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col">
-                                <span>Pang Tsun Hin</span>
-                                <span>彭浚軒</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            S6, FDBWA Szeto Ho Secondary School
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="p-2 border border-black bg-[#E0D0B0]" rowSpan="2">
-                            <div className="flex flex-col text-center">
-                                <span>Excellent Performance Award</span>
-                                <span>優異表現獎</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col">
-                                <span>Chan Cheuk Lai</span>
-                                <span>陳卓豊</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            S5, NTHYK Yuen Long District Secondary School
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col">
-                                <span>Kwok Chun Hang</span>
-                                <span>郭俊亨</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            S4, NTHYK Yuen Long District Secondary School
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <span className="text-sm/8">除上述獎項外，本科共有33名學生積極參與學習過程，獲頒勤奮表現獎。</span>
-            <span className="text-sm/8">Besides the above awards, there are 33 students granted Industrious Performance Awards due to their active participation in the course.</span>
-            <br />
-            <span className="text-lg/8">SAYT1034 Complex Numbers and Analytic Geometry 複數與解析幾何</span>
-            <table className="table-auto border-collapse w-full">
-                <thead>
-                    <tr className="bg-[#E0D0B0]">
-                        <th className="p-2 border border-black">Award</th>
-                        <th className="p-2 border border-black">Name of Students</th>
-                        <th className="p-2 border border-black">Class and School</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td className="p-2 border border-black bg-[#E0D0B0]">
-                            <div className="flex flex-col text-center">
-                                <span>Outstanding Performance Award</span>
-                                <span>卓越表現獎</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col">
-                                <span>Ho Wai Kiu</span>
-                                <span>何蔚僑</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            S4, Munsang College (Hong Kong Island)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="p-2 border border-black bg-[#E0D0B0]" rowSpan="2">
-                            <div className="flex flex-col text-center">
-                                <span>Excellent Performance Award</span>
-                                <span>優異表現獎</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col">
-                                <span>Ng Siu Kit</span>
-                                <span>吳少傑</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            S4, SKH Tang Shiu Kin Secondary School
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col">
-                                <span>Huang Chi Ming</span>
-                                <span>黄治铭</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            S5, NTHYK Yuen Long District Secondary School
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <span className="text-sm/8">除上述獎項外，本科共有24名學生積極參與學習過程，獲頒勤奮表現獎。</span>
-            <span className="text-sm/8">Besides the above awards, there are 24 students granted Industrious Performance Awards due to their active participation in the course.</span>
-            <br />
-            <span className="text-lg/8">SAYT1084 Introduction to Discrete Mathematics 離散數學導論</span>
-            <table className="table-auto border-collapse w-full">
-                <thead>
-                    <tr className="bg-[#E0D0B0]">
-                        <th className="p-2 border border-black">Award</th>
-                        <th className="p-2 border border-black">Name of Students</th>
-                        <th className="p-2 border border-black">Class and School</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td className="p-2 border border-black bg-[#E0D0B0]">
-                            <div className="flex flex-col text-center">
-                                <span>Outstanding Performance Award</span>
-                                <span>卓越表現獎</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col">
-                                <span>Wong Chun Yuen</span>
-                                <span>黃俊源</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            S6, Munsang College (Hong Kong Island)
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="p-2 border border-black bg-[#E0D0B0]">
-                            <div className="flex flex-col text-center">
-                                <span>Excellent Performance Award</span>
-                                <span>優異表現獎</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col">
-                                <span>Lam Tsz Ho</span>
-                                <span>林梓皓</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            S5, Pui Kiu Middle School
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <span className="text-sm/8">除上述獎項外，本科共有18名學生積極參與學習過程，獲頒勤奮表現獎。</span>
-            <span className="text-sm/8">Besides the above awards, there are 18 students granted Industrious Performance Awards due to their active participation in the course.</span>
-            <br />
-            <span className="text-lg/8">SAYT1114 Number Theory and Cryptography 數論與密碼學</span>
-            <table className="table-auto border-collapse w-full">
-                <thead>
-                    <tr className="bg-[#E0D0B0]">
-                        <th className="p-2 border border-black">Award</th>
-                        <th className="p-2 border border-black">Name of Students</th>
-                        <th className="p-2 border border-black">Class and School</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td className="p-2 border border-black bg-[#E0D0B0]">
-                            <div className="flex flex-col text-center">
-                                <span>Outstanding Performance Award</span>
-                                <span>卓越表現獎</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col">
-                                <span>Lam Tsz Ho</span>
-                                <span>林梓皓</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            S5, Pui Kiu Middle School
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="p-2 border border-black bg-[#E0D0B0]" rowSpan="2">
-                            <div className="flex flex-col text-center">
-                                <span>Excellent Performance Award</span>
-                                <span>優異表現獎</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col">
-                                <span>Dong Lun To</span>
-                                <span>董倫濤</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            S5, Pentecostal School
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col">
-                                <span>Lo Yiu Ki Astin</span>
-                                <span>盧曜祈</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            S5, Diocesan Boys&apos; School
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <span className="text-sm/8">除上述獎項外，本科共有27名學生積極參與學習過程，獲頒勤奮表現獎。</span>
-            <span className="text-sm/8">Besides the above awards, there are 27 students granted Industrious Performance Awards due to their active participation in the course.</span>
-            <br />
-            <span className="text-lg/8">SAYT1134 Towards Differential Geometry 微分幾何初探</span>
-            <table className="table-auto border-collapse w-full">
-                <thead>
-                    <tr className="bg-[#E0D0B0]">
-                        <th className="p-2 border border-black">Award</th>
-                        <th className="p-2 border border-black">Name of Students</th>
-                        <th className="p-2 border border-black">Class and School</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td className="p-2 border border-black bg-[#E0D0B0]" rowSpan="2">
-                            <div className="flex flex-col text-center">
-                                <span>Outstanding Performance Award</span>
-                                <span>卓越表現獎</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col">
-                                <span>Cheng Wing Yan</span>
-                                <span>鄭泳昕</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            S5, CCC Heep Woh College
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col">
-                                <span>Wong Chun Yuen</span>
-                                <span>黃俊源</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            S6, Munsang College (Hong Kong Island)
-                        </td>
-                    </tr>
-                    <tr>
-                        
-                    <td className="p-2 border border-black bg-[#E0D0B0]" rowSpan="3">
-                            <div className="flex flex-col text-center">
-                                <span>Excellent Performance Award</span>
-                                <span>優異表現獎</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col">
-                                <span>Chan Kwun Wang, Eric</span>
-                                <span>陳官弘</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            S6, Hoi Ping Chamber of Commerce Secondary School
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col">
-                                <span>Ng Ka Tsun</span>
-                                <span>吳嘉浚</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            S1, SKH Tsang Shiu Tim Secondary School
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            <div className="flex flex-col">
-                                <span>Wu Kai Chun</span>
-                                <span>吳佳臻</span>
-                            </div>
-                        </td>
-                        <td className="p-2 border border-black bg-[#F0E0C0]">
-                            S4, Munsang College (Hong Kong Island)
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <span className="text-sm/8">除上述獎項外，本科共有39名學生積極參與學習過程，獲頒勤奮表現獎。</span>
-            <span className="text-sm/8">Besides the above awards, there are 39 students granted Industrious Performance Awards due to their active participation in the course.</span>
-
+            <AwardBox
+                lang={lng}
+                topic={courseT("tma")}
+                outstandingNameList={["Pang Tsun Hin 彭浚軒"]}
+                outstandingSchoolList={["S6, FDBWA Szeto Ho Secondary School"]}
+                excellentNameList={["Chan Cheuk Lai 陳卓豊", "Kwok Chun Hang 郭俊亨"]}
+                excellentSchoolList={["S5, NTHYK Yuen Long District Secondary School", "S4, NTHYK Yuen Long District Secondary School"]}
+                hardwork={33}
+            />
+            <AwardBox
+                lang={lng}
+                topic={courseT("cnag")}
+                outstandingNameList={["Ho Wai Kiu 何蔚僑"]}
+                outstandingSchoolList={["S4, Munsang College (Hong Kong Island)"]}
+                excellentNameList={["Ng Siu Kit 吳少傑", "Huang Chi Ming 黄治铭"]}
+                excellentSchoolList={["S4, SKH Tang Shiu Kin Secondary School", "S5, NTHYK Yuen Long District Secondary School"]}
+                hardwork={24}
+            />
+            <AwardBox
+                lang={lng}
+                topic={courseT("idm")}
+                outstandingNameList={["Wong Chun Yuen 黃俊源"]}
+                outstandingSchoolList={["S6, Munsang College (Hong Kong Island)"]}
+                excellentNameList={["Lam Tsz Ho 林梓皓"]}
+                excellentSchoolList={["S5, Pui Kiu Middle School"]}
+                hardwork={18}
+            />
+            <AwardBox
+                lang={lng}
+                topic={courseT("ntc")}
+                outstandingNameList={["Lam Tsz Ho 林梓皓"]}
+                outstandingSchoolList={["S5, Pui Kiu Middle School"]}
+                excellentNameList={["Dong Lun To 董倫濤", "Lo Yiu Ki Astin 盧曜祈"]}
+                excellentSchoolList={["S5, Pentecostal School", "S5, Diocesan Boys' School"]}
+                hardwork={27}
+            />
+            <AwardBox
+                lang={lng}
+                topic={courseT("tdg")}
+                outstandingNameList={["Cheng Wing Yan 鄭泳昕", "Wong Chun Yuen 黃俊源"]}
+                outstandingSchoolList={["S5, CCC Heep Woh College", "S6, Munsang College (Hong Kong Island)"]}
+                excellentNameList={["Chan Kwun Wang, Eric 陳官弘", "Ng Ka Tsun 吳嘉浚", "Wu Kai Chun 吳佳臻"]}
+                excellentSchoolList={["S6, Hoi Ping Chamber of Commerce Secondary School", "S1, SKH Tsang Shiu Tim Secondary School", "S4, Munsang College (Hong Kong Island)"]}
+                hardwork={39}
+            />
         </div>
     );
 }
