@@ -10,7 +10,6 @@ export default async function StudentAwards({ params }) {
     return (
         <div className="flex justify-center items-center text-center w-full flex-col gap-2 md:text-base/8 sm:text-sm/8 text-xs">
             <Trans i18nKey="summer" t={t} values={{ period: period }} components={[<span key="0" className="font-bold text-3xl/8" />]} />
-            <br />
             <AwardBox
                 lang={lng}
                 topic={courseT("tma")}

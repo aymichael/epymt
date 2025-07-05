@@ -3,5 +3,6 @@
     "header": "得獎學生名單",
     "period": "<0>{{period}}學年</0>",
     "list": "得獎學生名單",
-    "summer": "<0>{{period}}學年暑期班學生得獎名單</0>"
+    "summer": "<0>{{period}}學年暑期班學生得獎名單</0>",
+    "fellowships": "<0>{{period}}學年榮譽學生名單</0>"
 }

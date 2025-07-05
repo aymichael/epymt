@@ -21,7 +21,6 @@ export default async function StudentAwards({ params }) {
     return (
         <div className="flex justify-center items-center text-center w-full flex-col gap-2 md:text-base/8 sm:text-sm/8 text-xs">
             <Trans i18nKey="summer" t={t} values={{ period: period }} components={[<span key="0" className="font-bold text-3xl/8" />]} />
-            <br />
             <div className="container mx-auto p-4">
                 <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">{courseT("tma")}</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -54,7 +53,7 @@ export default async function StudentAwards({ params }) {
             </div>
             <AwardBox
                 lang={lng}
-                topic={courseT("tdg")} // SAYT1134 Towards Differential Geometry
+                topic={courseT("tdg")}
                 outstandingNameList={["CHAN Hok HAN 陳學賢", "MA Yi Xuan 馬逸軒"]}
                 outstandingSchoolList={[
                     "S4, Pui Ching Middle School",
@@ -75,8 +74,8 @@ export default async function StudentAwards({ params }) {
 
             <AwardBox
                 lang={lng}
-                topic={courseT("ntc")} // SAYT1114 Number Theory and Cryptography
-                outstandingNameList={[]} // No Outstanding Award listed
+                topic={courseT("ntc")}
+                outstandingNameList={[]}
                 outstandingSchoolList={[]}
                 excellentNameList={["LEE Kwai Ling 李桂鈴"]}
                 excellentSchoolList={["S5, Leung Shek Chee College"]}
@@ -85,7 +84,7 @@ export default async function StudentAwards({ params }) {
 
             <AwardBox
                 lang={lng}
-                topic={courseT("neg")} // SAYT1214 Understanding Non-Euclidean Geometry
+                topic={courseT("uneg")}
                 outstandingNameList={["MA Yi Xuan 馬逸軒"]}
                 outstandingSchoolList={["S5, New Territories Heung Yee Kuk Yuen Long District Secondary School"]}
                 excellentNameList={["WONG Wai Chun 黃緯俊"]}
