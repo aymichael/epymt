@@ -18,7 +18,7 @@ const AwardBox = ({ lang, topic, outstandingNameList, outstandingSchoolList, exc
 
     return (
         <div className="container mx-auto p-4">
-            <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">{topic}</h2>
+            {topic && <h2 className="text-2xl font-bold mb-4 text-gray-900 dark:text-gray-100">{topic}</h2>}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                     <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-gray-200">{lang === 'en' ? 'Outstanding Performance Awards' : '卓越表現獎'}</h3>

@@ -4,5 +4,7 @@
     "period": "<0>{{period}}學年</0>",
     "list": "得獎學生名單",
     "summer": "<0>{{period}}學年暑期班學生得獎名單</0>",
+    "spring": "<0>{{period}}學年春季班學生得獎名單</0>",
+    "autumn": "<0>{{period}}學年秋季班學生得獎名單</0>",
     "fellowships": "<0>{{period}}學年榮譽學生名單</0>"
 }

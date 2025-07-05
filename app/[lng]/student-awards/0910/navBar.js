@@ -19,7 +19,6 @@ export default function NavBar({ lang }) {
     const targetURL = [`/${year}/summer`, `/${year}/fellowships`].map((url) => `/${lang}/student-awards/${url}`);
     const targetShortForm = ["summer", "fellowships"];
     const currentPath = usePathname().split("/")[4];
-    console.log(currentPath);
     return (
         <div className="flex justify-center gap-4 w-full flex-wrap">
             {targetName.map((name, index) => <NavButton key={index} text={name} link={targetURL[index]} selected={currentPath === targetShortForm[index]} />)}
