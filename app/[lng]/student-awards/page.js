@@ -7,7 +7,7 @@ export default async function Page({ params }) {
     const { lng } = await params;
     const { t } = await translation(lng, "awards");
     // generate years list by 2002-current year with last 2 digits
-    const years = Array.from({ length: year - 2002 }, (_, i) => (i + 3).toString().padStart(2, '0'));
+    const years = Array.from({ length: year - 2001 }, (_, i) => (i + 3).toString().padStart(2, '0'));
     console.log(year);
     return (
         <div className="container mx-auto p-4">
