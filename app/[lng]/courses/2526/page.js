@@ -1,10 +1,8 @@
 import Link from "next/link";
-import Image from "next/image";
 import { translation } from "@/app/i18n-index";
 import { Trans } from "react-i18next/TransWithoutContext";
 import { DateBox } from "../component";
 
-const prefix = "2526";
 const courses = ["tma", "cnag", "idm", "ntc", "tdg"];
 const date =
     ["14/7, 15/7, 17/7, 18/7, 21/7, 22/7, 24/7, 25/7, 28/7",
@@ -25,6 +23,7 @@ const lecturerCHI = ["李俊捷博士(香港中文大學)", "陳曉寧博士(香
 const lecturerENG = ["Dr. LI Chun Che (CUHK)", "Dr. CHAN Hiu Ning (CUHK)", "Dr. NG Ming Ho (CUHK)", "Dr. LIU Chun Lung Kelvin (CUHK)", "Dr. CHENG Man Chuen (CUHK)"];
 const tuitionFee = "3,350";
 const applicationFee = "50";
+const imagesList = ["2526_poster_1.jpg", "2526_poster_2.jpg", "2526_poster_3.jpg", "2526_poster_4.jpg"];
 
 export default async function Course({ params }) {
     const { lng } = await params;
@@ -184,10 +183,14 @@ export default async function Course({ params }) {
                 </tbody>
             </table>
             <span className="font-bold text-2xl/8 underline underline-offset-8" name="leaflet">{t("title_4")}</span>
-            <Image src={`/leaflet&poster/${prefix}_poster_1.jpg`} alt="課程海報" width={724} height={1024} />
-            <Image src={`/leaflet&poster/${prefix}_poster_2.jpg`} alt="課程海報" width={724} height={1024} />
-            <Image src={`/leaflet&poster/${prefix}_poster_3.jpg`} alt="課程海報" width={724} height={1024} />
-            <Image src={`/leaflet&poster/${prefix}_poster_4.jpg`} alt="課程海報" width={724} height={1024} />
+            {imagesList.map((image, index) => (
+                <div key={index} className="w-full m-4 flex justify-center">
+                <img
+                    src={`/leaflet&poster/${image}`}
+                    alt="課程海報"
+                />
+                </div>
+            ))}
         </div>
     );
 };
