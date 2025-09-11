@@ -54,7 +54,7 @@ export default async function StudentAwards({ params }) {
             <AwardBox
                 lang={lng}
                 topic={courseT("tdg")}
-                outstandingNameList={["CHAN Hok HAN 陳學賢", "MA Yi Xuan 馬逸軒"]}
+                outstandingNameList={["CHAN Hok Yin 陳學賢", "MA Yi Xuan 馬逸軒"]}
                 outstandingSchoolList={[
                     "S4, Pui Ching Middle School",
                     "S5, New Territories Heung Yee Kuk Yuen Long District Secondary School"
