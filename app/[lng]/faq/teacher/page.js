@@ -14,7 +14,7 @@ export default async function Student({ params }) {
                 answer={
                     [<div className="flex flex-col gap-2">
                         <p>There are several courses of different levels for students to choose. In general, if the student is Secondary 3 or above, enjoys mathematics and usually is the better one in class, there should be a course suitable for him/her. If he/she is of lower forms but already has mathematics skills of higher forms, he/she may also find a suitable course according to the following levels.</p>
-                        <div class="overflow-x-auto mx-2 my-4 rounded-lg border border-gray-400">
+                        <div className="overflow-x-auto mx-2 my-4 rounded-lg border border-gray-400">
                             <table className="table-auto w-full text-left">
                                 <thead>
                                     <tr>

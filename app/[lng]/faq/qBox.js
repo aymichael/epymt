@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 export default function QuestionBox({ question, answer,lang }) {
-    const [showAnswer, setShowAnswer] = useState(true);
+    const [showAnswer, setShowAnswer] = useState(false);
     const langFlag = lang === "en" ? 0 : 1;
 
     return (
