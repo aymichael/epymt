@@ -7,7 +7,7 @@ export default async function Student({ params }) {
     const { t } = await translation(lng, "faq");
     return (
         <div className="flex flex-col gap-4">
-            <h2 className="font-bold text-2xl/8 my-4">{t("student_header_1")}</h2>
+            <h2 className="font-bold text-2xl/8 my-4">{t("header_1")}</h2>
             <QuestionBox
                 lang={lng}
                 question={["How do I choose the courses of EPYMT?", "我應該如何選擇適合自己的課程？"]}
@@ -65,7 +65,7 @@ export default async function Student({ params }) {
                 question={["What language will be conducted in the courses?", "會使用什麼語言上課？"]}
                 answer={["The lecturers and teaching assistants will use Cantonese in class but all notes and teaching materials are conducted in English.", "授課老師和助教會以廣東話授課，但所有講義和教材均以英文編寫。"]}
             />
-            <h2 className="font-bold text-2xl/8 my-4">{t("student_header_2")}</h2>
+            <h2 className="font-bold text-2xl/8 my-4">{t("header_2")}</h2>
             <QuestionBox
                 lang={lng}
                 question={["I am mathematically well beyond the average of my age. However, I am only F.2 (or any junior form), am I able to attend your courses?", "我在數學方面遠超同齡學生，但我只是中二學生（或任何低年級），我可以參加你們的課程嗎？"]}
@@ -92,7 +92,7 @@ export default async function Student({ params }) {
                 question={["What if I can only attend several dates of the course?", "如果我只能參加課程的其中幾天，該怎麼辦？"]}
                 answer={["Our courses are intensive and they demand tremendous efforts to master the course contents. Therefore, it is advisable not to skip any one of the lecture, even to take a leave. Attending several dates of the course is strongly discouraged and your application may not be considered if such a condition is acknowledged.", "我們的課程編排密集，並需要付出大量的努力來掌握課程內容。因此，建議不要缺席任何一堂課，即使是請假也不例外。我們強烈不建議只參加課程的其中幾天，如果申請時說明了這種情況，你的申請可能不會被考慮。"]}
             />
-            <h2 className="font-bold text-2xl/8 my-4">{t("student_header_3")}</h2>
+            <h2 className="font-bold text-2xl/8 my-4">{t("header_3")}</h2>
             <QuestionBox
                 lang={lng}
                 question={["If I had applied EPYMT last year, do I still ask my teacher/principal to write me another recommendation letter this year?", "如果我去年申請過EPYMT，今年我還需要請老師/校長再為我寫一封推薦信嗎？"]}
@@ -135,7 +135,7 @@ export default async function Student({ params }) {
                 question={["Do I need to send in my school report cards or supporting documents for examination results?", "我需要提交學校成績單或成績證明文件嗎？"]}
                 answer={["NO. Please DO NOT send in any neither academic supporting documents, nor school reports now. You may be requested to do so in the future.", "不需要。請現在不要提交任何學業支持文件或學校成績單。您可能會在未來被要求這樣做。"]}
             />
-            <h2 className="font-bold text-2xl/8 my-4">{t("student_header_3")}</h2>
+            <h2 className="font-bold text-2xl/8 my-4">{t("header_4")}</h2>
             <QuestionBox
                 lang={lng}
                 question={["When will I know if I can attend the Admission Screening Test?", "我什麼時候會知道我是否可以參加入學甄選測驗？"]}
