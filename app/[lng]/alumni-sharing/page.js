@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 function SharingBox({ content, author }) {
     return (
         <div className="border-2 border-l-8 border-l-blue-200 dark:border-l-blue-800 border-gray-300 dark:border-gray-600 rounded-xl p-4 sm:p-6 flex flex-col gap-3 my-4 bg-white dark:bg-gray-800 shadow-sm ">
@@ -51,6 +53,7 @@ export default async function AlumniSharing({ params }) {
         const j = Math.floor(Math.random() * (i + 1));
         [data[i], data[j]] = [data[j], data[i]];
     }
+
     return (
         <div className="flex flex-col">
             <h1 className="font-bold text-3xl/8 text-center mb-4">{lng === "en" ? "Alumni Sharing" : "舊生分享"}</h1>
