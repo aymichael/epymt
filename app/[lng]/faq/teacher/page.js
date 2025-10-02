@@ -12,7 +12,7 @@ export default async function Student({ params }) {
                 lang={lng}
                 question={["How does my student choose the courses of EPYMT?", "我的學生應如何選擇EPYMT的課程？"]}
                 answer={
-                    [<div className="flex flex-col gap-2">
+                    [<div className="flex flex-col gap-2" key="0">
                         <p>There are several courses of different levels for students to choose. In general, if the student is Secondary 3 or above, enjoys mathematics and usually is the better one in class, there should be a course suitable for him/her. If he/she is of lower forms but already has mathematics skills of higher forms, he/she may also find a suitable course according to the following levels.</p>
                         <div className="overflow-x-auto mx-2 my-4 rounded-lg border border-gray-400">
                             <table className="table-auto w-full text-left">
@@ -49,9 +49,48 @@ export default async function Student({ params }) {
                         </div>
                         <span>It is advisable to seek consultation from school teachers to decide the course which suits him/her most, and ask teacher/principal to write him/her an online recommendation letter. We will also assess every applicant by an Admission Screening Test to evaluate his/her mathematical maturity before admitting him/her.</span>
                         <span>For course details and registration, please visit <Link href="/en/course-information" className="text-indigo-500 dark:text-indigo-300">here</Link>.</span>
-                    </div>, <div className="flex flex-col gap-2"> <p>我們有多個不同程度的課程供學生選擇。一般而言，如果學生是中三或以上，喜歡數學並且是班上較優秀的學生，應該有適合他的課程。如果他是低年級但已具備高年級的數學能力，他也可以根據以下程度找到合適的課程。</p>
-                        <div class="overflow-x-auto mx-2 my-4 rounded-lg border border-gray-400"> <table className="table-auto w-full text-left"> <thead> <tr> <th className="px-2 py-2">課程</th> <th className="px-2 py-2">學生程度</th> <th className="px-2 py-2">備註</th> </tr> </thead> <tbody> <tr className="border-t border-gray-400"> <td className="px-2 py-2">複數的幾何面貌 (CUSA1014)</td> <td className="px-2 py-2">完成中三，升讀中四</td> <td className="px-2 py-2">- 中學座標幾何的延伸</td> </tr> <tr className="border-t border-gray-400"> <td className="px-2 py-2">數論與密碼學 (SAYT1114)</td> <td className="px-2 py-2">完成中四，升讀中五</td> <td className="px-2 py-2">- 數字之間的樂趣</td> </tr> <tr className="border-t border-gray-400"> <td className="px-2 py-2">微分幾何初探 (SAYT1134)</td> <td className="px-2 py-2">完成中五，升讀中六</td> <td className="px-2 py-2">- 必須掌握微積分（微分與積分）</td> </tr> <tr className="border-t border-gray-400"> <td className="px-2 py-2">非歐幾何賞析 (SAYT1214)</td> <td className="px-2 py-2">中六頂尖學生或曾修讀 EPYMT 的學生</td> <td className="px-2 py-2">- 最具挑戰性的課程；絕大多數中四學生難以應付</td> </tr> </tbody> </table> </div>
-                        <span>建議先向學校老師諮詢，以決定最適合他/她的課程，並請老師或校長為他/她撰寫線上推薦信。我們也會透過入學甄選測驗來評估申請者的數學能力，再決定是否錄取。</span> <span>課程詳情與報名，請參閱 <Link href="/zh-Hant/course-information" className="text-indigo-500 dark:text-indigo-300">此處</Link>。</span> </div>]
+                    </div>, <div className="flex flex-col gap-2"  key="1">
+                        <p>我們有多個不同程度的課程供學生選擇。一般而言，如果學生是中三或以上，喜歡數學並且是班上較優秀的學生，應該有適合他的課程。如果他是低年級但已具備高年級的數學能力，他也可以根據以下程度找到合適的課程。</p>
+                        <div class="overflow-x-auto mx-2 my-4 rounded-lg border border-gray-400">
+                            <table className="table-auto w-full text-left">
+                                <thead>
+                                    <tr>
+                                        <th className="px-2 py-2">課程</th>
+                                        <th className="px-2 py-2">學生程度</th>
+                                        <th className="px-2 py-2">備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr className="border-t border-gray-400">
+                                        <td className="px-2 py-2">複數的幾何面貌 (CUSA1014)</td>
+                                        <td className="px-2 py-2">完成中三，升讀中四</td>
+                                        <td className="px-2 py-2">- 中學座標幾何的延伸</td>
+                                    </tr>
+                                    <tr className="border-t border-gray-400">
+                                        <td className="px-2 py-2">數論與密碼學 (SAYT1114)</td>
+                                        <td className="px-2 py-2">完成中四，升讀中五</td>
+                                        <td className="px-2 py-2">- 數字之間的樂趣</td>
+                                    </tr>
+                                    <tr className="border-t border-gray-400">
+                                        <td className="px-2 py-2">微分幾何初探 (SAYT1134)</td>
+                                        <td className="px-2 py-2">完成中五，升讀中六</td>
+                                        <td className="px-2 py-2">- 必須掌握微積分（微分與積分）</td>
+                                    </tr>
+                                    <tr className="border-t border-gray-400">
+                                        <td className="px-2 py-2">非歐幾何賞析 (SAYT1214)</td>
+                                        <td className="px-2 py-2">中六頂尖學生或曾修讀 EPYMT 的學生</td>
+                                        <td className="px-2 py-2">- 最具挑戰性的課程；絕大多數中四學生難以應付</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <span>建議先向學校老師諮詢，以決定最適合他/她的課程，並請老師或校長為他/她撰寫線上推薦信。我們也會透過入學甄選測驗來評估申請者的數學能力，再決定是否錄取。</span>
+                        <span>
+                            課程詳情與報名，請參閱
+                            <Link href="/zh-Hant/course-information" className="text-indigo-500 dark:text-indigo-300">
+                                此處</Link>。
+                        </span>
+                    </div>]
                 }
             />
             <QuestionBox

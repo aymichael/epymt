@@ -12,7 +12,7 @@ export default async function Student({ params }) {
                 lang={lng}
                 question={["How do I choose the courses of EPYMT?", "我應該如何選擇適合自己的課程？"]}
                 answer={
-                    [<div className="flex flex-col gap-2">
+                    [<div className="flex flex-col gap-2" key="0">
                         <p>There are several courses of different levels for you to choose. In general, if you are Secondary 3 or above, if you enjoy mathematics and usually are the better ones in your class, there should be a course suitable for you. If you are of lower forms but already have mathematics skills of higher forms, you may also find a suitable course according to the following levels.</p>
                         <div className="overflow-x-auto mx-2 my-4 rounded-lg border border-gray-400">
                             <table className="table-auto w-full text-left">
@@ -49,10 +49,48 @@ export default async function Student({ params }) {
                         </div>
                         <span>It is advisable to seek consultation from school teachers to decide the course which suits you most, and ask teacher/principal to write you an online recommendation letter. We will also assess every applicant by an Admission Screening Test to evaluate students&apos; mathematical maturity before admitting them.</span>
                         <span>For course details and registration, please visit <Link href="/en/course-information" className="text-indigo-500 dark:text-indigo-300">here</Link>.</span>
-                    </div>, <div className="flex flex-col gap-2"> <p>我們有多個不同程度的課程可供選擇。一般而言，如果你是中三或以上的學生，喜歡數學又在班上屬於較優秀的一批，那麼應該會有適合你的課程。如果你是低年級學生，但已經具備較高年級的數學能力，你也可以根據以下表格找到合適的課程。</p>
-
-                        <div class="overflow-x-auto mx-2 my-4 rounded-lg border border-gray-400"> <table className="table-auto w-full text-left"> <thead> <tr> <th className="px-2 py-2">課程</th> <th className="px-2 py-2">學生程度</th> <th className="px-2 py-2">備註</th> </tr> </thead> <tbody> <tr className="border-t border-gray-400"> <td className="px-2 py-2">複數的幾何面貌 (CUSA1014)</td> <td className="px-2 py-2">完成中三，升讀中四</td> <td className="px-2 py-2">- 中學座標幾何的延伸</td> </tr> <tr className="border-t border-gray-400"> <td className="px-2 py-2">數論與密碼學 (SAYT1114)</td> <td className="px-2 py-2">完成中四，升讀中五</td> <td className="px-2 py-2">- 數字之間的樂趣</td> </tr> <tr className="border-t border-gray-400"> <td className="px-2 py-2">微分幾何初探 (SAYT1134)</td> <td className="px-2 py-2">完成中五，升讀中六</td> <td className="px-2 py-2">- 必須掌握微積分（微分與積分）</td> </tr> <tr className="border-t border-gray-400"> <td className="px-2 py-2">非歐幾何賞析 (SAYT1214)</td> <td className="px-2 py-2">中六頂尖學生或曾修讀 EPYMT 的學生</td> <td className="px-2 py-2">- 最具挑戰性的課程；絕大多數中四學生難以應付</td> </tr> </tbody> </table> </div>
-                        <span>建議先向學校老師諮詢，以決定最適合你的課程，並請老師或校長為你撰寫線上推薦信。我們也會透過入學甄選測驗來評估申請者的數學成熟度，再決定是否錄取。</span> <span>課程詳情與報名，請參閱 <Link href="/zh-Hant/course-information" className="text-indigo-500 dark:text-indigo-300">此處</Link>。</span> </div>]
+                    </div>, <div className="flex flex-col gap-2" key="0">
+                        <p>我們有多個不同程度的課程可供選擇。一般而言，如果你是中三或以上的學生，喜歡數學又在班上屬於較優秀的一批，那麼應該會有適合你的課程。如果你是低年級學生，但已經具備較高年級的數學能力，你也可以根據以下表格找到合適的課程。</p>
+                        <div class="overflow-x-auto mx-2 my-4 rounded-lg border border-gray-400">
+                            <table className="table-auto w-full text-left">
+                                <thead>
+                                    <tr>
+                                        <th className="px-2 py-2">課程</th>
+                                        <th className="px-2 py-2">學生程度</th>
+                                        <th className="px-2 py-2">備註</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr className="border-t border-gray-400">
+                                        <td className="px-2 py-2">複數的幾何面貌 (CUSA1014)</td>
+                                        <td className="px-2 py-2">完成中三，升讀中四</td>
+                                        <td className="px-2 py-2">- 中學座標幾何的延伸</td>
+                                    </tr>
+                                    <tr className="border-t border-gray-400">
+                                        <td className="px-2 py-2">數論與密碼學 (SAYT1114)</td>
+                                        <td className="px-2 py-2">完成中四，升讀中五</td>
+                                        <td className="px-2 py-2">- 數字之間的樂趣</td>
+                                    </tr>
+                                    <tr className="border-t border-gray-400">
+                                        <td className="px-2 py-2">微分幾何初探 (SAYT1134)</td>
+                                        <td className="px-2 py-2">完成中五，升讀中六</td>
+                                        <td className="px-2 py-2">- 必須掌握微積分（微分與積分）</td>
+                                    </tr>
+                                    <tr className="border-t border-gray-400">
+                                        <td className="px-2 py-2">非歐幾何賞析 (SAYT1214)</td>
+                                        <td className="px-2 py-2">中六頂尖學生或曾修讀 EPYMT 的學生</td>
+                                        <td className="px-2 py-2">- 最具挑戰性的課程；絕大多數中四學生難以應付</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <span>建議先向學校老師諮詢，以決定最適合你的課程，並請老師或校長為你撰寫線上推薦信。我們也會透過入學甄選測驗來評估申請者的數學成熟度，再決定是否錄取。</span>
+                        <span>
+                            課程詳情與報名，請參閱
+                            <Link href="/zh-Hant/course-information" className="text-indigo-500 dark:text-indigo-300">
+                                此處</Link>。
+                        </span>
+                    </div>]
                 }
             />
             <QuestionBox
@@ -106,7 +144,7 @@ export default async function Student({ params }) {
             <QuestionBox
                 lang={lng}
                 question={["I heard of this year's EPYMT courses after the application deadline! Can I still apply?", "我在申請截止日期後才聽說今年的EPYMT課程！我還可以申請嗎？"]}
-                answer={[<span>Please email us <a href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</a> to consider if it is still possible to accept your application at the time of your inquiry.</span>, <span>
+                answer={[<span  key="0">Please email us <a href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</a> to consider if it is still possible to accept your application at the time of your inquiry.</span>, <span  key="1">
                     請發送電子郵件至 <a href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</a>，以考慮是否仍有可能接受您的申請。
                 </span>]} />
             <QuestionBox
@@ -117,13 +155,13 @@ export default async function Student({ params }) {
             <QuestionBox
                 lang={lng}
                 question={["How do I know my application is successfully submitted?", "我怎麼知道我的申請已成功提交？"]}
-                answer={[<span>You should receive a confirmation email listing the course(s) you applied if your online application has been successfully submitted. If you have not received a confirmation email, please contact us by <a href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</a> immediately.</span>
-                    , <span>如果您的網上申請已成功提交，您應該會收到一封確認電子郵件，列出您所申請的課程。如果您沒有收到確認電子郵件，請立即通過 <a href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</a> 與我們聯繫。</span>
+                answer={[<span  key="0">You should receive a confirmation email listing the course(s) you applied if your online application has been successfully submitted. If you have not received a confirmation email, please contact us by <a href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</a> immediately.</span>
+                    , <span  key="1">如果您的網上申請已成功提交，您應該會收到一封確認電子郵件，列出您所申請的課程。如果您沒有收到確認電子郵件，請立即通過 <a href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</a> 與我們聯繫。</span>
                 ]} />
             <QuestionBox
                 lang={lng}
                 question={["Can I change some details or my course choice after I submit the online application?", "提交網上申請後，我可以更改一些信息或我的課程選擇嗎？"]}
-                answer={[<span>Yes. Please email us <a href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</a> and state the changes by using the email address you provided in the online application form you have submitted.</span>, <span>可以。請通過您在已提交的網上申請表中提供的電子郵件地址，發送電子郵件至 <a href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</a> 並說明更改內容。</span>
+                answer={[<span  key="0">Yes. Please email us <a href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</a> and state the changes by using the email address you provided in the online application form you have submitted.</span>, <span key="1">可以。請通過您在已提交的網上申請表中提供的電子郵件地址，發送電子郵件至 <a href="mailto:epymt@math.cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt@math.cuhk.edu.hk</a> 並說明更改內容。</span>
                 ]} />
             <QuestionBox
                 lang={lng}
@@ -139,8 +177,8 @@ export default async function Student({ params }) {
             <QuestionBox
                 lang={lng}
                 question={["When will I know if I can attend the Admission Screening Test?", "我什麼時候會知道我是否可以參加入學甄選測驗？"]}
-                answer={[<span>Usually, we will invite most applicants to attend an Admission Screening Test on the date mentioned in <Link href="/en/application" className="text-indigo-500 dark:text-indigo-300">Application</Link> page. We will also send confirmation emails to students after the application period. Please keep checking your emails.</span>,
-                <span>通常，我們會邀請大多數申請者在<a href="/zh-Hant/application" className="text-indigo-500 dark:text-indigo-300">申請</a>頁面中提到的日期參加入學甄選測驗。我們也會在申請期結束後向學生發送確認電子郵件。請持續檢查您的電子郵件。</span>
+                answer={[<span key="0">Usually, we will invite most applicants to attend an Admission Screening Test on the date mentioned in <Link href="/en/application" className="text-indigo-500 dark:text-indigo-300">Application</Link> page. We will also send confirmation emails to students after the application period. Please keep checking your emails.</span>,
+                <span key="1">通常，我們會邀請大多數申請者在<Link href="/zh-Hant/application" className="text-indigo-500 dark:text-indigo-300">申請</Link>頁面中提到的日期參加入學甄選測驗。我們也會在申請期結束後向學生發送確認電子郵件。請持續檢查您的電子郵件。</span>
                 ]}
             />
             <QuestionBox
