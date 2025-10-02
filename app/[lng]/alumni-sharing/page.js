@@ -1,17 +1,5 @@
-export const dynamic = "force-dynamic";
+import SharingBox from "./sharingBox";
 
-function SharingBox({ content, author }) {
-    return (
-        <div className="border-2 border-l-8 border-l-blue-200 dark:border-l-blue-800 border-gray-300 dark:border-gray-600 rounded-xl p-4 sm:p-6 flex flex-col gap-3 my-4 bg-white dark:bg-gray-800 shadow-sm ">
-            <span className="italic text-gray-700 dark:text-gray-300 text-lg/8 sm:text-xl/8 whitespace-pre-line">
-                &quot;{content}&quot;
-            </span>
-            <span className="font-bold self-end">
-                —— {author}
-            </span>
-        </div>
-    );
-}
 export default async function AlumniSharing({ params }) {
     const { lng } = await params;
     const data = [
@@ -47,21 +35,13 @@ export default async function AlumniSharing({ params }) {
             authors: 'Overseas student, Colman YAU Ho Man, 2011'
         }
     ]
-    // shuffle the data
-    const length = data.length;
-    for (let i = length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [data[i], data[j]] = [data[j], data[i]];
-    }
+
 
     return (
         <div className="flex flex-col">
             <h1 className="font-bold text-3xl/8 text-center mb-4">{lng === "en" ? "Alumni Sharing" : "舊生分享"}</h1>
             <p>{lng === "en" ? "Since 2002, EPYMT has nurtured various local and international school students. Many of them learnt the mathematics taught in EPYMT courses with enjoyment and enlightenment. Here we share some encouraging opinions of students and parents." : "自2002年起，數學英才精進課程培育了來自本地及國際學校的學生。他們當中有不少人都樂在其中地學習課程所教授的數學知識，並從中獲益良多。以下是一些學生及家長的分享。"}</p>
-            {/* randomly choose 3 content */}
-            {data.slice(0, 3).map((item, index) => (
-                <SharingBox key={index} content={item.content} author={item.authors} />
-            ))}
+            <SharingBox data={data} />
         </div>
     );
 };
