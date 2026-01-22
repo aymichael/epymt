@@ -6,7 +6,6 @@ export default async function CNAG({ params }) {
     const { t } = await translation(lng, "uneg");
     return (
         <div className="flex justify-center w-full flex-col gap-2">
-            <span className="text-2xl/8 font-bold text-center text-red-500">{t("outdated")}</span>
             <div className="flex flex-col gap-2">
                 <span className="font-bold">{t("courseCode")}</span>
                 <span>SAYT1214</span>

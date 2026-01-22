@@ -3,27 +3,29 @@ import { translation } from "@/app/i18n-index";
 import { Trans } from "react-i18next/TransWithoutContext";
 import { DateBox } from "../component";
 
-const courses = ["tma", "cnag", "idm", "ntc", "tdg"];
+const courses = ["tma", "cnag", "idm", "ntc", "tdg", "uneg"];
 const date =
-    ["14/7, 15/7, 17/7, 18/7, 21/7, 22/7, 24/7, 25/7, 28/7",
-        "14/7, 15/7, 17/7, 18/7, 21/7, 22/7, 24/7, 25/7, 28/7",
-        "14/7, 15/7, 17/7, 18/7, 21/7, 22/7, 24/7, 25/7, 28/7",
-        "8/8, 11/8, 13/8, 15/8, 18/8, 20/8, 22/8, 25/8, 27/8",
-        "8/8, 11/8, 13/8, 15/8, 18/8, 20/8, 22/8, 25/8, 27/8"
+    ["13/7, 14/7, 16/7, 17/7, 20/7, 21/7, 23/7, 24/7, 27/7",
+        "13/7, 14/7, 16/7, 17/7, 20/7, 21/7, 23/7, 24/7, 27/7",
+        "13/7, 14/7, 16/7, 17/7, 20/7, 21/7, 23/7, 24/7, 27/7",
+        "7/8, 10/8, 12/8, 14/8, 17/8, 19/8, 21/8, 24/8, 26/8",
+        "7/8, 10/8, 12/8, 14/8, 17/8, 19/8, 21/8, 24/8, 26/8",
+        "7/8, 10/8, 12/8, 14/8, 17/8, 19/8, 21/8, 24/8, 26/8"
     ];
-const examDate = ["31/7", "31/7", "31/7", "29/8", "29/8"];
+const examDate = ["30/7", "30/7", "30/7", "28/8", "28/8", "28/8"];
 const reservedDate =
-    ["23/7, 29/7, 1/8",
-        "23/7, 29/7, 1/8",
-        "23/7, 29/7, 1/8",
-        "19/8, 28/8, 30/8",
-        "19/8, 28/8, 30/8"
+    ["22/7, 28/7, 31/7",
+        "22/7, 28/7, 31/7",
+        "22/7, 28/7, 31/7",
+        "18/8, 27/8, 31/8",
+        "18/8, 27/8, 31/8",
+        "18/8, 27/8, 31/8"
     ];
-const lecturerCHI = ["李俊捷博士(香港中文大學)", "陳曉寧博士(香港中文大學)", "吳銘豪博士(香港中文大學)", "廖振隆博士(香港中文大學)", "鄭文銓博士(香港中文大學)"];
-const lecturerENG = ["Dr. LI Chun Che (CUHK)", "Dr. CHAN Hiu Ning (CUHK)", "Dr. NG Ming Ho (CUHK)", "Dr. LIU Chun Lung Kelvin (CUHK)", "Dr. CHENG Man Chuen (CUHK)"];
+const lecturerCHI = ["李俊捷博士(香港中文大學)", "陳曉寧博士(香港中文大學)", "吳銘豪博士(香港中文大學)", "廖振隆博士(香港中文大學)", "鄭文銓博士(香港中文大學)", "張亮夫博士(香港中文大學)"];
+const lecturerENG = ["Dr. LI Chun Che (CUHK)", "Dr. CHAN Hiu Ning (CUHK)", "Dr. NG Ming Ho (CUHK)", "Dr. LIU Chun Lung Kelvin (CUHK)", "Dr. CHENG Man Chuen (CUHK)", "Dr. CHEUNG Leung Fu (CUHK)"];
 const tuitionFee = "3,350";
 const applicationFee = "50";
-const imagesList = ["2526_poster_1.jpg", "2526_poster_2.jpg", "2526_poster_3.jpg", "2526_poster_4.jpg"];
+const imagesList = [];
 
 export default async function Course({ params }) {
     const { lng } = await params;
