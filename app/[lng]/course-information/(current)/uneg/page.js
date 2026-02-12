@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { translation } from "@/app/i18n-index";
+import { Trans } from "react-i18next/TransWithoutContext";
 
-export default async function CNAG({ params }) {
+export default async function UNEG({ params }) {
     const { lng } = await params;
     const { t } = await translation(lng, "uneg");
     return (
-        <div className="flex justify-center w-full flex-col gap-2">
-            <span className="text-2xl/8 font-bold text-center text-red-500">{t("outdated")}</span>
+        <div className="flex justify-center w-full flex-col gamd:p-2">
             <div className="flex flex-col gap-2">
                 <span className="font-bold">{t("courseCode")}</span>
                 <span>SAYT1214</span>
@@ -17,14 +17,19 @@ export default async function CNAG({ params }) {
                 <span className="font-bold">{t("expectedApplicants.header")}</span>
                 <span>{t("expectedApplicants.content")}</span>
                 <span className="font-bold">{t("introduction.header")}</span>
-                <div className="flex flex-col">{t("introduction.content")}</div>
+                <div className="flex flex-col">
+                    <Trans
+                        i18nKey="introduction.content"
+                        t={t}
+                        components={[<span key="0" />]}
+                    />
+                </div>
+
             </div>
-            <div className="flex flex-col gap-2 p-4 border-gray-300 rounded-2xl border-2">
+            <Link href={`/${lng}/application`} className="text-indigo-500 text-center my-4 dark:text-indigo-300 font-bold underline text-2xl/8">{t("application")}</Link>
+            <div className="flex flex-col gamd:p-2 p-4 border-gray-300 rounded-2xl border-2">
                 <span className="font-bold text-xl/8 text-center">{t("conditions.title")}</span>
-                <span>{t("conditions.description")}</span>
-                <span className="text-sm">{t("conditions.note")}</span>
-                <span>{t("conditions.point_1")}</span>
-                <span>{t("conditions.point_2")}</span>
+                <span>{t("conditions.point_3")}</span>
             </div>
         </div>
     );

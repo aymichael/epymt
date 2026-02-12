@@ -23,26 +23,10 @@ export default async function Introduction({ params }) {
                     components={[<Link key="0" href="https://www.qef.org.hk/en/index.html" className="text-indigo-500 dark:text-indigo-300" />, <span key="1" className="font-bold" />]}
                 />
             </span>
-            <span>
-                <Trans
-                    i18nKey="section_2.content_2"
-                    t={t}
-                    components={[<span key="0" className="font-bold" />]}
-                />
-            </span>
             <br />
             <span className=" font-bold text-2xl/8 underline-offset-8 underline my-2">{t("section_3.title")}</span>
             <span>
                 {t("section_3.content_1")}
-            </span>
-            <span>
-                {t("section_3.content_2")}
-            </span>
-            <span>
-                {t("section_3.content_3")}
-            </span>
-            <span>
-                {t("section_3.content_4")}
             </span>
         </div>
     )

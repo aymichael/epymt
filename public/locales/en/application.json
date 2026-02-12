@@ -11,19 +11,19 @@
     "reminder_2": "- Application fee is HK$50 for each EPYMT course.",
     "reminder_3": "- Applicants who apply for more than one course should submit application separately for each course in the same account.",
     "checkStatus": "3. Check application status. Applicants can also login the account to check their course result in the future.",
+    "checkEmail": "4. We primarily communicate with you via email, and we kindly encourage you to <0>check your email account regularly</0>. This will ensure that you stay informed and do not miss any important information.",
     "remark": "* It is not necessary to send any supporting documents at this stage."
   },
   "step_2": {
     "title": "STEP 2 : Admission Screening Test",
     "formerStudents": {
       "title": "Former students",
-      "description": "Former students of EPYMT may enjoy exemption of admission screening tests under certain conditions. Please read the course webpage for requirements and complete the form under \"Former EPYMT Applicant\" of the online application."
+      "description": "Applicants who have successfully completed any EPYMT course may be exempt from the Admission Screening Test and will be directly admitted to their chosen course(s)."
     },
     "localAndOverseasStudents": {
-      "title": "Local and Overseas students",
-      "description": "All local first-time applicants must attend the admission screening test on <0>{{admissionDate}}</0>. Failing to do so will be considered as withdrawing from the application."
+      "title": "Details",
+      "description": "All first-time applicants must attend the admission screening test on <0>{{admissionDate}}</0>. Failing to do so will be considered as withdrawing from the application."
     },
-    "details": "The screening test is a take-home exam that assesses whether an applicant has acquired sufficient background knowledge to take EPYMT courses. The question paper will be sent to applicants at <0>10:00 on 31 May 2025 (Saturday)</0> by email. Answers should be scanned, combined into a single PDF file, and submitted to the link provided in the email before <0>17:00 on 2 June 2025 (Monday)</0>. Late submissions may not be considered."
-  },
-  "remark":  "Attention: The learning pace is fast and the schedule is tight. It <0>requires tremendous effort</0> and commitment from students to truly benefit from the programme. Absence and withdrawal are detrimental to learning, and we will also strictly follow the university regulations on matters related to taking leave and withdrawal."
+    "details": "The screening test is a take-home exam that assesses whether an applicant has acquired sufficient background knowledge to take EPYMT courses. The question paper will be sent to applicants at <0>10:00 on 1 May 2026 (Friday)</0> by email. Answers should be scanned, combined into a single PDF file, and submitted to the link provided in the email before <0>17:00 on 4 May 2026 (Monday)</0>. Late submissions may not be considered."
+  }
 }

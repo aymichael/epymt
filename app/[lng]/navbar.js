@@ -11,8 +11,8 @@ import { year } from "../data";
 export default function Navbar({ lang }) {
     const currCourseURL = year.toString().slice(2) + (year + 1).toString().slice(2);
     const pages = lang === languages[0] ? ["About", "Courses", "Students Highlights", "Support"] : ["關於", "課程", "學生亮點", "支援"];
-    const subpages = lang === languages[0] ? [["Introduction", "Advisors"], ["This Year's Courses", "Past Courses", "Course Infomation", "Guest Lectures"], ["Student Awards", "Alumni Sharing"], ["Application", "FAQ", "Contact Us"]] : [["簡介", "導師"], ["本年度課程", "過往課程", "課程資訊", "客席講座"], ["學生獎項", "校友分享"], ["申請", "常見問題", "聯絡我們"]];
-    const subpageURL = [["introduction", "advisors"], [`courses/${currCourseURL}`, "courses", "course-information", "guest-lectures"], ["student-awards", "alumni-sharing"], ["application", "faq", "contact-us"]];
+    const subpages = lang === languages[0] ? [["Introduction", "Inaugurate Advisors"], ["This Year's Courses", "Past Courses", "Course Infomation"], ["Student Awards", "Alumni Sharing"], ["Application", "FAQ", "Contact Us"]] : [["簡介", "起始學術顧問"], ["本年度課程", "過往課程", "課程資訊"], ["學生獎項", "校友分享"], ["申請", "常見問題", "聯絡我們"]];
+    const subpageURL = [["introduction", "advisors"], [`courses/${currCourseURL}`, "courses", "course-information"], ["student-awards", "alumni-sharing"], ["application", "faq", "contact-us"]];
     const [isOpen, setIsOpen] = useState(false);
     const [currentNav, setCurrentNav] = useState(-1);
     const [selectedNav, setSelectedNav] = useState(-1);
