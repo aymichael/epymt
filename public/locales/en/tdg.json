@@ -10,7 +10,7 @@
     },
     "expectedApplicants": {
         "header": "Expected Applicants",
-        "content": "Students who have high competence in abstract mathematical reasoning, and are promoting to Secondary 4 or Secondary 5."
+        "content": "Students who are promoting to Secondary 5 or 6, and have good knowledge of calculus and geometry. An exposure to physics will be helpful."
     },
     "introduction": {
         "header": "Introduction",
@@ -23,6 +23,7 @@
         "description": "Applicants who satisfy either one of the following conditions may be exempted from Admission Screening Test and will be directly admitted into this course.",
         "note": "*(Those who had taken \"Enrichment Mentoring Mathematics I or II\" still need to sit the Test, but will be considered with priority.)",
         "point_1": "1. Passed in any of the following courses before: Geometric Perspectives of Complex Numbers, Complex Number and Analytical Geometry, and Towards Modern Algebra.",
-        "point_2": "2. Being admitted in one of the following courses before: Number Theory and Cryptography, Towards Differential Geometry, Mathematical Analysis, and Understanding Non-Euclidean Geometry."
+        "point_2": "2. Being admitted in one of the following courses before: Number Theory and Cryptography, Towards Differential Geometry, Mathematical Analysis, and Understanding Non-Euclidean Geometry.",
+        "point_3": "Applicants who have successfully completed any EPYMT course may be exempt from the Admission Screening Test and will be directly admitted to their chosen course(s)."
     }
 }

@@ -13,18 +13,43 @@ export default async function Student({ params }) {
                 question={["How do I choose the courses of EPYMT?", "我應該如何選擇適合自己的課程？"]}
                 answer={
                     [<div className="flex flex-col gap-2" key="0">
+<<<<<<< HEAD
+                        <p>There are several courses of different levels for you to choose. In general, if you are promoting to Secondary 4 or above, if you enjoy mathematics and usually are the better ones in your class, there should be a course suitable for you. If you are of lower forms but already have mathematics skills of higher forms, you may also find a suitable course according to the following levels.</p>
+=======
                         <p>There are several courses of different levels for you to choose. In general, if you are Secondary 3 or above, if you enjoy mathematics and usually are the better ones in your class, there should be a course suitable for you. If you are of lower forms but already have mathematics skills of higher forms, you may also find a suitable course according to the following levels.</p>
+>>>>>>> 9ce3eb9a70e0ddf27fb67382d5e4071bb4659de1
                         <div className="overflow-x-auto mx-2 my-4 rounded-lg border border-gray-400">
                             <table className="table-auto w-full text-left">
                                 <thead>
                                     <tr>
+<<<<<<< HEAD
+                                        <th className="px-2 py-2 w-1/2">Course</th>
+                                        <th className="px-2 py-2">Target Students</th>
+=======
                                         <th className="px-2 py-2">Course</th>
                                         <th className="px-2 py-2">Student level</th>
                                         <th className="px-2 py-2">Remarks</th>
+>>>>>>> 9ce3eb9a70e0ddf27fb67382d5e4071bb4659de1
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="border-t border-gray-400">
+<<<<<<< HEAD
+                                        <td className="px-2 py-2"><p>Towards Modern Algebra (SAYT1014)</p><p>Complex Numbers and Analytic Geometry (SAYT1034)</p><p>Introduction to Discrete Mathematics (SAYT1084)</p></td>
+                                        <td className="px-2 py-2">Students who have high competence in abstract mathematical reasoning, and are promoting to Secondary 4 or Secondary 5.</td>
+                                    </tr>
+                                    <tr className="border-t border-gray-400">
+                                        <td className="px-2 py-2">Number Theory and Cryptography (SAYT1114)</td>
+                                        <td className="px-2 py-2">Students who are promoting to Secondary 5 or 6, and have good knowledge of algebra.</td>
+                                    </tr>
+                                    <tr className="border-t border-gray-400">
+                                        <td className="px-2 py-2">Towards Differential Geometry (SAYT1134)</td>
+                                        <td className="px-2 py-2">Students who are promoting to Secondary 5 or 6, and have good knowledge of calculus and geometry. An exposure to physics will be helpful.</td>
+                                    </tr>
+                                    <tr className="border-t border-gray-400">
+                                        <td className="px-2 py-2">Understanding Non-Euclidean Geometry (SAYT1214)</td>
+                                        <td className="px-2 py-2">Students who are promoting to Secondary 5 or 6, and have good knowledge of complex numbers, calculus and geometry.</td>
+=======
                                         <td className="px-2 py-2">Geometric Perspectives of Complex Numbers (CUSA1014)</td>
                                         <td className="px-2 py-2">Finished S3 (Grade 9), advancing to S4 (Grade 10)</td>
                                         <td className="px-2 py-2">- A natural extension secondary school coordinate geometry module</td>
@@ -43,25 +68,54 @@ export default async function Student({ params }) {
                                         <td className="px-2 py-2">Understanding Non-Euclidean Geometry (SAYT1214)</td>
                                         <td className="px-2 py-2">Top of class in S6 (Grade 12) or former EPYMT students</td>
                                         <td className="px-2 py-2">- Most challenging course; beyond the reach of the vast majority of F.4 students</td>
+>>>>>>> 9ce3eb9a70e0ddf27fb67382d5e4071bb4659de1
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
+<<<<<<< HEAD
+                        <span>An Admission Screening Test will be conducted to evaluate your mathematical maturity.</span>
+                        <span>For course details and registration, please visit <Link href="/en/course-information" className="text-indigo-500 dark:text-indigo-300">here</Link>.</span>
+                    </div>, <div className="flex flex-col gap-2" key="0">
+                        <p>我們有多個不同程度的課程可供選擇。一般而言，如果你是中四或以上的學生，喜歡數學又在班上屬於較優秀的一批，那麼應該會有適合你的課程。如果你是低年級學生，但已經具備較高年級的數學能力，你也可以根據以下表格找到合適的課程。</p>
+=======
                         <span>It is advisable to seek consultation from school teachers to decide the course which suits you most, and ask teacher/principal to write you an online recommendation letter. We will also assess every applicant by an Admission Screening Test to evaluate students&apos; mathematical maturity before admitting them.</span>
                         <span>For course details and registration, please visit <Link href="/en/course-information" className="text-indigo-500 dark:text-indigo-300">here</Link>.</span>
                     </div>, <div className="flex flex-col gap-2" key="0">
                         <p>我們有多個不同程度的課程可供選擇。一般而言，如果你是中三或以上的學生，喜歡數學又在班上屬於較優秀的一批，那麼應該會有適合你的課程。如果你是低年級學生，但已經具備較高年級的數學能力，你也可以根據以下表格找到合適的課程。</p>
+>>>>>>> 9ce3eb9a70e0ddf27fb67382d5e4071bb4659de1
                         <div class="overflow-x-auto mx-2 my-4 rounded-lg border border-gray-400">
                             <table className="table-auto w-full text-left">
                                 <thead>
                                     <tr>
+<<<<<<< HEAD
+                                        <th className="px-2 py-2 w-1/3">課程</th>
+                                        <th className="px-2 py-2">對象</th>
+=======
                                         <th className="px-2 py-2">課程</th>
                                         <th className="px-2 py-2">學生程度</th>
                                         <th className="px-2 py-2">備註</th>
+>>>>>>> 9ce3eb9a70e0ddf27fb67382d5e4071bb4659de1
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr className="border-t border-gray-400">
+<<<<<<< HEAD
+                                        <td className="px-2 py-2"><p>近世代數初探 (SAYT1014)</p><p>複數與解析幾何 (SAYT1034)</p><p>離散數學導論 (SAYT1084)</p></td>
+                                        <td className="px-2 py-2">準備升讀中四或中五，並具備良好的抽象數學推理能力的同學。</td>
+                                    </tr>
+                                    <tr className="border-t border-gray-400">
+                                        <td className="px-2 py-2">數論與密碼學 (SAYT1114)</td>
+                                        <td className="px-2 py-2">準備升讀中五或中六，並具備良好的代數知識的同學。</td>
+                                    </tr>
+                                    <tr className="border-t border-gray-400">
+                                        <td className="px-2 py-2">微分幾何初探 (SAYT1134)</td>
+                                        <td className="px-2 py-2">準備升讀中五或中六，並具備良好的微積分及幾何，甚至物理知識的同學。</td>
+                                    </tr>
+                                    <tr className="border-t border-gray-400">
+                                        <td className="px-2 py-2">非歐幾何賞析 (SAYT1214)</td>
+                                        <td className="px-2 py-2">準備升讀中五或中六，並具備良好的複數、微積分及幾何知識的同學。</td>
+=======
                                         <td className="px-2 py-2">複數的幾何面貌 (CUSA1014)</td>
                                         <td className="px-2 py-2">完成中三，升讀中四</td>
                                         <td className="px-2 py-2">- 中學座標幾何的延伸</td>
@@ -80,11 +134,16 @@ export default async function Student({ params }) {
                                         <td className="px-2 py-2">非歐幾何賞析 (SAYT1214)</td>
                                         <td className="px-2 py-2">中六頂尖學生或曾修讀 EPYMT 的學生</td>
                                         <td className="px-2 py-2">- 最具挑戰性的課程；絕大多數中四學生難以應付</td>
+>>>>>>> 9ce3eb9a70e0ddf27fb67382d5e4071bb4659de1
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
+<<<<<<< HEAD
+                        <span>我們將透過入學試評估你的數學程度以決定是否錄取。</span>
+=======
                         <span>建議先向學校老師諮詢，以決定最適合你的課程，並請老師或校長為你撰寫線上推薦信。我們也會透過入學甄選測驗來評估申請者的數學成熟度，再決定是否錄取。</span>
+>>>>>>> 9ce3eb9a70e0ddf27fb67382d5e4071bb4659de1
                         <span>
                             課程詳情與報名，請參閱
                             <Link href="/zh-Hant/course-information" className="text-indigo-500 dark:text-indigo-300">
@@ -101,11 +160,62 @@ export default async function Student({ params }) {
             <QuestionBox
                 lang={lng}
                 question={["What language will be conducted in the courses?", "會使用什麼語言上課？"]}
+<<<<<<< HEAD
+                answer={["The lecturers and teaching assistants will use Cantonese in class but all notes and teaching materials are written in English.", "授課老師和助教會以粵語授課，但所有講義和教材均以英文編寫。"]}
+=======
                 answer={["The lecturers and teaching assistants will use Cantonese in class but all notes and teaching materials are conducted in English.", "授課老師和助教會以廣東話授課，但所有講義和教材均以英文編寫。"]}
+>>>>>>> 9ce3eb9a70e0ddf27fb67382d5e4071bb4659de1
             />
             <h2 className="font-bold text-2xl/8 my-4">{t("header_2")}</h2>
             <QuestionBox
                 lang={lng}
+<<<<<<< HEAD
+                question={["I am mathematically well beyond the average of my age. However, I am only promoting to Secondary 3 (or any junior form), am I eligible to participate in EPYMT?", "我在數學方面遠超同齡學生，但我只是升讀中三（或更低年級），我可否參加數學英材精進課程？"]}
+                answer={["We welcome junior form students to participate in EPYMT. However, please note that EPYMT introduces more advanced and sophisticated mathematics than what you learn in school, so you should be mature enough to face difficulties and challenges.", "我們歡迎低年級學生參加數學英材精進課程，但請注意此課程教授的數學內容較學校課程更為進階和複雜，因此你需具備良好的能力和態度面對困難和挑戰。"]}
+            />
+            <QuestionBox
+                lang={lng}
+                question={["I am not a local student, can I still apply for EPYMT?", "我並非本地學生，我可否參加數學英材精進課程？"]}
+                answer={["Yes, please ensure you can attend the course in person and understand Cantonese", "可以，但請確保你能親身出席課堂活動以及以粵語聽課"]}
+            />
+            <QuestionBox
+                lang={lng}
+                question={["What if I can only attend several dates of the course?", "如果我只能參加課程的其中幾天，該怎麼辦？"]}
+                answer={["Our courses are intensive and demand significant effort to master the material. Therefore, attending all course activities is strongly advised. Please note that a certificate will only be issued if you pass the subject assessment and attend 7 or more days.", "我們的課程非常緊湊，而且需要付出極大努力才能掌握課程內容。因此，我們強烈建議你出席所有課程活動。請注意，課程證書僅在通過科目評估並參加7天或以上的情況下才會發放。"]}
+            />
+            <h2 className="font-bold text-2xl/8 my-4">{t("header_3")}</h2>
+            <QuestionBox
+                lang={lng}
+                question={["How do I know my application is successfully submitted?", "我怎麼知道我的申請已成功提交？"]}
+                answer={[<span  key="0">You should receive a confirmation email listing the course(s) you applied if your online application has been successfully submitted. If you have not received a confirmation email, please contact us by <a href="mailto:epymt.math@cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt.math@cuhk.edu.hk</a> immediately.</span>
+                    , <span  key="1">如果您的網上申請已成功提交，您應該會收到一封確認電子郵件，列出您所申請的課程。如果您沒有收到確認電子郵件，請立即通過 <a href="mailto:epymt.math@cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt.math@cuhk.edu.hk</a> 與我們聯繫。</span>
+                ]} />
+            <QuestionBox
+                lang={lng}
+                question={["How will the information I submit online be used?", "我在線提交的信息將如何使用？"]}
+                answer={["The information collected in the application form will be used for processing, administration, and statistical purposes. We will not share your personal information with any third party.", "在申請表中收集的信息將用於處理、管理和統計目的。我們不會與任何第三方共享你的個人信息。"]}
+            />
+            <h2 className="font-bold text-2xl/8 my-4">{t("header_4")}</h2>
+            <QuestionBox
+                lang={lng}
+                question={["What language will the Admission Screening Test paper be in?", "入學試將以甚麼語言進行？"]}
+                answer={["The Admission Screening Test paper is written in English, and you are expect to write your answers in English.", "入學試卷是用英文編寫的，你亦需以英文作答。"]}
+            />
+            <QuestionBox
+                lang={lng}
+                question={["How long will the Admission Screening Test paper be?", "入學試卷有多長？"]}
+                answer={["The Admission Screening Test paper consists of two parts: a compulsory part and an elective part. If you apply for an elementary level course (Towards Modern Algebra, Complex Numbers and Analytic Geometry, or Introduction to Discrete Mathematics), the elective part is optional and will be considered a bonus. If you apply for an advanced level course (Towards Differential Geometry, Number Theory and Cryptography, or Understanding Non-Euclidean Geometry), you must attempt the corresponding question in the elective part, and any additional attempts will also be considered a bonus.", "入學試卷由兩部分組成：必答部分和選答部分。如果你申請初級程度課程（如《近世代數初探》、《複數與解析幾何》或《離散數學導論》），選答部分答案將被視為額外獎勵。如果你申請進階程度課程（如《數論與密碼學》、《微分幾何初探》或《非歐幾何賞析》），則必須作答選答部分中的相應問題，任何額外的嘗試也將被視為獎勵。"]}
+            />
+            <QuestionBox
+                lang={lng}
+                question={["What is the purpose of the Admission Screening Test?", "入學甄選測驗的目的是甚麼？"]}
+                answer={["The Admission Screening Test is designed to evaluate your mathematical skills and ensure you possess the necessary knowledge to enroll in an EPYMT course. You are expected to complete the test independently to accurately reflect your abilities. Otherwise, you may end up in a course that is not suited to your level.", "入學試旨在評估你的數學能力，以確保你具備課程所需的知識。因此，你需要獨立完成測試，以準確反映你的能力。否則，你可能修讀了不適合你的課程。"]}
+            />
+            <QuestionBox
+                lang={lng}
+                question={["How can I know if my application is successful or not?", "我怎麼知道我的申請是否成功？"]}
+                answer={["You will receive an email notification from us within two weeks after the Admission Screening Test. If you do not receive a notification, please consider your application unsuccessful.", "你將在入學試後的兩週內收到電郵通知。否則，很抱歉，你的申請並未成功。"]}
+=======
                 question={["I am mathematically well beyond the average of my age. However, I am only F.2 (or any junior form), am I able to attend your courses?", "我在數學方面遠超同齡學生，但我只是中二學生（或任何低年級），我可以參加你們的課程嗎？"]}
                 answer={["We welcome junior form student to take EPYMT course, but please note that EPYMT introduces students more advanced and sophisticated mathematics than that they learn in school so junior form students should be mature enough to face difficulties and frustration. It is important to consider if junior form students are able to learn mathematics together with higher form students (both in mathematics ability and personality).\nIt is advisable to seek consultation from school teachers to decide the course which suits you most, and ask teacher/principal to write you an online recommendation letter. We will also assess every applicant by an Admission Screening Test to evaluate students&apos; mathematical maturity before admitting them.", "我們歡迎低年級學生參加 EPYMT 課程，但請注意 EPYMT 所教授的數學內容較學校課程更為進階和複雜，因此低年級學生應具備足夠能力來面對困難和挫折。考慮低年級學生是否能夠與高年級學生一同學習數學（無論在數學能力和個性方面）是很重要的。\n建議先向學校老師諮詢，以決定最適合你的課程，並請老師或校長為你撰寫線上推薦信。我們也會透過入學甄選測驗來評估申請者的數學能力，再決定是否錄取他們。"]}
             />
@@ -215,6 +325,7 @@ export default async function Student({ params }) {
                 lang={lng}
                 question={["How can I know if my application is successful or not?", "我怎麼知道我的申請是否成功？"]}
                 answer={["You shall receive a notification and an attachment of a formal document from us through email. For applicants who do not receive any notification before July 1, you may consider your application unsuccessful.", "你應該會通過電子郵件收到我們的通知和正式文件的附件。對於在7月1日之前未收到任何通知的申請者，你可以認為你的申請不成功。"]}
+>>>>>>> 9ce3eb9a70e0ddf27fb67382d5e4071bb4659de1
             />
         </div>
     );

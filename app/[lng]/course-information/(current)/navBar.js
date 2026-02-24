@@ -14,9 +14,9 @@ function NavButton({ text, link, selected }) {
 }
 
 export default function NavBar({ lang }) {
-    const targetName = lang === "en" ? ["Towards Modern Algebra", "Complex Numbers and Analytic Geometry", "Introduction to Discrete Mathematics", "Numbers Theory and Cryptography", "Towards Differential Geometry"] : ["近世代數初探", "複數與解析幾何", "離散數學導論", "數論與密碼學", "微分幾何初探"];
-    const targetURL = ["/course-information/tma", "/course-information/cnag", "/course-information/idm", "/course-information/ntc", "/course-information/tdg"].map((url) => `/${lang}${url}`);
-    const targetShortForm = ["tma", "cnag", "idm", "ntc", "tdg"];
+    const targetName = lang === "en" ? ["Towards Modern Algebra", "Complex Numbers and Analytic Geometry", "Introduction to Discrete Mathematics", "Numbers Theory and Cryptography", "Towards Differential Geometry", "Understanding Non-Euclidean Geometry"] : ["近世代數初探", "複數與解析幾何", "離散數學導論", "數論與密碼學", "微分幾何初探", "非歐幾何賞析"];
+    const targetURL = ["/course-information/tma", "/course-information/cnag", "/course-information/idm", "/course-information/ntc", "/course-information/tdg", "/course-information/uneg"].map((url) => `/${lang}${url}`);
+    const targetShortForm = ["tma", "cnag", "idm", "ntc", "tdg", "uneg"];
     const currentPath = usePathname().split("/")[3];
     return (
         <div className="flex justify-center gap-4 w-full flex-wrap">

@@ -35,7 +35,13 @@ export default async function Application({ params }) {
             <span>{t("step_1.reminder_2")}</span>
             <span>{t("step_1.reminder_3")}</span>
             <span className="my-1">{t("step_1.checkStatus")}</span>
-            <span className="text-xs text-red-500">{t("step_1.remark")}</span>
+            <span className="my-1">
+                <Trans
+                    i18nKey="step_1.checkEmail" // The key from your JSON
+                    t={t}
+                    components={[ <strong /> ]} // The tag to replace <0> with
+                />
+            </span>
             <br />
             <span className="font-bold text-xl/8">{t("step_2.title")}</span>
             <span className="font-bold mt-2">{t("step_2.formerStudents.title")}</span>
@@ -54,14 +60,6 @@ export default async function Application({ params }) {
                     i18nKey="step_2.details"
                     t={t}
                     components={[<span className="text-red-500" key="0" />]}
-                />
-            </span>
-            <br />
-            <span className="text-sm text-red-500">
-                <Trans
-                    i18nKey="remark"
-                    t={t}
-                    components={[<span key="0" className="text-bold text-green-500" />]}
                 />
             </span>
         </div>

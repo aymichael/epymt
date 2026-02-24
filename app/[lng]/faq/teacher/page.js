@@ -7,6 +7,15 @@ export default async function Student({ params }) {
     const { t } = await translation(lng, "faq");
     return (
         <div className="flex flex-col gap-4">
+<<<<<<< HEAD
+            <h2 className="font-bold text-2xl/8 my-4">{t("header_1")}</h2>
+            <QuestionBox
+                lang={lng}
+                question={["My school can pay the tuition fees for students participate in EPYMT. May I obtain a receipt as proof?", "校方可以為報讀課程的學生代為繳交學費，我可否獲得收據作為證明？"]}
+                answer={[<span  key="0">Yes, please contact us by <a href="mailto:epymt.math@cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt.math@cuhk.edu.hk</a>.</span>
+                    , <span  key="1">可以，請通過 <a href="mailto:epymt.math@cuhk.edu.hk" className="text-indigo-500 dark:text-indigo-300">epymt.math@cuhk.edu.hk</a> 與我們聯繫。</span>
+                ]}
+=======
             <h2 className="font-bold text-2xl/8 my-4">{t("header_2")}</h2>
             <QuestionBox
                 lang={lng}
@@ -139,6 +148,7 @@ export default async function Student({ params }) {
                 lang={lng}
                 question={["How can my student prepare for the admission test?", "我的學生如何準備入學測驗？"]}
                 answer={["No any specific drills are recommended. Since the syllabuses of EMPYT courses are beyond secondary school taught level, the questions set for this test will be close to tertiary education level.\nTo improve your student’s mathematical ability, we advise him/her to concentrate on school works and try to learn beyond what the textbook teaches. Also, try to read ahead. For example, if he/she is a F.4 student, he/she should try to take a look or even finish the F.5 mathematics textbook and work out the problems by himself/herself. He/She could also read some foreign mathematics textbooks or leisure books for enrichment. He/She can even surf the web to learn advanced mathematics.", "不建議進行任何特定的練習。由於EPYMT課程的教學大綱超越了中學所教授的水平，因此為這次測驗設計的問題將接近大學教育水平。\n為了提高你的學生的數學能力，我們建議他/她專注於學校的功課，並嘗試學習超出教科書所教授的內容。此外，嘗試預習。例如，如果他/她是中四學生，他/她應該嘗試閱讀甚至完成中五數學教科書，並自己解決問題。他/她也可以閱讀一些外國數學教科書或休閒書籍以充實自己。他/她甚至可以上網學習高等數學。"]}
+>>>>>>> 9ce3eb9a70e0ddf27fb67382d5e4071bb4659de1
             />
         </div>
     );

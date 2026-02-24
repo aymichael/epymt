@@ -19,13 +19,14 @@ const reservedDate =
         "22/7, 28/7, 31/7",
         "18/8, 27/8, 31/8",
         "18/8, 27/8, 31/8",
+        "18/8, 27/8, 31/8",
         "18/8, 27/8, 31/8"
     ];
 const lecturerCHI = ["李俊捷博士(香港中文大學)", "陳曉寧博士(香港中文大學)", "吳銘豪博士(香港中文大學)", "廖振隆博士(香港中文大學)", "鄭文銓博士(香港中文大學)", "張亮夫博士(香港中文大學)"];
 const lecturerENG = ["Dr. LI Chun Che (CUHK)", "Dr. CHAN Hiu Ning (CUHK)", "Dr. NG Ming Ho (CUHK)", "Dr. LIU Chun Lung Kelvin (CUHK)", "Dr. CHENG Man Chuen (CUHK)", "Dr. CHEUNG Leung Fu (CUHK)"];
 const tuitionFee = "3,350";
 const applicationFee = "50";
-const imagesList = [];
+const imagesList = ["2627_poster_1.jpg", "2627_poster_2.jpg", "2627_poster_3.jpg", "2627_poster_4.jpg"];
 
 export default async function Course({ params }) {
     const { lng } = await params;
@@ -38,7 +39,7 @@ export default async function Course({ params }) {
             <span className="font-bold text-2xl/8 underline underline-offset-8">{t("title_1")}</span>
             <div className="flex flex-col gap-1 my-4">
                 <Trans
-                    i18nKey="introduction_1"
+                    i18nKey="introduction_7"
                     t={t}
                     components={[<span key="0" />]}
                 />
@@ -147,7 +148,7 @@ export default async function Course({ params }) {
                         </td>
                         <td className="md:px-4 md:py-4 flex flex-col gap-1 dark:md:bg-gray-600 md:bg-gray-50 md:pb-4 pb-6">
                             <Trans
-                                i18nKey="table.targetStudents"
+                                i18nKey="table.targetStudents_3"
                                 t={t}
                                 components={[<span key="0" />]}
                             />
@@ -173,7 +174,7 @@ export default async function Course({ params }) {
                             <Trans
                                 i18nKey="table.creditRecognition_2"
                                 t={t}
-                                components={{ span: <span key="0" />, Link: <Link href="https://yashk.org.hk/yau-award" key="1" className="text-indigo-500 dark:text-indigo-300" /> }}
+                                components={{ span: <span key="0" />, Link: <Link href="https://yauaward-asia.hk" key="1" className="text-indigo-500 dark:text-indigo-300" /> }}
                             />
                             <Trans
                                 i18nKey="table.remark_2"

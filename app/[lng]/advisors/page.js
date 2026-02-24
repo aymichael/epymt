@@ -80,7 +80,7 @@ export default async function Advisors({ params }) {
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
                             <td className="px-2 py-1">Prof. Daniel Stroock</td>
-                            <td className="px-2 py-1">M.I.T.</td>
+                            <td className="px-2 py-1">Massachusetts Institute of Technology</td>
                         </tr>
                         <tr className="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700 border-gray-200">
                             <td className="px-2 py-1">Prof. Neil S. Trudinger</td>
@@ -101,9 +101,6 @@ export default async function Advisors({ params }) {
                     </tbody>
                 </table>
             </div>
-            <span className="text-xs">
-                {t("remark")}
-            </span>
         </div>
     );
 }

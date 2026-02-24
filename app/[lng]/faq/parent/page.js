@@ -7,6 +7,15 @@ export default async function Parent({ params }) {
     const { t } = await translation(lng, "faq");
     return (
         <div className="flex flex-col gap-4">
+<<<<<<< HEAD
+            <h2 className="font-bold text-2xl/8 my-4">{t("header_1")}</h2>
+            <QuestionBox
+                lang={lng}
+                question={["I believe my child is too young. Can I accompany them to the course activities?", "我認為我的孩子年齡太小，可以陪伴他參加課程活動嗎？"]}
+                answer={["We kindly ask that students attend the course activities independently. Parents are requested to wait outside the venue during the sessions. This approach helps foster independence and allows students to fully engage in the learning experience. Thank you for your understanding.", "我們誠摯地要求學生獨立參加課程活動。家長請在活動場地外等候。這種方式有助於培養學生的獨立性，並使他們能充分投入學習體驗。感謝您的理解。"]}
+            />
+ 
+=======
             <h2 className="font-bold text-2xl/8 my-4">{t("header_2")}</h2>
             <QuestionBox
                 lang={lng}
@@ -154,6 +163,7 @@ export default async function Parent({ params }) {
                 question={["Does my child need to pay cost on the date of Admission Screening Test?", "我的孩子在入學甄選測驗當天需要支付費用嗎？"]}
                 answer={["No. He/She needs not to pay any cost before he/she are admitted. After we have confirmed the admitted students, we will contact them for the issue of tuition payment.", "不需要。在被錄取之前，他/她不需要支付任何費用。在我們確認錄取的學生後，我們會聯繫他們處理學費支付事宜。"]}
             />
+>>>>>>> 9ce3eb9a70e0ddf27fb67382d5e4071bb4659de1
         </div>
     );
 };
