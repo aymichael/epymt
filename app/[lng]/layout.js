@@ -17,8 +17,8 @@ export async function generateStaticParams() {
 export default async function RootLayout({ children, params }) {
   const { lng } = await params;
   return (
-    <html lang={lng}>
-      <body className={`${nunito.variable} ${lato.variable} font-nunito min-h-screen w-full flex justify-center leading-8`}>
+    <html lang={lng} className={`${nunito.variable} ${lato.variable}`}>
+      <body className="font-nunito min-h-screen w-full flex justify-center leading-8">
         <div className="flex flex-col w-full items-center">
           <Navbar lang={lng} />
           <main className=" md:bg-[url(/background.png)] md:dark:bg-[url(/background_dark.png)] bg-center bg-contain bg-no-repeat  mt-16 w-full h-full dark:bg-gray-700 flex items-center flex-col">

@@ -5,7 +5,7 @@ export default async function Advisors({ params }) {
     const { t } = await translation(lng, "advisors");
     return (
         <div className="flex justify-center w-full flex-col gap-2">
-            <span className="font-bold text-xl/8">{t("title")}</span>
+            <span className="font-bold text-2xl/8">{t("title")}</span>
             <span>
                 {t("introduction")}
             </span>
