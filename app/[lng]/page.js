@@ -15,6 +15,7 @@ export default async function Home({ params }) {
             alt="EPYMT slogan"
             width={720}
             height={240}
+            unoptimized
           >
           </Image>
         </div>
