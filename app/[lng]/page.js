@@ -11,7 +11,7 @@ export default async function Home({ params }) {
       <div className="flex flex-col gap-4">
         <div className="flex w-full justify-center">
           <Image
-            src="/slogan.jpg"
+            src="/slogan1.jpg"
             alt="EPYMT slogan"
             width={720}
             height={240}
